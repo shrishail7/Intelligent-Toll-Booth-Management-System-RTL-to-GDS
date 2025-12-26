@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<refinement-file-root>
+<information creation-time="Sun 12 Oct 2025 00:09:10 IST" creator="prerana25172" csCheck="false" rules-signature-c="6a3f352fd7da678d545dac7c63999" tool-version="Incisive vManager15.2">
+<ucm-files>
+<ucm-file domain="icc" modelCheckSum="928437808" path="./cov_work/scope/icc_3756d630_00000000.ucm"/>
+</ucm-files>
+<ccf-files/>
+</information>
+<rules>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/uut/u_account_balance/id_to_check/7" entityType="toggle-bit" excTime="1760207721" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/uut/u_account_balance/id_to_check/6" entityType="toggle-bit" excTime="1760207725" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/uut/u_account_balance/id_to_check/5" entityType="toggle-bit" excTime="1760207729" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/uut/u_account_balance/id_to_check/4" entityType="toggle-bit" excTime="1760207732" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/uut/display_out/7" entityType="toggle-bit" excTime="1760207778" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/uut/display_out/4" entityType="toggle-bit" excTime="1760207782" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/display_out/7" entityType="toggle-bit" excTime="1760207882" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/display_out/6" entityType="toggle-bit" excTime="1760207886" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/display_out/5" entityType="toggle-bit" excTime="1760207889" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+<rule ccType="inst" domain="icc" entityName="tb_toll_gate_coverage/display_out/4" entityType="toggle-bit" excTime="1760207893" name="exclude" reviewer="unknown" user="0" vscope="default"/>
+</rules>
+<cache-map>
+<cache-entry key="0" value="prerana25172"/>
+</cache-map>
+</refinement-file-root>

@@ -1,0 +1,11 @@
+//
+// File created by:  ncverilog
+// Do not modify this file
+//
+-access
+rwc
+toll.v
+tb_toll.v
+-coverage
+all
+-gui

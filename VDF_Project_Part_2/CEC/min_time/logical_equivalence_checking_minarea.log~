@@ -1,0 +1,280 @@
+                          CONFORMAL (R)
+                   Version 20.10-p100 (01-May-2020) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2019. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 1990 days old. You can download the latest version from http://downloads.cadence.com.
+
+CPU time     : 0.39    seconds
+Elapse time  : 2       seconds
+Memory usage : 252.46  M bytes
+// Command: read library /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/min_time/slow.v -verilog -both
+// Parsing file /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/min_time/slow.v ...
+// Warning: (RTL7.2) Gate or transistor primitive is using weak attributes (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:196)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:84)
+// Warning: (VLG5.2) Primitive input port has multiple bits. Ignore all but LSB bit (occurrence:2)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:480)
+// Warning: (DIR6.2) Supported compiler directive is detected (occurrence:960)
+// Warning: (HRC1.4) Module/entity is empty (blackboxed) (occurrence:1)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
+// Note: Read VERILOG library successfully
+CPU time     : 0.60    seconds
+Elapse time  : 2       seconds
+Memory usage : 274.55  M bytes
+// Command: read design /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/min_time/toll.v -golden
+// Parsing file /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/min_time/toll.v ...
+// Golden root module is set to 'toll_gate'
+// Warning: (RTL1.2) Variable/signal is assigned by multiple non-blocking assignments (occurrence:3)
+// Warning: (RTL1.5a) Assignment with RHS bit width is greater than LHS bit width (occurrence:9)
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:3)
+// Warning: (RTL7.8) Overflowed integer is truncated (occurrence:4)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:1)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:1)
+// Warning: (HRC3.6) Port connection width mis-matches. Undriven signals are floating (occurrence:1)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:8)
+// Note: Read VERILOG design successfully
+// Command: read design /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/min_time/netlist.v -verilog -revised
+// Parsing file /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/min_time/netlist.v ...
+// Revised root module is set to 'toll_gate'
+// Warning: (RTL2.2) Variable is referenced but never assigned (occurrence:8)
+// Warning: (RTL2.5) Net is referenced without an assignment. Design verification will be based on set_undriven_signal setting (occurrence:11)
+// Warning: (RTL2.13) Undriven pin is detected (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:4)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:12)
+// Warning: There are 4 undriven nets in Revised
+// Warning: There are 1 undriven pins in Revised
+// Note: Read VERILOG design successfully
+// Command: set system mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// (F13) Converted 13 DFF(s) to DLAT(s) due to direct feedback
+// Processing Revised ...
+// Modeling Revised ...
+// (F32) Created 3 Z gate(s) for floating net(s) and floating pin(s)
+// (F28) Converted 1 internal output port(s) to inout port(s)
+CPU time     : 0.88    seconds
+Elapse time  : 3       seconds
+Memory usage : 314.85  M bytes
+// Warning: Golden and Revised have different numbers of key points:
+// Golden  key points = 294
+// Revised key points = 278
+// Mapping key points ...
+// Warning: Golden has 3 unmapped key points
+// Warning: Revised has 3 unmapped key points
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            12     12     251       275     
+--------------------------------------------------------------------------------
+Revised           12     12     251       275     
+================================================================================
+Unmapped points:
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF    DLAT      Total   
+--------------------------------------------------------------------------------
+Unreachable       3      13        16      
+Not-mapped        3      0         3       
+================================================================================
+Revised:
+--------------------------------------------------------------------------------
+Unmapped points   Z         Total   
+--------------------------------------------------------------------------------
+Not-mapped        3         3       
+================================================================================
+// Warning: Key point mapping is incomplete
+CPU time     : 1.58    seconds
+Elapse time  : 3       seconds
+Memory usage : 315.85  M bytes
+// Command: add compared points -all
+// Warning: Golden has 3 unmapped key points which will not be compared
+// 263 compared points added to compare list
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           12     235       247     
+--------------------------------------------------------------------------------
+Non-equivalent       0      16        16      
+================================================================================
+CPU time     : 1.81    seconds
+Elapse time  : 4       seconds
+Memory usage : 321.03  M bytes
+// Command: report messages -compare -verb
+// Command: report compare data -noneq
+Compared points are: Non-equivalent
+  (G) + 25   DFF  /state_reg[2]
+  (R) + 275  DFF  /state_reg[2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 952  MUX  /U$38/U$3
+  (R) + 3852 INV  /g776/U$3
+
+Compared points are: Non-equivalent
+  (G) + 26   DFF  /state_reg[1]
+  (R) + 273  DFF  /state_reg[1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 951  MUX  /U$38/U$2
+  (R) + 3836 INV  /g773/U$4
+
+Compared points are: Non-equivalent
+  (G) + 27   DFF  /state_reg[0]
+  (R) + 274  DFF  /state_reg[0]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 950  MUX  /U$38/U$1
+  (R) + 3849 INV  /g775/U$4
+
+Compared points are: Non-equivalent
+  (G) + 48   DFF  /u_account_balance/balance_db_reg[1][15]
+  (R) + 52   DFF  /u_account_balance/balance_db_reg[1][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1130 MUX  /u_account_balance/U$9/U$16
+  (R) + 3527 OR   /u_account_balance/g3334/U$3
+
+Compared points are: Non-equivalent
+  (G) + 49   DFF  /u_account_balance/balance_db_reg[1][14]
+  (R) + 51   DFF  /u_account_balance/balance_db_reg[1][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1128 MUX  /u_account_balance/U$9/U$15
+  (R) + 3538 OR   /u_account_balance/g3422/U$3
+
+Compared points are: Non-equivalent
+  (G) + 50   DFF  /u_account_balance/balance_db_reg[1][13]
+  (R) + 50   DFF  /u_account_balance/balance_db_reg[1][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1126 MUX  /u_account_balance/U$9/U$14
+  (R) + 3608 OR   /u_account_balance/g3444/U$3
+
+Compared points are: Non-equivalent
+  (G) + 51   DFF  /u_account_balance/balance_db_reg[1][12]
+  (R) + 49   DFF  /u_account_balance/balance_db_reg[1][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1124 MUX  /u_account_balance/U$9/U$13
+  (R) + 3605 OR   /u_account_balance/g3443/U$3
+
+Compared points are: Non-equivalent
+  (G) + 52   DFF  /u_account_balance/balance_db_reg[1][11]
+  (R) + 48   DFF  /u_account_balance/balance_db_reg[1][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1122 MUX  /u_account_balance/U$9/U$12
+  (R) + 3602 OR   /u_account_balance/g3442/U$3
+
+Compared points are: Non-equivalent
+  (G) + 53   DFF  /u_account_balance/balance_db_reg[1][10]
+  (R) + 47   DFF  /u_account_balance/balance_db_reg[1][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1120 MUX  /u_account_balance/U$9/U$11
+  (R) + 3599 OR   /u_account_balance/g3441/U$3
+
+Compared points are: Non-equivalent
+  (G) + 54   DFF  /u_account_balance/balance_db_reg[1][9]
+  (R) + 46   DFF  /u_account_balance/balance_db_reg[1][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1118 MUX  /u_account_balance/U$9/U$10
+  (R) + 3596 OR   /u_account_balance/g3440/U$3
+
+Compared points are: Non-equivalent
+  (G) + 55   DFF  /u_account_balance/balance_db_reg[1][8]
+  (R) + 45   DFF  /u_account_balance/balance_db_reg[1][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1116 MUX  /u_account_balance/U$9/U$9
+  (R) + 3593 OR   /u_account_balance/g3439/U$3
+
+Compared points are: Non-equivalent
+  (G) + 56   DFF  /u_account_balance/balance_db_reg[1][7]
+  (R) + 44   DFF  /u_account_balance/balance_db_reg[1][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1114 MUX  /u_account_balance/U$9/U$8
+  (R) + 3590 OR   /u_account_balance/g3438/U$3
+
+Compared points are: Non-equivalent
+  (G) + 57   DFF  /u_account_balance/balance_db_reg[1][6]
+  (R) + 43   DFF  /u_account_balance/balance_db_reg[1][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1112 MUX  /u_account_balance/U$9/U$7
+  (R) + 3545 INV  /u_account_balance/g3423/U$3
+
+Compared points are: Non-equivalent
+  (G) + 61   DFF  /u_account_balance/balance_db_reg[1][2]
+  (R) + 42   DFF  /u_account_balance/balance_db_reg[1][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1104 MUX  /u_account_balance/U$9/U$3
+  (R) + 3551 INV  /u_account_balance/g3424/U$3
+
+Compared points are: Non-equivalent
+  (G) + 62   DFF  /u_account_balance/balance_db_reg[1][1]
+  (R) + 41   DFF  /u_account_balance/balance_db_reg[1][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1102 MUX  /u_account_balance/U$9/U$2
+  (R) + 3587 OR   /u_account_balance/g3435/U$3
+
+Compared points are: Non-equivalent
+  (G) + 276  DFF  /u_account_balance/charge_done_reg
+  (R) + 25   DFF  /u_account_balance/charge_done_reg/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1426 AND  /u_account_balance/U$67
+  (R) + 3667 INV  /u_account_balance/g18686/U$3
+
+16 Non-equivalent point(s) reported
+16 compared point(s) reported
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           12     235       247     
+--------------------------------------------------------------------------------
+Non-equivalent       0      16        16      
+================================================================================
+// Command: report verification
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 1
+     Not-mapped DFF/DLAT is detected:                          yes
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  1
+     Multiple clocks in the design:                            yes
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+--------------------------------------------------------------------------------
+6. Compare Results:                                                  FAIL:NONEQ
+================================================================================
+// Command: write compared points -replace lec_compared_points_minarea
+CPU time     : 1.95    seconds
+Elapse time  : 4       seconds
+Memory usage : 321.03  M bytes
+// Command: write mapped points -replace lec_mapped_points_minarea
+// Command: set verification information logical_eq_check_minarea
+// Verification information is set to /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/min_time/logical_eq_check_minarea.
+// Advanced reporting is enabled and the output is written to /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/min_time/logical_eq_check_minarea
+// Command: write verification information
+// Verification information is written to logical_eq_check_minarea.
+// Command: exit

@@ -1,0 +1,12 @@
+s1(11Oct2025:23:26:20):  ncverilog -access rwc toll.v tb_toll.v -coverage all -gui 
+s2(11Oct2025:23:38:49):  ncverilog -access rwc toll.v tb_toll.v -coverage all -gui 
+s3(11Oct2025:23:58:15):  ncverilog -access rwc toll.v tb_toll.v -coverage all -gui 
+s4(12Oct2025:00:03:58):  ncverilog -access rwc toll.v tb_toll.v -coverage all -gui 
+s5(16Nov2025:17:47:04):  ncverilog -access rwc toll.v tb_toll.v -coverage all -gui 
+s6(16Nov2025:17:49:43):  ncverilog -access rwc toll.v tb_toll.v -coverage all -gui 
+s7(16Nov2025:21:35:03):  ncverilog -access rwc toll.v tb_toll_1.v -coverage all -gui 
+s8(16Nov2025:21:36:39):  ncverilog -access rwc toll.v tb_toll_1.v -coverage all -gui 
+s9(16Nov2025:21:37:00):  ncverilog -access rwc toll.v tb_toll.v -coverage all -gui 
+s10(16Nov2025:21:40:25):  ncverilog -access rwc toll.v tb_toll_90.v -coverage all -gui 
+s11(17Nov2025:01:46:51):  ncverilog -access rwc toll.v tb_toll_90.v 
+s12(17Nov2025:01:47:19):  ncverilog -access rwc toll.v tb_toll_90.v -coverage all -gui 

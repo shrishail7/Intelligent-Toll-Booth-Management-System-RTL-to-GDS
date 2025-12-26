@@ -1,0 +1,41 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 19.13-s073_1, built Fri Mar 20 01:36:16 PDT 2020
+Options: -files sta_min_area.tcl 
+Date:    Mon Oct 13 17:53:54 2025
+Host:    edatools-server2.iiitd.edu.in (x86_64 w/Linux 2.6.32-754.35.1.el6.x86_64) (18cores*72cpus*2physical cpus*Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz 39936KB) (528955884KB)
+PID:     45462
+OS:      Red Hat Enterprise Linux Server release 6.10 (Santiago)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+
+Finished loading tool scripts (5 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source sta_min_area.tcl
+#@ Begin verbose source sta_min_area.tcl
+@file(sta_min_area.tcl) 1: file mkdir sta_after_synthesis_area/reports
+@file(sta_min_area.tcl) 2: set report_dir sta_after_synthesis_area/reports
+@file(sta_min_area.tcl) 3: read_lib /cadence/FOUNDRY/digital/90nm/dig/lib/slow.lib
+
+Threads Configured:3
+
+  Message Summary for Library slow.lib:
+  *************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  Missing library level attribute. [LBR-516]: 1
+  *************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 125.000000) in library 'slow.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+@file(sta_min_area.tcl) 5: read_verilog /home/prerana25172/Desktop/cmos65/VDF_Project/STA/min_area/netlist.v
+#@ End verbose source sta_min_area.tcl
+invalid command name "read_verilog"
+Encountered problems processing file: sta_min_area.tcl
+WARNING: This version of the tool is 2033 days old.

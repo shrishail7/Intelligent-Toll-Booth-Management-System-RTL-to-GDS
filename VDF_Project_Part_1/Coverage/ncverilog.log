@@ -1,0 +1,182 @@
+ncverilog(64): 15.20-s084: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s084: Started on Nov 17, 2025 at 01:47:19 IST
+ncverilog
+	-access
+	rwc
+	toll.v
+	tb_toll_90.v
+	-coverage
+	all
+	-gui
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+
+	Extracting FSMs for coverage:
+		worklib.vehicle_interface
+		worklib.account_balance
+		worklib.barrier_ctrl
+		worklib.toll_gate
+			FSM extracted for state register state
+		worklib.tb_toll_gate
+	Total FSMs extracted = 1
+        .id_to_check(id_to_check),
+                               |
+ncelab: *W,CUVMPW (./toll.v,169|31): port sizes differ in port connection (8/4).
+	Building instance overlay tables: ....
+ncelab: *W,COVFHT: FSM hold transitions (transitions to the current state) are not extracted for any FSM in default mode.
+................ Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+ncelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+    integer i;
+            |
+ncelab: *W,COVUTA (./tb_toll_90.v,12|12): Toggle coverage is not supported for SystemVerilog integer, real, string, dynamic array, sparse memory, and array of enum. It is also not supported for VHDL multi-dimensional array and array of record. There may also be other such objects in the design.
+    reg [15:0] balance_db [0:15];
+                        |
+ncelab: *W,COVMDD (./toll.v,244|24): Toggle coverage for bit, logic, reg, wire, and struct multi-dimensional static arrays and vectors is not supported by default. To enable toggle coverage on for these types specify 'set_toggle_scoring -sv_mda [<max_bit_base2_exponent>] [-sv_mda_of_struct]' ccf command in the coverage configuration file.
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 5       5
+		Registers:              23      23
+		Scalar wires:           20       -
+		Expanded wires:          4       1
+		Vectored wires:          4       -
+		Always blocks:           6       6
+		Initial blocks:          3       3
+		Cont. assignments:       2       3
+		Pseudo assignments:     10      10
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_toll_gate:v
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm tb_toll_gate.barrier_close_cmd tb_toll_gate.barrier_open_cmd tb_toll_gate.clk tb_toll_gate.display_out tb_toll_gate.i tb_toll_gate.led_status tb_toll_gate.reset tb_toll_gate.sensor_vehicle_enter tb_toll_gate.sensor_vehicle_exit tb_toll_gate.vehicle_id_in
+Created probe 1
+ncsim> run
+ncsim: *E,C58EXE: Coverage database file already exists in the test output directory './cov_work/scope/test', and will not be overwritten. Specify a different name for the test output directory or use the '-covoverwrite' option to overwrite the existing test output directory, and rerun the simulation.
+
+=== SCENARIO 1: Successful Transaction (ID=01) ===
+Time=30000 | State=000 | Enter=0 Exit=0 ID=00 | Open=0 Close=1 LED=01 Display=45
+Time=35000 | State=001 | Enter=1 Exit=0 ID=01 | Open=0 Close=1 LED=01 Display=44
+Time=45000 | State=001 | Enter=1 Exit=0 ID=01 | Open=0 Close=0 LED=01 Display=44
+Time=55000 | State=010 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=01 Display=4b
+Time=65000 | State=011 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=11 Display=45
+Time=85000 | State=101 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=10 Display=4f
+Time=95000 | State=101 | Enter=0 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=155000 | State=101 | Enter=0 Exit=1 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=165000 | State=101 | Enter=0 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+
+=== SCENARIO 2: Insufficient Funds (ID=02) ===
+Time=315000 | State=101 | Enter=1 Exit=0 ID=02 | Open=1 Close=0 LED=10 Display=4f
+Time=335000 | State=101 | Enter=0 Exit=0 ID=02 | Open=1 Close=0 LED=10 Display=4f
+
+=== SCENARIO 3: Valid Transaction (ID=03) ===
+Time=385000 | State=101 | Enter=1 Exit=0 ID=03 | Open=1 Close=0 LED=10 Display=4f
+Time=405000 | State=101 | Enter=0 Exit=0 ID=03 | Open=1 Close=0 LED=10 Display=4f
+Time=505000 | State=101 | Enter=0 Exit=1 ID=03 | Open=1 Close=0 LED=10 Display=4f
+Time=515000 | State=101 | Enter=0 Exit=0 ID=03 | Open=1 Close=0 LED=10 Display=4f
+
+=== SCENARIO 4: Vehicle Interface Edge Cases ===
+Time=665000 | State=101 | Enter=1 Exit=0 ID=ff | Open=1 Close=0 LED=10 Display=4f
+Time=675000 | State=101 | Enter=0 Exit=0 ID=ff | Open=1 Close=0 LED=10 Display=4f
+Time=725000 | State=101 | Enter=1 Exit=0 ID=55 | Open=1 Close=0 LED=10 Display=4f
+Time=735000 | State=101 | Enter=0 Exit=0 ID=55 | Open=1 Close=0 LED=10 Display=4f
+Time=785000 | State=101 | Enter=1 Exit=0 ID=aa | Open=1 Close=0 LED=10 Display=4f
+Time=795000 | State=101 | Enter=0 Exit=0 ID=aa | Open=1 Close=0 LED=10 Display=4f
+
+=== SCENARIO 5: Barrier Control Edge Cases ===
+Time=845000 | State=101 | Enter=1 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=865000 | State=101 | Enter=0 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Gate fully opened at time 1065000
+Time=1095000 | State=101 | Enter=0 Exit=1 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=1105000 | State=101 | Enter=0 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Gate fully closed at time 1305000
+
+=== SCENARIO 6: Account Balance Edge Cases ===
+Time=1335000 | State=101 | Enter=1 Exit=0 ID=0f | Open=1 Close=0 LED=10 Display=4f
+Time=1355000 | State=101 | Enter=0 Exit=0 ID=0f | Open=1 Close=0 LED=10 Display=4f
+
+=== SCENARIO 7: Reset During Operation ===
+Time=1405000 | State=101 | Enter=1 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=1425000 | State=101 | Enter=0 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=1445000 | State=000 | Enter=0 Exit=0 ID=01 | Open=0 Close=1 LED=01 Display=45
+
+=== SCENARIO 8: Rapid Successive Transactions ===
+Time=1495000 | State=001 | Enter=1 Exit=0 ID=01 | Open=0 Close=1 LED=01 Display=44
+Time=1505000 | State=001 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=01 Display=44
+Time=1515000 | State=010 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=01 Display=4b
+Time=1525000 | State=011 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=11 Display=45
+Time=1545000 | State=101 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=10 Display=4f
+Time=1555000 | State=101 | Enter=0 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=1755000 | State=101 | Enter=1 Exit=0 ID=03 | Open=1 Close=0 LED=10 Display=4f
+Time=1765000 | State=101 | Enter=0 Exit=0 ID=03 | Open=1 Close=0 LED=10 Display=4f
+
+=== SCENARIO 9: Complete FSM State Coverage ===
+Time=2015000 | State=000 | Enter=0 Exit=0 ID=03 | Open=0 Close=0 LED=01 Display=45
+Time=2025000 | State=000 | Enter=0 Exit=0 ID=03 | Open=0 Close=1 LED=01 Display=45
+
+=== SCENARIO 10: Extended Gate Operations ===
+Time=2055000 | State=001 | Enter=1 Exit=0 ID=01 | Open=0 Close=1 LED=01 Display=44
+Time=2065000 | State=001 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=01 Display=44
+Time=2075000 | State=010 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=01 Display=4b
+Time=2085000 | State=011 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=11 Display=45
+Time=2105000 | State=101 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=10 Display=4f
+Time=2115000 | State=101 | Enter=0 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=2125000 | State=101 | Enter=0 Exit=1 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=2135000 | State=101 | Enter=0 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+
+=== SCENARIO 11: Sensor Combinations ===
+Time=2355000 | State=101 | Enter=1 Exit=0 ID=01 | Open=1 Close=0 LED=10 Display=4f
+Time=2375000 | State=110 | Enter=0 Exit=1 ID=01 | Open=1 Close=0 LED=01 Display=45
+Time=2385000 | State=110 | Enter=0 Exit=1 ID=01 | Open=0 Close=1 LED=01 Display=45
+Time=2395000 | State=110 | Enter=1 Exit=1 ID=01 | Open=0 Close=1 LED=01 Display=45
+Time=2415000 | State=110 | Enter=0 Exit=0 ID=01 | Open=0 Close=1 LED=01 Display=45
+Time=2435000 | State=110 | Enter=1 Exit=1 ID=01 | Open=0 Close=1 LED=01 Display=45
+Time=2455000 | State=000 | Enter=0 Exit=0 ID=01 | Open=0 Close=1 LED=01 Display=45
+Time=2475000 | State=001 | Enter=1 Exit=1 ID=01 | Open=0 Close=1 LED=01 Display=44
+Time=2485000 | State=001 | Enter=1 Exit=1 ID=01 | Open=0 Close=0 LED=01 Display=44
+Time=2495000 | State=010 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=01 Display=4b
+
+=== SCENARIO 12: Boundary Conditions ===
+Time=2505000 | State=011 | Enter=0 Exit=0 ID=01 | Open=0 Close=0 LED=11 Display=45
+Time=2515000 | State=011 | Enter=1 Exit=0 ID=ff | Open=0 Close=0 LED=11 Display=45
+Time=2525000 | State=101 | Enter=0 Exit=0 ID=ff | Open=0 Close=0 LED=10 Display=4f
+Time=2535000 | State=101 | Enter=0 Exit=0 ID=ff | Open=1 Close=0 LED=10 Display=4f
+Time=2575000 | State=101 | Enter=1 Exit=0 ID=00 | Open=1 Close=0 LED=10 Display=4f
+Time=2585000 | State=101 | Enter=0 Exit=0 ID=00 | Open=1 Close=0 LED=10 Display=4f
+
+=== All Test Scenarios Completed ===
+Simulation complete via $finish(1) at time 2735 NS + 0
+./tb_toll_90.v:323         $finish;
+ncsim> coverage -analyze
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_toll_gate(tb_toll_gate)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_1d2f3871_00000000.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_1d2f3871_00000000.ucd
+
+Launching IMC...
+
+ncsim> ^C
+ncsim> exit
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tb_toll_gate(tb_toll_gate)
+  scope    :  scope
+  testname :  test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_1d2f3871_00000000.ucm (reused)
+  data               :  ./cov_work/scope/test/icc_1d2f3871_00000000.ucd
+TOOL:	ncverilog	15.20-s084: Exiting on Nov 17, 2025 at 01:48:04 IST  (total: 00:00:45)

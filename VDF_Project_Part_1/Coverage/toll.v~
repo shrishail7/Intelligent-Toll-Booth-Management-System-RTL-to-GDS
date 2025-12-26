@@ -1,0 +1,327 @@
+`timescale 1ns / 1ps
+
+//================================================================
+// MODULE: toll_gate (Top-Level Controller)
+// DESCRIPTION: This is the main FSM that orchestrates the entire
+//              toll booth operation by interacting with submodules.
+//================================================================
+module toll_gate (
+    // Port List
+    clk,
+    reset,
+    sensor_vehicle_enter,
+    sensor_vehicle_exit,
+    vehicle_id_in,
+    barrier_open_cmd,
+    barrier_close_cmd,
+    led_status,
+    display_out
+);
+    // Port Declarations
+    input clk;
+    input reset;
+    input sensor_vehicle_enter;
+    input sensor_vehicle_exit;
+    input [7:0] vehicle_id_in;
+
+    // Outputs to the Environment
+    output barrier_open_cmd;
+    output barrier_close_cmd;
+    output reg [1:0] led_status;
+    output reg [7:0] display_out;
+
+    // FSM State Parameters (Expanded for robust operation)
+    localparam IDLE               = 3'b000;
+    localparam READ_ID            = 3'b001;
+    localparam CHECK_BALANCE      = 3'b010;
+    localparam CHARGE_ACCOUNT     = 3'b011;
+    localparam REJECT_TRANSACTION = 3'b100;
+    localparam OPEN_GATE          = 3'b101;
+    localparam CLOSE_GATE         = 3'b110;
+
+    // FSM State Registers
+    reg [2:0] state, next_state;
+
+    // Internal control signals from FSM to submodules (must be 'reg')
+    reg read_id_en;
+    reg balance_check_req;
+    reg charge_req;
+    reg open_gate_en;
+    reg close_gate_en;
+
+    // Internal status signals from submodules to FSM (must be 'wire')
+    wire id_valid;
+    wire [3:0] id_to_check;
+    wire sufficient_balance;
+    wire charge_done;
+    wire gate_is_open;
+    wire gate_is_closed;
+
+    // Signals driven by a submodule's output port MUST be wires.
+    wire barrier_open_cmd;
+    wire barrier_close_cmd;
+
+    // =======================================================
+    // I. STATE REGISTER (Sequential Logic with SYNCHRONOUS RESET)
+    // =======================================================
+    // MODIFIED: 'reset' removed from sensitivity list. Reset is now checked on posedge clk.
+    always @(posedge clk) begin
+        if (reset)
+            state <= IDLE;
+        else
+            state <= next_state;
+    end
+
+    // =======================================================
+    // II. NEXT STATE & OUTPUT LOGIC (Single Combinational Block)
+    // =======================================================
+    // NOTE: This combinational block does not change.
+    always @(*) begin
+        // --- Start with safe default assignments for all control signals ---
+        next_state          = state;
+        read_id_en          = 1'b0;
+        balance_check_req   = 1'b0;
+        charge_req          = 1'b0;
+        open_gate_en        = 1'b0;
+        close_gate_en       = 1'b0;
+        led_status          = 2'b01; // Default to RED LED
+        display_out         = "----";
+
+        // --- FSM Logic ---
+        case (state)
+            IDLE: begin
+                display_out = "IDLE";
+                close_gate_en = 1'b1; // Ensure gate is closed
+
+                if (sensor_vehicle_enter) begin
+                    next_state = READ_ID;
+                end
+            end
+
+            READ_ID: begin
+                display_out = "READ";
+                read_id_en = 1'b1; // Enable ID reading
+                if (id_valid) begin
+                    next_state = CHECK_BALANCE;
+                end
+            end
+
+            CHECK_BALANCE: begin
+                display_out = "CHECK";
+                balance_check_req = 1'b1;
+                if (sufficient_balance) begin
+                    next_state = CHARGE_ACCOUNT;
+                end else begin
+                    next_state = REJECT_TRANSACTION;
+                end
+            end
+
+            CHARGE_ACCOUNT: begin
+                led_status = 2'b11; // BLUE (Processing)
+                display_out = "CHARGE";
+                // Keep balance check active so 'sufficient_balance' remains valid
+                balance_check_req = 1'b1;
+                charge_req = 1'b1;
+                if (charge_done) begin
+                    next_state = OPEN_GATE;
+                end
+            end
+
+            REJECT_TRANSACTION: begin
+                display_out = "FAIL";
+                // After showing fail message for one cycle, return to idle
+                next_state = IDLE;
+            end
+
+            OPEN_GATE: begin
+                led_status  = 2'b10; // GREEN LED
+                display_out = "GO";
+                open_gate_en = 1'b1; // Command the barrier to open
+
+                if (sensor_vehicle_exit) begin
+                    next_state = CLOSE_GATE;
+                end
+            end
+
+            CLOSE_GATE: begin
+                display_out   = "CLOSE";
+                close_gate_en = 1'b1; // Command the barrier to close
+
+                if (gate_is_closed) begin
+                    next_state = IDLE;
+                end
+            end
+
+            default: begin
+                next_state = IDLE;
+            end
+        endcase
+    end
+
+    // =======================================================
+    // III. MODULE INSTANTIATIONS
+    // =======================================================
+    vehicle_interface u_vehicle_interface (
+        .clk(clk),
+        .reset(reset),
+        .fsm_read_en(read_id_en),
+        .vehicle_id_in(vehicle_id_in),
+        .id_to_check(id_to_check),
+        .id_valid(id_valid)
+    );
+
+    account_balance u_account_balance (
+        .clk(clk),
+        .reset(reset),
+        .id_to_check(id_to_check),
+        .fsm_check_req(balance_check_req),
+        .fsm_charge_req(charge_req),
+        .sufficient_balance(sufficient_balance),
+        .charge_done(charge_done)
+    );
+
+    barrier_ctrl u_barrier_ctrl (
+        .clk(clk),
+        .reset(reset),
+        .fsm_open_en(open_gate_en),
+        .fsm_close_en(close_gate_en),
+        .barrier_open_cmd(barrier_open_cmd),
+        .barrier_close_cmd(barrier_close_cmd),
+        .gate_is_open(gate_is_open),
+        .gate_is_closed(gate_is_closed)
+    );
+endmodule
+
+
+//================================================================
+// MODULE: vehicle_interface
+// DESCRIPTION: Captures the vehicle ID when enabled by the FSM.
+//================================================================
+module vehicle_interface (
+    clk, reset, fsm_read_en, vehicle_id_in, id_to_check, id_valid
+);
+    input clk;
+    input reset;
+    input fsm_read_en;
+    input [7:0] vehicle_id_in;
+    output reg [3:0] id_to_check;
+    output reg id_valid;
+
+    // MODIFIED: Converted to synchronous reset.
+    always @(posedge clk) begin
+        if (reset) begin
+            id_to_check <= 4'h00;
+            id_valid <= 1'b0;
+        end else begin
+            if (fsm_read_en) begin
+                id_to_check <= vehicle_id_in;
+                id_valid <= 1'b1;
+            end else begin
+                id_valid <= 1'b0;
+            end
+        end
+    end
+endmodule
+
+
+//================================================================
+// MODULE: account_balance
+// DESCRIPTION: Manages a simple memory-based account database.
+//================================================================
+module account_balance (
+    clk, reset, id_to_check, fsm_check_req, fsm_charge_req,
+    sufficient_balance, charge_done
+);
+    input clk;
+    input reset;
+    input [7:0] id_to_check;
+    input fsm_check_req;
+    input fsm_charge_req;
+    output reg sufficient_balance;
+    output reg charge_done;
+
+    localparam TOLL_AMOUNT = 16'd10;
+    reg [15:0] balance_db [0:15];
+    wire [3:0] db_addr = id_to_check[3:0];
+
+    // MODIFIED: Converted to synchronous reset.
+    // Use a synthesizable reset to initialize the memory.
+    always @(posedge clk) begin
+        if (reset) begin
+            charge_done <= 1'b0;
+            // Initialize memory on reset
+            balance_db[4'h01] <= 16'd100; // Has funds
+            balance_db[4'h02] <= 16'd5;   // No funds
+            balance_db[4'h03] <= 16'd20;  // Has funds
+            // Note: Other memory locations will be unknown unless also initialized.
+            // A for-loop could be used here if you need to clear everything.
+        end else begin
+            charge_done <= 1'b0; // Default to not done
+            if (fsm_charge_req && sufficient_balance) begin
+                balance_db[db_addr] <= balance_db[db_addr] - TOLL_AMOUNT;
+                charge_done <= 1'b1;
+            end
+        end
+    end
+
+    // Combinational logic for checking balance remains the same.
+    always @(*) begin
+        if (fsm_check_req) begin
+            if (balance_db[db_addr] >= TOLL_AMOUNT)
+                sufficient_balance = 1'b1;
+            else
+                sufficient_balance = 1'b0;
+        end else begin
+            sufficient_balance = 1'b0;
+        end
+    end
+endmodule
+
+
+//================================================================
+// MODULE: barrier_ctrl
+// DESCRIPTION: Simulates the physical barrier motor and position.
+//================================================================
+module barrier_ctrl (
+    clk, reset, fsm_open_en, fsm_close_en,
+    barrier_open_cmd, barrier_close_cmd, gate_is_open, gate_is_closed
+);
+    input clk;
+    input reset;
+    input fsm_open_en;
+    input fsm_close_en;
+    output reg barrier_open_cmd;
+    output reg barrier_close_cmd;
+    output gate_is_open;
+    output gate_is_closed;
+
+    reg [2:0] barrier_position_counter;
+    assign gate_is_open = (barrier_position_counter == 3'd7);
+    assign gate_is_closed = (barrier_position_counter == 3'd0);
+
+    // MODIFIED: Converted to synchronous reset.
+    always @(posedge clk) begin
+        if (reset) begin
+            barrier_open_cmd <= 1'b0;
+            barrier_close_cmd <= 1'b1;
+            barrier_position_counter <= 3'd0;
+        end else begin
+            if (fsm_open_en && !gate_is_open) begin
+                barrier_open_cmd <= 1'b1;
+                barrier_close_cmd <= 1'b0;
+                barrier_position_counter <= barrier_position_counter + 1;
+            end else if (fsm_close_en && !gate_is_closed) begin
+                barrier_open_cmd <= 1'b0;
+                barrier_close_cmd <= 1'b1;
+                barrier_position_counter <= barrier_position_counter - 1;
+            end else begin
+                barrier_open_cmd <= 1'b0;
+                barrier_close_cmd <= 1'b0;
+                if (fsm_close_en && gate_is_closed)
+                    barrier_close_cmd <= 1'b1;
+                else if (fsm_open_en && gate_is_open)
+                    barrier_open_cmd <= 1'b1;
+            end
+        end
+    end
+endmodule

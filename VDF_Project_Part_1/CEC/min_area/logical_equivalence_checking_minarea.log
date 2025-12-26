@@ -1,0 +1,2088 @@
+                          CONFORMAL (R)
+                   Version 20.10-p100 (01-May-2020) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2019. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 2024 days old. You can download the latest version from http://downloads.cadence.com.
+
+CPU time     : 2.75    seconds
+Elapse time  : 1       seconds
+Memory usage : 252.46  M bytes
+// Command: read library /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_area/slow.v -verilog -both
+// Parsing file /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_area/slow.v ...
+// Warning: (RTL7.2) Gate or transistor primitive is using weak attributes (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:196)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:84)
+// Warning: (VLG5.2) Primitive input port has multiple bits. Ignore all but LSB bit (occurrence:2)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:480)
+// Warning: (DIR6.2) Supported compiler directive is detected (occurrence:960)
+// Warning: (HRC1.4) Module/entity is empty (blackboxed) (occurrence:1)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
+// Note: Read VERILOG library successfully
+CPU time     : 2.97    seconds
+Elapse time  : 1       seconds
+Memory usage : 274.57  M bytes
+// Command: read design /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_area/toll.v -golden
+// Parsing file /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_area/toll.v ...
+// Golden root module is set to 'toll_gate'
+// Warning: (RTL1.2) Variable/signal is assigned by multiple non-blocking assignments (occurrence:3)
+// Warning: (RTL1.5a) Assignment with RHS bit width is greater than LHS bit width (occurrence:9)
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:3)
+// Warning: (RTL7.8) Overflowed integer is truncated (occurrence:4)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:1)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:1)
+// Warning: (HRC3.6) Port connection width mis-matches. Undriven signals are floating (occurrence:1)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:8)
+// Note: Read VERILOG design successfully
+// Command: read design /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_area/netlist.v -verilog -revised
+// Parsing file /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_area/netlist.v ...
+// Revised root module is set to 'toll_gate'
+// Warning: (RTL2.2) Variable is referenced but never assigned (occurrence:8)
+// Warning: (RTL2.5) Net is referenced without an assignment. Design verification will be based on set_undriven_signal setting (occurrence:8)
+// Warning: (RTL2.13) Undriven pin is detected (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:1)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:12)
+// Warning: There are 1 undriven nets in Revised
+// Warning: There are 1 undriven pins in Revised
+// Note: Read VERILOG design successfully
+// Command: set system mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// (F13) Converted 13 DFF(s) to DLAT(s) due to direct feedback
+// Processing Revised ...
+// Modeling Revised ...
+// (F28) Converted 1 internal output port(s) to inout port(s)
+// Warning: Golden and Revised have different numbers of key points:
+// Golden  key points = 294
+// Revised key points = 278
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            12     12     254       278     
+--------------------------------------------------------------------------------
+Revised           12     12     254       278     
+================================================================================
+Unmapped points:
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF    DLAT      Total   
+--------------------------------------------------------------------------------
+Unreachable       3      13        16      
+================================================================================
+// Command: add compared points -all
+// 266 compared points added to compare list
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           12     10        22      
+--------------------------------------------------------------------------------
+Non-equivalent       0      244       244     
+================================================================================
+CPU time     : 3.37    seconds
+Elapse time  : 2       seconds
+Memory usage : 322.18  M bytes
+// Command: report messages -compare -verb
+// Command: report compare data -noneq
+Compared points are: Non-equivalent
+  (G) + 25   DFF  /state_reg[2]
+  (R) + 278  DFF  /state_reg[2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 952  MUX  /U$38/U$3
+  (R) + 3788 INV  /g782/U$3
+
+Compared points are: Non-equivalent
+  (G) + 26   DFF  /state_reg[1]
+  (R) + 276  DFF  /state_reg[1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 951  MUX  /U$38/U$2
+  (R) + 3772 INV  /g779/U$4
+
+Compared points are: Non-equivalent
+  (G) + 27   DFF  /state_reg[0]
+  (R) + 277  DFF  /state_reg[0]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 950  MUX  /U$38/U$1
+  (R) + 3785 INV  /g781/U$4
+
+Compared points are: Non-equivalent
+  (G) + 33   DFF  /u_account_balance/balance_db_reg[0][15]
+  (R) + 40   DFF  /u_account_balance/balance_db_reg[0][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1097 MUX  /u_account_balance/U$5/U$16
+  (R) + 2668 OR   /u_account_balance/balance_db_reg[0][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 34   DFF  /u_account_balance/balance_db_reg[0][14]
+  (R) + 39   DFF  /u_account_balance/balance_db_reg[0][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1092 MUX  /u_account_balance/U$5/U$15
+  (R) + 2663 OR   /u_account_balance/balance_db_reg[0][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 35   DFF  /u_account_balance/balance_db_reg[0][13]
+  (R) + 38   DFF  /u_account_balance/balance_db_reg[0][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1087 MUX  /u_account_balance/U$5/U$14
+  (R) + 2652 OR   /u_account_balance/balance_db_reg[0][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 36   DFF  /u_account_balance/balance_db_reg[0][12]
+  (R) + 37   DFF  /u_account_balance/balance_db_reg[0][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1082 MUX  /u_account_balance/U$5/U$13
+  (R) + 2647 OR   /u_account_balance/balance_db_reg[0][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 37   DFF  /u_account_balance/balance_db_reg[0][11]
+  (R) + 36   DFF  /u_account_balance/balance_db_reg[0][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1077 MUX  /u_account_balance/U$5/U$12
+  (R) + 2636 OR   /u_account_balance/balance_db_reg[0][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 38   DFF  /u_account_balance/balance_db_reg[0][10]
+  (R) + 35   DFF  /u_account_balance/balance_db_reg[0][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1072 MUX  /u_account_balance/U$5/U$11
+  (R) + 2631 OR   /u_account_balance/balance_db_reg[0][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 39   DFF  /u_account_balance/balance_db_reg[0][9]
+  (R) + 34   DFF  /u_account_balance/balance_db_reg[0][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1067 MUX  /u_account_balance/U$5/U$10
+  (R) + 2620 OR   /u_account_balance/balance_db_reg[0][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 40   DFF  /u_account_balance/balance_db_reg[0][8]
+  (R) + 33   DFF  /u_account_balance/balance_db_reg[0][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1062 MUX  /u_account_balance/U$5/U$9
+  (R) + 2615 OR   /u_account_balance/balance_db_reg[0][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 41   DFF  /u_account_balance/balance_db_reg[0][7]
+  (R) + 32   DFF  /u_account_balance/balance_db_reg[0][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1057 MUX  /u_account_balance/U$5/U$8
+  (R) + 2607 OR   /u_account_balance/balance_db_reg[0][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 42   DFF  /u_account_balance/balance_db_reg[0][6]
+  (R) + 31   DFF  /u_account_balance/balance_db_reg[0][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1052 MUX  /u_account_balance/U$5/U$7
+  (R) + 2602 OR   /u_account_balance/balance_db_reg[0][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 43   DFF  /u_account_balance/balance_db_reg[0][5]
+  (R) + 30   DFF  /u_account_balance/balance_db_reg[0][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1047 MUX  /u_account_balance/U$5/U$6
+  (R) + 2589 OR   /u_account_balance/balance_db_reg[0][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 44   DFF  /u_account_balance/balance_db_reg[0][4]
+  (R) + 29   DFF  /u_account_balance/balance_db_reg[0][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1042 MUX  /u_account_balance/U$5/U$5
+  (R) + 2584 OR   /u_account_balance/balance_db_reg[0][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 45   DFF  /u_account_balance/balance_db_reg[0][3]
+  (R) + 28   DFF  /u_account_balance/balance_db_reg[0][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1037 MUX  /u_account_balance/U$5/U$4
+  (R) + 2574 OR   /u_account_balance/balance_db_reg[0][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 46   DFF  /u_account_balance/balance_db_reg[0][2]
+  (R) + 27   DFF  /u_account_balance/balance_db_reg[0][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1032 MUX  /u_account_balance/U$5/U$3
+  (R) + 2569 OR   /u_account_balance/balance_db_reg[0][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 47   DFF  /u_account_balance/balance_db_reg[0][1]
+  (R) + 26   DFF  /u_account_balance/balance_db_reg[0][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1028 MUX  /u_account_balance/U$5/U$2
+  (R) + 2559 OR   /u_account_balance/balance_db_reg[0][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 48   DFF  /u_account_balance/balance_db_reg[1][15]
+  (R) + 55   DFF  /u_account_balance/balance_db_reg[1][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1130 MUX  /u_account_balance/U$9/U$16
+  (R) + 3448 OR   /u_account_balance/g3379/U$3
+
+Compared points are: Non-equivalent
+  (G) + 49   DFF  /u_account_balance/balance_db_reg[1][14]
+  (R) + 54   DFF  /u_account_balance/balance_db_reg[1][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1128 MUX  /u_account_balance/U$9/U$15
+  (R) + 3469 OR   /u_account_balance/g3468/U$3
+
+Compared points are: Non-equivalent
+  (G) + 50   DFF  /u_account_balance/balance_db_reg[1][13]
+  (R) + 53   DFF  /u_account_balance/balance_db_reg[1][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1126 MUX  /u_account_balance/U$9/U$14
+  (R) + 3605 OR   /u_account_balance/g3508/U$3
+
+Compared points are: Non-equivalent
+  (G) + 51   DFF  /u_account_balance/balance_db_reg[1][12]
+  (R) + 52   DFF  /u_account_balance/balance_db_reg[1][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1124 MUX  /u_account_balance/U$9/U$13
+  (R) + 3551 OR   /u_account_balance/g3490/U$3
+
+Compared points are: Non-equivalent
+  (G) + 52   DFF  /u_account_balance/balance_db_reg[1][11]
+  (R) + 51   DFF  /u_account_balance/balance_db_reg[1][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1122 MUX  /u_account_balance/U$9/U$12
+  (R) + 3602 OR   /u_account_balance/g3507/U$3
+
+Compared points are: Non-equivalent
+  (G) + 53   DFF  /u_account_balance/balance_db_reg[1][10]
+  (R) + 50   DFF  /u_account_balance/balance_db_reg[1][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1120 MUX  /u_account_balance/U$9/U$11
+  (R) + 3548 OR   /u_account_balance/g3489/U$3
+
+Compared points are: Non-equivalent
+  (G) + 54   DFF  /u_account_balance/balance_db_reg[1][9]
+  (R) + 49   DFF  /u_account_balance/balance_db_reg[1][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1118 MUX  /u_account_balance/U$9/U$10
+  (R) + 3599 OR   /u_account_balance/g3506/U$3
+
+Compared points are: Non-equivalent
+  (G) + 55   DFF  /u_account_balance/balance_db_reg[1][8]
+  (R) + 48   DFF  /u_account_balance/balance_db_reg[1][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1116 MUX  /u_account_balance/U$9/U$9
+  (R) + 3545 OR   /u_account_balance/g3488/U$3
+
+Compared points are: Non-equivalent
+  (G) + 56   DFF  /u_account_balance/balance_db_reg[1][7]
+  (R) + 47   DFF  /u_account_balance/balance_db_reg[1][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1114 MUX  /u_account_balance/U$9/U$8
+  (R) + 3596 OR   /u_account_balance/g3505/U$3
+
+Compared points are: Non-equivalent
+  (G) + 57   DFF  /u_account_balance/balance_db_reg[1][6]
+  (R) + 46   DFF  /u_account_balance/balance_db_reg[1][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1112 MUX  /u_account_balance/U$9/U$7
+  (R) + 3515 INV  /u_account_balance/g3478/U$3
+
+Compared points are: Non-equivalent
+  (G) + 58   DFF  /u_account_balance/balance_db_reg[1][5]
+  (R) + 45   DFF  /u_account_balance/balance_db_reg[1][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1110 MUX  /u_account_balance/U$9/U$6
+  (R) + 3618 INV  /u_account_balance/g17079/U$2
+
+Compared points are: Non-equivalent
+  (G) + 59   DFF  /u_account_balance/balance_db_reg[1][4]
+  (R) + 44   DFF  /u_account_balance/balance_db_reg[1][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1108 MUX  /u_account_balance/U$9/U$5
+  (R) + 3542 OR   /u_account_balance/g3487/U$3
+
+Compared points are: Non-equivalent
+  (G) + 60   DFF  /u_account_balance/balance_db_reg[1][3]
+  (R) + 43   DFF  /u_account_balance/balance_db_reg[1][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1106 MUX  /u_account_balance/U$9/U$4
+  (R) + 3593 OR   /u_account_balance/g3504/U$3
+
+Compared points are: Non-equivalent
+  (G) + 61   DFF  /u_account_balance/balance_db_reg[1][2]
+  (R) + 42   DFF  /u_account_balance/balance_db_reg[1][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1104 MUX  /u_account_balance/U$9/U$3
+  (R) + 3505 INV  /u_account_balance/g3476/U$3
+
+Compared points are: Non-equivalent
+  (G) + 62   DFF  /u_account_balance/balance_db_reg[1][1]
+  (R) + 41   DFF  /u_account_balance/balance_db_reg[1][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1102 MUX  /u_account_balance/U$9/U$2
+  (R) + 3539 OR   /u_account_balance/g3486/U$3
+
+Compared points are: Non-equivalent
+  (G) + 64   DFF  /u_account_balance/balance_db_reg[2][15]
+  (R) + 70   DFF  /u_account_balance/balance_db_reg[2][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1163 MUX  /u_account_balance/U$12/U$16
+  (R) + 3466 OR   /u_account_balance/g3381/U$3
+
+Compared points are: Non-equivalent
+  (G) + 65   DFF  /u_account_balance/balance_db_reg[2][14]
+  (R) + 69   DFF  /u_account_balance/balance_db_reg[2][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1161 MUX  /u_account_balance/U$12/U$15
+  (R) + 3518 OR   /u_account_balance/g3479/U$3
+
+Compared points are: Non-equivalent
+  (G) + 66   DFF  /u_account_balance/balance_db_reg[2][13]
+  (R) + 68   DFF  /u_account_balance/balance_db_reg[2][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1159 MUX  /u_account_balance/U$12/U$14
+  (R) + 3472 OR   /u_account_balance/g3469/U$3
+
+Compared points are: Non-equivalent
+  (G) + 67   DFF  /u_account_balance/balance_db_reg[2][12]
+  (R) + 67   DFF  /u_account_balance/balance_db_reg[2][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1157 MUX  /u_account_balance/U$12/U$13
+  (R) + 3572 OR   /u_account_balance/g3497/U$3
+
+Compared points are: Non-equivalent
+  (G) + 68   DFF  /u_account_balance/balance_db_reg[2][11]
+  (R) + 66   DFF  /u_account_balance/balance_db_reg[2][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1155 MUX  /u_account_balance/U$12/U$12
+  (R) + 3475 OR   /u_account_balance/g3470/U$3
+
+Compared points are: Non-equivalent
+  (G) + 69   DFF  /u_account_balance/balance_db_reg[2][10]
+  (R) + 65   DFF  /u_account_balance/balance_db_reg[2][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1153 MUX  /u_account_balance/U$12/U$11
+  (R) + 3569 OR   /u_account_balance/g3496/U$3
+
+Compared points are: Non-equivalent
+  (G) + 70   DFF  /u_account_balance/balance_db_reg[2][9]
+  (R) + 64   DFF  /u_account_balance/balance_db_reg[2][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1151 MUX  /u_account_balance/U$12/U$10
+  (R) + 3478 OR   /u_account_balance/g3471/U$3
+
+Compared points are: Non-equivalent
+  (G) + 71   DFF  /u_account_balance/balance_db_reg[2][8]
+  (R) + 63   DFF  /u_account_balance/balance_db_reg[2][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1149 MUX  /u_account_balance/U$12/U$9
+  (R) + 3566 OR   /u_account_balance/g3495/U$3
+
+Compared points are: Non-equivalent
+  (G) + 72   DFF  /u_account_balance/balance_db_reg[2][7]
+  (R) + 62   DFF  /u_account_balance/balance_db_reg[2][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1147 MUX  /u_account_balance/U$12/U$8
+  (R) + 3481 OR   /u_account_balance/g3472/U$3
+
+Compared points are: Non-equivalent
+  (G) + 73   DFF  /u_account_balance/balance_db_reg[2][6]
+  (R) + 61   DFF  /u_account_balance/balance_db_reg[2][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1145 MUX  /u_account_balance/U$12/U$7
+  (R) + 3563 OR   /u_account_balance/g3494/U$3
+
+Compared points are: Non-equivalent
+  (G) + 74   DFF  /u_account_balance/balance_db_reg[2][5]
+  (R) + 60   DFF  /u_account_balance/balance_db_reg[2][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1143 MUX  /u_account_balance/U$12/U$6
+  (R) + 3554 OR   /u_account_balance/g3491/U$3
+
+Compared points are: Non-equivalent
+  (G) + 75   DFF  /u_account_balance/balance_db_reg[2][4]
+  (R) + 59   DFF  /u_account_balance/balance_db_reg[2][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1141 MUX  /u_account_balance/U$12/U$5
+  (R) + 3560 OR   /u_account_balance/g3493/U$3
+
+Compared points are: Non-equivalent
+  (G) + 76   DFF  /u_account_balance/balance_db_reg[2][3]
+  (R) + 58   DFF  /u_account_balance/balance_db_reg[2][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1139 MUX  /u_account_balance/U$12/U$4
+  (R) + 3608 OR   /u_account_balance/g3509/U$3
+
+Compared points are: Non-equivalent
+  (G) + 77   DFF  /u_account_balance/balance_db_reg[2][2]
+  (R) + 57   DFF  /u_account_balance/balance_db_reg[2][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1137 MUX  /u_account_balance/U$12/U$3
+  (R) + 3490 INV  /u_account_balance/g3473/U$2
+
+Compared points are: Non-equivalent
+  (G) + 78   DFF  /u_account_balance/balance_db_reg[2][1]
+  (R) + 56   DFF  /u_account_balance/balance_db_reg[2][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1135 MUX  /u_account_balance/U$12/U$2
+  (R) + 3557 OR   /u_account_balance/g3492/U$3
+
+Compared points are: Non-equivalent
+  (G) + 80   DFF  /u_account_balance/balance_db_reg[3][15]
+  (R) + 85   DFF  /u_account_balance/balance_db_reg[3][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1196 MUX  /u_account_balance/U$15/U$16
+  (R) + 3459 OR   /u_account_balance/g3380/U$3
+
+Compared points are: Non-equivalent
+  (G) + 81   DFF  /u_account_balance/balance_db_reg[3][14]
+  (R) + 84   DFF  /u_account_balance/balance_db_reg[3][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1194 MUX  /u_account_balance/U$15/U$15
+  (R) + 3536 OR   /u_account_balance/g3485/U$3
+
+Compared points are: Non-equivalent
+  (G) + 82   DFF  /u_account_balance/balance_db_reg[3][13]
+  (R) + 83   DFF  /u_account_balance/balance_db_reg[3][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1192 MUX  /u_account_balance/U$15/U$14
+  (R) + 3590 OR   /u_account_balance/g3503/U$3
+
+Compared points are: Non-equivalent
+  (G) + 83   DFF  /u_account_balance/balance_db_reg[3][12]
+  (R) + 82   DFF  /u_account_balance/balance_db_reg[3][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1190 MUX  /u_account_balance/U$15/U$13
+  (R) + 3533 OR   /u_account_balance/g3484/U$3
+
+Compared points are: Non-equivalent
+  (G) + 84   DFF  /u_account_balance/balance_db_reg[3][11]
+  (R) + 81   DFF  /u_account_balance/balance_db_reg[3][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1188 MUX  /u_account_balance/U$15/U$12
+  (R) + 3587 OR   /u_account_balance/g3502/U$3
+
+Compared points are: Non-equivalent
+  (G) + 85   DFF  /u_account_balance/balance_db_reg[3][10]
+  (R) + 80   DFF  /u_account_balance/balance_db_reg[3][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1186 MUX  /u_account_balance/U$15/U$11
+  (R) + 3530 OR   /u_account_balance/g3483/U$3
+
+Compared points are: Non-equivalent
+  (G) + 86   DFF  /u_account_balance/balance_db_reg[3][9]
+  (R) + 79   DFF  /u_account_balance/balance_db_reg[3][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1184 MUX  /u_account_balance/U$15/U$10
+  (R) + 3584 OR   /u_account_balance/g3501/U$3
+
+Compared points are: Non-equivalent
+  (G) + 87   DFF  /u_account_balance/balance_db_reg[3][8]
+  (R) + 78   DFF  /u_account_balance/balance_db_reg[3][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1182 MUX  /u_account_balance/U$15/U$9
+  (R) + 3527 OR   /u_account_balance/g3482/U$3
+
+Compared points are: Non-equivalent
+  (G) + 88   DFF  /u_account_balance/balance_db_reg[3][7]
+  (R) + 77   DFF  /u_account_balance/balance_db_reg[3][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1180 MUX  /u_account_balance/U$15/U$8
+  (R) + 3581 OR   /u_account_balance/g3500/U$3
+
+Compared points are: Non-equivalent
+  (G) + 89   DFF  /u_account_balance/balance_db_reg[3][6]
+  (R) + 76   DFF  /u_account_balance/balance_db_reg[3][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1178 MUX  /u_account_balance/U$15/U$7
+  (R) + 3524 OR   /u_account_balance/g3481/U$3
+
+Compared points are: Non-equivalent
+  (G) + 90   DFF  /u_account_balance/balance_db_reg[3][5]
+  (R) + 75   DFF  /u_account_balance/balance_db_reg[3][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1176 MUX  /u_account_balance/U$15/U$6
+  (R) + 3578 OR   /u_account_balance/g3499/U$3
+
+Compared points are: Non-equivalent
+  (G) + 91   DFF  /u_account_balance/balance_db_reg[3][4]
+  (R) + 74   DFF  /u_account_balance/balance_db_reg[3][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1174 MUX  /u_account_balance/U$15/U$5
+  (R) + 3510 INV  /u_account_balance/g3477/U$3
+
+Compared points are: Non-equivalent
+  (G) + 92   DFF  /u_account_balance/balance_db_reg[3][3]
+  (R) + 73   DFF  /u_account_balance/balance_db_reg[3][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1172 MUX  /u_account_balance/U$15/U$4
+  (R) + 3575 OR   /u_account_balance/g3498/U$3
+
+Compared points are: Non-equivalent
+  (G) + 93   DFF  /u_account_balance/balance_db_reg[3][2]
+  (R) + 72   DFF  /u_account_balance/balance_db_reg[3][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1170 MUX  /u_account_balance/U$15/U$3
+  (R) + 3498 INV  /u_account_balance/g3475/U$3
+
+Compared points are: Non-equivalent
+  (G) + 94   DFF  /u_account_balance/balance_db_reg[3][1]
+  (R) + 71   DFF  /u_account_balance/balance_db_reg[3][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1168 MUX  /u_account_balance/U$15/U$2
+  (R) + 3521 OR   /u_account_balance/g3480/U$3
+
+Compared points are: Non-equivalent
+  (G) + 96   DFF  /u_account_balance/balance_db_reg[4][15]
+  (R) + 100  DFF  /u_account_balance/balance_db_reg[4][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1215 MUX  /u_account_balance/U$18/U$16
+  (R) + 2730 OR   /u_account_balance/balance_db_reg[4][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 97   DFF  /u_account_balance/balance_db_reg[4][14]
+  (R) + 99   DFF  /u_account_balance/balance_db_reg[4][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1214 MUX  /u_account_balance/U$18/U$15
+  (R) + 2726 OR   /u_account_balance/balance_db_reg[4][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 98   DFF  /u_account_balance/balance_db_reg[4][13]
+  (R) + 98   DFF  /u_account_balance/balance_db_reg[4][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1213 MUX  /u_account_balance/U$18/U$14
+  (R) + 2722 OR   /u_account_balance/balance_db_reg[4][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 99   DFF  /u_account_balance/balance_db_reg[4][12]
+  (R) + 97   DFF  /u_account_balance/balance_db_reg[4][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1212 MUX  /u_account_balance/U$18/U$13
+  (R) + 2718 OR   /u_account_balance/balance_db_reg[4][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 100  DFF  /u_account_balance/balance_db_reg[4][11]
+  (R) + 96   DFF  /u_account_balance/balance_db_reg[4][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1211 MUX  /u_account_balance/U$18/U$12
+  (R) + 2714 OR   /u_account_balance/balance_db_reg[4][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 101  DFF  /u_account_balance/balance_db_reg[4][10]
+  (R) + 95   DFF  /u_account_balance/balance_db_reg[4][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1210 MUX  /u_account_balance/U$18/U$11
+  (R) + 2710 OR   /u_account_balance/balance_db_reg[4][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 102  DFF  /u_account_balance/balance_db_reg[4][9]
+  (R) + 94   DFF  /u_account_balance/balance_db_reg[4][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1209 MUX  /u_account_balance/U$18/U$10
+  (R) + 2706 OR   /u_account_balance/balance_db_reg[4][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 103  DFF  /u_account_balance/balance_db_reg[4][8]
+  (R) + 93   DFF  /u_account_balance/balance_db_reg[4][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1208 MUX  /u_account_balance/U$18/U$9
+  (R) + 2702 OR   /u_account_balance/balance_db_reg[4][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 104  DFF  /u_account_balance/balance_db_reg[4][7]
+  (R) + 92   DFF  /u_account_balance/balance_db_reg[4][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1207 MUX  /u_account_balance/U$18/U$8
+  (R) + 2698 OR   /u_account_balance/balance_db_reg[4][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 105  DFF  /u_account_balance/balance_db_reg[4][6]
+  (R) + 91   DFF  /u_account_balance/balance_db_reg[4][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1206 MUX  /u_account_balance/U$18/U$7
+  (R) + 2694 OR   /u_account_balance/balance_db_reg[4][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 106  DFF  /u_account_balance/balance_db_reg[4][5]
+  (R) + 90   DFF  /u_account_balance/balance_db_reg[4][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1205 MUX  /u_account_balance/U$18/U$6
+  (R) + 2690 OR   /u_account_balance/balance_db_reg[4][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 107  DFF  /u_account_balance/balance_db_reg[4][4]
+  (R) + 89   DFF  /u_account_balance/balance_db_reg[4][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1204 MUX  /u_account_balance/U$18/U$5
+  (R) + 2686 OR   /u_account_balance/balance_db_reg[4][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 108  DFF  /u_account_balance/balance_db_reg[4][3]
+  (R) + 88   DFF  /u_account_balance/balance_db_reg[4][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1203 MUX  /u_account_balance/U$18/U$4
+  (R) + 2682 OR   /u_account_balance/balance_db_reg[4][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 109  DFF  /u_account_balance/balance_db_reg[4][2]
+  (R) + 87   DFF  /u_account_balance/balance_db_reg[4][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1202 MUX  /u_account_balance/U$18/U$3
+  (R) + 2678 OR   /u_account_balance/balance_db_reg[4][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 110  DFF  /u_account_balance/balance_db_reg[4][1]
+  (R) + 86   DFF  /u_account_balance/balance_db_reg[4][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1201 MUX  /u_account_balance/U$18/U$2
+  (R) + 2674 OR   /u_account_balance/balance_db_reg[4][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 111  DFF  /u_account_balance/balance_db_reg[5][15]
+  (R) + 115  DFF  /u_account_balance/balance_db_reg[5][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1234 MUX  /u_account_balance/U$22/U$16
+  (R) + 2800 OR   /u_account_balance/balance_db_reg[5][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 112  DFF  /u_account_balance/balance_db_reg[5][14]
+  (R) + 114  DFF  /u_account_balance/balance_db_reg[5][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1233 MUX  /u_account_balance/U$22/U$15
+  (R) + 2796 OR   /u_account_balance/balance_db_reg[5][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 113  DFF  /u_account_balance/balance_db_reg[5][13]
+  (R) + 113  DFF  /u_account_balance/balance_db_reg[5][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1232 MUX  /u_account_balance/U$22/U$14
+  (R) + 2792 OR   /u_account_balance/balance_db_reg[5][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 114  DFF  /u_account_balance/balance_db_reg[5][12]
+  (R) + 112  DFF  /u_account_balance/balance_db_reg[5][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1231 MUX  /u_account_balance/U$22/U$13
+  (R) + 2788 OR   /u_account_balance/balance_db_reg[5][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 115  DFF  /u_account_balance/balance_db_reg[5][11]
+  (R) + 111  DFF  /u_account_balance/balance_db_reg[5][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1230 MUX  /u_account_balance/U$22/U$12
+  (R) + 2784 OR   /u_account_balance/balance_db_reg[5][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 116  DFF  /u_account_balance/balance_db_reg[5][10]
+  (R) + 110  DFF  /u_account_balance/balance_db_reg[5][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1229 MUX  /u_account_balance/U$22/U$11
+  (R) + 2780 OR   /u_account_balance/balance_db_reg[5][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 117  DFF  /u_account_balance/balance_db_reg[5][9]
+  (R) + 109  DFF  /u_account_balance/balance_db_reg[5][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1228 MUX  /u_account_balance/U$22/U$10
+  (R) + 2776 OR   /u_account_balance/balance_db_reg[5][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 118  DFF  /u_account_balance/balance_db_reg[5][8]
+  (R) + 108  DFF  /u_account_balance/balance_db_reg[5][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1227 MUX  /u_account_balance/U$22/U$9
+  (R) + 2772 OR   /u_account_balance/balance_db_reg[5][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 119  DFF  /u_account_balance/balance_db_reg[5][7]
+  (R) + 107  DFF  /u_account_balance/balance_db_reg[5][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1226 MUX  /u_account_balance/U$22/U$8
+  (R) + 2768 OR   /u_account_balance/balance_db_reg[5][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 120  DFF  /u_account_balance/balance_db_reg[5][6]
+  (R) + 106  DFF  /u_account_balance/balance_db_reg[5][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1225 MUX  /u_account_balance/U$22/U$7
+  (R) + 2764 OR   /u_account_balance/balance_db_reg[5][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 121  DFF  /u_account_balance/balance_db_reg[5][5]
+  (R) + 105  DFF  /u_account_balance/balance_db_reg[5][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1224 MUX  /u_account_balance/U$22/U$6
+  (R) + 2760 OR   /u_account_balance/balance_db_reg[5][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 122  DFF  /u_account_balance/balance_db_reg[5][4]
+  (R) + 104  DFF  /u_account_balance/balance_db_reg[5][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1223 MUX  /u_account_balance/U$22/U$5
+  (R) + 2756 OR   /u_account_balance/balance_db_reg[5][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 123  DFF  /u_account_balance/balance_db_reg[5][3]
+  (R) + 103  DFF  /u_account_balance/balance_db_reg[5][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1222 MUX  /u_account_balance/U$22/U$4
+  (R) + 2752 OR   /u_account_balance/balance_db_reg[5][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 124  DFF  /u_account_balance/balance_db_reg[5][2]
+  (R) + 102  DFF  /u_account_balance/balance_db_reg[5][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1221 MUX  /u_account_balance/U$22/U$3
+  (R) + 2748 OR   /u_account_balance/balance_db_reg[5][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 125  DFF  /u_account_balance/balance_db_reg[5][1]
+  (R) + 101  DFF  /u_account_balance/balance_db_reg[5][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1220 MUX  /u_account_balance/U$22/U$2
+  (R) + 2744 OR   /u_account_balance/balance_db_reg[5][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 126  DFF  /u_account_balance/balance_db_reg[6][15]
+  (R) + 130  DFF  /u_account_balance/balance_db_reg[6][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1253 MUX  /u_account_balance/U$26/U$16
+  (R) + 2862 OR   /u_account_balance/balance_db_reg[6][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 127  DFF  /u_account_balance/balance_db_reg[6][14]
+  (R) + 129  DFF  /u_account_balance/balance_db_reg[6][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1252 MUX  /u_account_balance/U$26/U$15
+  (R) + 2858 OR   /u_account_balance/balance_db_reg[6][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 128  DFF  /u_account_balance/balance_db_reg[6][13]
+  (R) + 128  DFF  /u_account_balance/balance_db_reg[6][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1251 MUX  /u_account_balance/U$26/U$14
+  (R) + 2854 OR   /u_account_balance/balance_db_reg[6][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 129  DFF  /u_account_balance/balance_db_reg[6][12]
+  (R) + 127  DFF  /u_account_balance/balance_db_reg[6][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1250 MUX  /u_account_balance/U$26/U$13
+  (R) + 2850 OR   /u_account_balance/balance_db_reg[6][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 130  DFF  /u_account_balance/balance_db_reg[6][11]
+  (R) + 126  DFF  /u_account_balance/balance_db_reg[6][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1249 MUX  /u_account_balance/U$26/U$12
+  (R) + 2846 OR   /u_account_balance/balance_db_reg[6][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 131  DFF  /u_account_balance/balance_db_reg[6][10]
+  (R) + 125  DFF  /u_account_balance/balance_db_reg[6][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1248 MUX  /u_account_balance/U$26/U$11
+  (R) + 2842 OR   /u_account_balance/balance_db_reg[6][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 132  DFF  /u_account_balance/balance_db_reg[6][9]
+  (R) + 124  DFF  /u_account_balance/balance_db_reg[6][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1247 MUX  /u_account_balance/U$26/U$10
+  (R) + 2838 OR   /u_account_balance/balance_db_reg[6][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 133  DFF  /u_account_balance/balance_db_reg[6][8]
+  (R) + 123  DFF  /u_account_balance/balance_db_reg[6][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1246 MUX  /u_account_balance/U$26/U$9
+  (R) + 2834 OR   /u_account_balance/balance_db_reg[6][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 134  DFF  /u_account_balance/balance_db_reg[6][7]
+  (R) + 122  DFF  /u_account_balance/balance_db_reg[6][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1245 MUX  /u_account_balance/U$26/U$8
+  (R) + 2830 OR   /u_account_balance/balance_db_reg[6][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 135  DFF  /u_account_balance/balance_db_reg[6][6]
+  (R) + 121  DFF  /u_account_balance/balance_db_reg[6][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1244 MUX  /u_account_balance/U$26/U$7
+  (R) + 2826 OR   /u_account_balance/balance_db_reg[6][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 136  DFF  /u_account_balance/balance_db_reg[6][5]
+  (R) + 120  DFF  /u_account_balance/balance_db_reg[6][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1243 MUX  /u_account_balance/U$26/U$6
+  (R) + 2822 OR   /u_account_balance/balance_db_reg[6][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 137  DFF  /u_account_balance/balance_db_reg[6][4]
+  (R) + 119  DFF  /u_account_balance/balance_db_reg[6][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1242 MUX  /u_account_balance/U$26/U$5
+  (R) + 2818 OR   /u_account_balance/balance_db_reg[6][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 138  DFF  /u_account_balance/balance_db_reg[6][3]
+  (R) + 118  DFF  /u_account_balance/balance_db_reg[6][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1241 MUX  /u_account_balance/U$26/U$4
+  (R) + 2814 OR   /u_account_balance/balance_db_reg[6][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 139  DFF  /u_account_balance/balance_db_reg[6][2]
+  (R) + 117  DFF  /u_account_balance/balance_db_reg[6][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1240 MUX  /u_account_balance/U$26/U$3
+  (R) + 2810 OR   /u_account_balance/balance_db_reg[6][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 140  DFF  /u_account_balance/balance_db_reg[6][1]
+  (R) + 116  DFF  /u_account_balance/balance_db_reg[6][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1239 MUX  /u_account_balance/U$26/U$2
+  (R) + 2806 OR   /u_account_balance/balance_db_reg[6][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 141  DFF  /u_account_balance/balance_db_reg[7][15]
+  (R) + 145  DFF  /u_account_balance/balance_db_reg[7][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1272 MUX  /u_account_balance/U$30/U$16
+  (R) + 2924 OR   /u_account_balance/balance_db_reg[7][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 142  DFF  /u_account_balance/balance_db_reg[7][14]
+  (R) + 144  DFF  /u_account_balance/balance_db_reg[7][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1271 MUX  /u_account_balance/U$30/U$15
+  (R) + 2920 OR   /u_account_balance/balance_db_reg[7][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 143  DFF  /u_account_balance/balance_db_reg[7][13]
+  (R) + 143  DFF  /u_account_balance/balance_db_reg[7][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1270 MUX  /u_account_balance/U$30/U$14
+  (R) + 2916 OR   /u_account_balance/balance_db_reg[7][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 144  DFF  /u_account_balance/balance_db_reg[7][12]
+  (R) + 142  DFF  /u_account_balance/balance_db_reg[7][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1269 MUX  /u_account_balance/U$30/U$13
+  (R) + 2912 OR   /u_account_balance/balance_db_reg[7][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 145  DFF  /u_account_balance/balance_db_reg[7][11]
+  (R) + 141  DFF  /u_account_balance/balance_db_reg[7][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1268 MUX  /u_account_balance/U$30/U$12
+  (R) + 2908 OR   /u_account_balance/balance_db_reg[7][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 146  DFF  /u_account_balance/balance_db_reg[7][10]
+  (R) + 140  DFF  /u_account_balance/balance_db_reg[7][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1267 MUX  /u_account_balance/U$30/U$11
+  (R) + 2904 OR   /u_account_balance/balance_db_reg[7][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 147  DFF  /u_account_balance/balance_db_reg[7][9]
+  (R) + 139  DFF  /u_account_balance/balance_db_reg[7][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1266 MUX  /u_account_balance/U$30/U$10
+  (R) + 2900 OR   /u_account_balance/balance_db_reg[7][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 148  DFF  /u_account_balance/balance_db_reg[7][8]
+  (R) + 138  DFF  /u_account_balance/balance_db_reg[7][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1265 MUX  /u_account_balance/U$30/U$9
+  (R) + 2896 OR   /u_account_balance/balance_db_reg[7][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 149  DFF  /u_account_balance/balance_db_reg[7][7]
+  (R) + 137  DFF  /u_account_balance/balance_db_reg[7][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1264 MUX  /u_account_balance/U$30/U$8
+  (R) + 2892 OR   /u_account_balance/balance_db_reg[7][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 150  DFF  /u_account_balance/balance_db_reg[7][6]
+  (R) + 136  DFF  /u_account_balance/balance_db_reg[7][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1263 MUX  /u_account_balance/U$30/U$7
+  (R) + 2888 OR   /u_account_balance/balance_db_reg[7][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 151  DFF  /u_account_balance/balance_db_reg[7][5]
+  (R) + 135  DFF  /u_account_balance/balance_db_reg[7][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1262 MUX  /u_account_balance/U$30/U$6
+  (R) + 2884 OR   /u_account_balance/balance_db_reg[7][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 152  DFF  /u_account_balance/balance_db_reg[7][4]
+  (R) + 134  DFF  /u_account_balance/balance_db_reg[7][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1261 MUX  /u_account_balance/U$30/U$5
+  (R) + 2880 OR   /u_account_balance/balance_db_reg[7][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 153  DFF  /u_account_balance/balance_db_reg[7][3]
+  (R) + 133  DFF  /u_account_balance/balance_db_reg[7][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1260 MUX  /u_account_balance/U$30/U$4
+  (R) + 2876 OR   /u_account_balance/balance_db_reg[7][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 154  DFF  /u_account_balance/balance_db_reg[7][2]
+  (R) + 132  DFF  /u_account_balance/balance_db_reg[7][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1259 MUX  /u_account_balance/U$30/U$3
+  (R) + 2872 OR   /u_account_balance/balance_db_reg[7][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 155  DFF  /u_account_balance/balance_db_reg[7][1]
+  (R) + 131  DFF  /u_account_balance/balance_db_reg[7][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1258 MUX  /u_account_balance/U$30/U$2
+  (R) + 2868 OR   /u_account_balance/balance_db_reg[7][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 156  DFF  /u_account_balance/balance_db_reg[8][15]
+  (R) + 160  DFF  /u_account_balance/balance_db_reg[8][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1291 MUX  /u_account_balance/U$34/U$16
+  (R) + 2991 OR   /u_account_balance/balance_db_reg[8][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 157  DFF  /u_account_balance/balance_db_reg[8][14]
+  (R) + 159  DFF  /u_account_balance/balance_db_reg[8][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1290 MUX  /u_account_balance/U$34/U$15
+  (R) + 2987 OR   /u_account_balance/balance_db_reg[8][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 158  DFF  /u_account_balance/balance_db_reg[8][13]
+  (R) + 158  DFF  /u_account_balance/balance_db_reg[8][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1289 MUX  /u_account_balance/U$34/U$14
+  (R) + 2983 OR   /u_account_balance/balance_db_reg[8][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 159  DFF  /u_account_balance/balance_db_reg[8][12]
+  (R) + 157  DFF  /u_account_balance/balance_db_reg[8][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1288 MUX  /u_account_balance/U$34/U$13
+  (R) + 2979 OR   /u_account_balance/balance_db_reg[8][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 160  DFF  /u_account_balance/balance_db_reg[8][11]
+  (R) + 156  DFF  /u_account_balance/balance_db_reg[8][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1287 MUX  /u_account_balance/U$34/U$12
+  (R) + 2975 OR   /u_account_balance/balance_db_reg[8][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 161  DFF  /u_account_balance/balance_db_reg[8][10]
+  (R) + 155  DFF  /u_account_balance/balance_db_reg[8][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1286 MUX  /u_account_balance/U$34/U$11
+  (R) + 2971 OR   /u_account_balance/balance_db_reg[8][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 162  DFF  /u_account_balance/balance_db_reg[8][9]
+  (R) + 154  DFF  /u_account_balance/balance_db_reg[8][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1285 MUX  /u_account_balance/U$34/U$10
+  (R) + 2967 OR   /u_account_balance/balance_db_reg[8][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 163  DFF  /u_account_balance/balance_db_reg[8][8]
+  (R) + 153  DFF  /u_account_balance/balance_db_reg[8][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1284 MUX  /u_account_balance/U$34/U$9
+  (R) + 2963 OR   /u_account_balance/balance_db_reg[8][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 164  DFF  /u_account_balance/balance_db_reg[8][7]
+  (R) + 152  DFF  /u_account_balance/balance_db_reg[8][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1283 MUX  /u_account_balance/U$34/U$8
+  (R) + 2959 OR   /u_account_balance/balance_db_reg[8][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 165  DFF  /u_account_balance/balance_db_reg[8][6]
+  (R) + 151  DFF  /u_account_balance/balance_db_reg[8][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1282 MUX  /u_account_balance/U$34/U$7
+  (R) + 2955 OR   /u_account_balance/balance_db_reg[8][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 166  DFF  /u_account_balance/balance_db_reg[8][5]
+  (R) + 150  DFF  /u_account_balance/balance_db_reg[8][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1281 MUX  /u_account_balance/U$34/U$6
+  (R) + 2951 OR   /u_account_balance/balance_db_reg[8][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 167  DFF  /u_account_balance/balance_db_reg[8][4]
+  (R) + 149  DFF  /u_account_balance/balance_db_reg[8][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1280 MUX  /u_account_balance/U$34/U$5
+  (R) + 2947 OR   /u_account_balance/balance_db_reg[8][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 168  DFF  /u_account_balance/balance_db_reg[8][3]
+  (R) + 148  DFF  /u_account_balance/balance_db_reg[8][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1279 MUX  /u_account_balance/U$34/U$4
+  (R) + 2943 OR   /u_account_balance/balance_db_reg[8][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 169  DFF  /u_account_balance/balance_db_reg[8][2]
+  (R) + 147  DFF  /u_account_balance/balance_db_reg[8][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1278 MUX  /u_account_balance/U$34/U$3
+  (R) + 2939 OR   /u_account_balance/balance_db_reg[8][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 170  DFF  /u_account_balance/balance_db_reg[8][1]
+  (R) + 146  DFF  /u_account_balance/balance_db_reg[8][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1277 MUX  /u_account_balance/U$34/U$2
+  (R) + 2935 OR   /u_account_balance/balance_db_reg[8][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 171  DFF  /u_account_balance/balance_db_reg[9][15]
+  (R) + 175  DFF  /u_account_balance/balance_db_reg[9][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1310 MUX  /u_account_balance/U$38/U$16
+  (R) + 3056 OR   /u_account_balance/balance_db_reg[9][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 172  DFF  /u_account_balance/balance_db_reg[9][14]
+  (R) + 174  DFF  /u_account_balance/balance_db_reg[9][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1309 MUX  /u_account_balance/U$38/U$15
+  (R) + 3052 OR   /u_account_balance/balance_db_reg[9][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 173  DFF  /u_account_balance/balance_db_reg[9][13]
+  (R) + 173  DFF  /u_account_balance/balance_db_reg[9][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1308 MUX  /u_account_balance/U$38/U$14
+  (R) + 3048 OR   /u_account_balance/balance_db_reg[9][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 174  DFF  /u_account_balance/balance_db_reg[9][12]
+  (R) + 172  DFF  /u_account_balance/balance_db_reg[9][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1307 MUX  /u_account_balance/U$38/U$13
+  (R) + 3044 OR   /u_account_balance/balance_db_reg[9][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 175  DFF  /u_account_balance/balance_db_reg[9][11]
+  (R) + 171  DFF  /u_account_balance/balance_db_reg[9][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1306 MUX  /u_account_balance/U$38/U$12
+  (R) + 3040 OR   /u_account_balance/balance_db_reg[9][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 176  DFF  /u_account_balance/balance_db_reg[9][10]
+  (R) + 170  DFF  /u_account_balance/balance_db_reg[9][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1305 MUX  /u_account_balance/U$38/U$11
+  (R) + 3036 OR   /u_account_balance/balance_db_reg[9][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 177  DFF  /u_account_balance/balance_db_reg[9][9]
+  (R) + 169  DFF  /u_account_balance/balance_db_reg[9][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1304 MUX  /u_account_balance/U$38/U$10
+  (R) + 3032 OR   /u_account_balance/balance_db_reg[9][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 178  DFF  /u_account_balance/balance_db_reg[9][8]
+  (R) + 168  DFF  /u_account_balance/balance_db_reg[9][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1303 MUX  /u_account_balance/U$38/U$9
+  (R) + 3028 OR   /u_account_balance/balance_db_reg[9][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 179  DFF  /u_account_balance/balance_db_reg[9][7]
+  (R) + 167  DFF  /u_account_balance/balance_db_reg[9][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1302 MUX  /u_account_balance/U$38/U$8
+  (R) + 3024 OR   /u_account_balance/balance_db_reg[9][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 180  DFF  /u_account_balance/balance_db_reg[9][6]
+  (R) + 166  DFF  /u_account_balance/balance_db_reg[9][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1301 MUX  /u_account_balance/U$38/U$7
+  (R) + 3020 OR   /u_account_balance/balance_db_reg[9][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 181  DFF  /u_account_balance/balance_db_reg[9][5]
+  (R) + 165  DFF  /u_account_balance/balance_db_reg[9][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1300 MUX  /u_account_balance/U$38/U$6
+  (R) + 3016 OR   /u_account_balance/balance_db_reg[9][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 182  DFF  /u_account_balance/balance_db_reg[9][4]
+  (R) + 164  DFF  /u_account_balance/balance_db_reg[9][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1299 MUX  /u_account_balance/U$38/U$5
+  (R) + 3012 OR   /u_account_balance/balance_db_reg[9][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 183  DFF  /u_account_balance/balance_db_reg[9][3]
+  (R) + 163  DFF  /u_account_balance/balance_db_reg[9][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1298 MUX  /u_account_balance/U$38/U$4
+  (R) + 3008 OR   /u_account_balance/balance_db_reg[9][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 184  DFF  /u_account_balance/balance_db_reg[9][2]
+  (R) + 162  DFF  /u_account_balance/balance_db_reg[9][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1297 MUX  /u_account_balance/U$38/U$3
+  (R) + 3004 OR   /u_account_balance/balance_db_reg[9][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 185  DFF  /u_account_balance/balance_db_reg[9][1]
+  (R) + 161  DFF  /u_account_balance/balance_db_reg[9][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1296 MUX  /u_account_balance/U$38/U$2
+  (R) + 3000 OR   /u_account_balance/balance_db_reg[9][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 186  DFF  /u_account_balance/balance_db_reg[10][15]
+  (R) + 190  DFF  /u_account_balance/balance_db_reg[10][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1329 MUX  /u_account_balance/U$42/U$16
+  (R) + 3122 OR   /u_account_balance/balance_db_reg[10][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 187  DFF  /u_account_balance/balance_db_reg[10][14]
+  (R) + 189  DFF  /u_account_balance/balance_db_reg[10][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1328 MUX  /u_account_balance/U$42/U$15
+  (R) + 3118 OR   /u_account_balance/balance_db_reg[10][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 188  DFF  /u_account_balance/balance_db_reg[10][13]
+  (R) + 188  DFF  /u_account_balance/balance_db_reg[10][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1327 MUX  /u_account_balance/U$42/U$14
+  (R) + 3114 OR   /u_account_balance/balance_db_reg[10][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 189  DFF  /u_account_balance/balance_db_reg[10][12]
+  (R) + 187  DFF  /u_account_balance/balance_db_reg[10][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1326 MUX  /u_account_balance/U$42/U$13
+  (R) + 3110 OR   /u_account_balance/balance_db_reg[10][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 190  DFF  /u_account_balance/balance_db_reg[10][11]
+  (R) + 186  DFF  /u_account_balance/balance_db_reg[10][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1325 MUX  /u_account_balance/U$42/U$12
+  (R) + 3106 OR   /u_account_balance/balance_db_reg[10][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 191  DFF  /u_account_balance/balance_db_reg[10][10]
+  (R) + 185  DFF  /u_account_balance/balance_db_reg[10][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1324 MUX  /u_account_balance/U$42/U$11
+  (R) + 3102 OR   /u_account_balance/balance_db_reg[10][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 192  DFF  /u_account_balance/balance_db_reg[10][9]
+  (R) + 184  DFF  /u_account_balance/balance_db_reg[10][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1323 MUX  /u_account_balance/U$42/U$10
+  (R) + 3098 OR   /u_account_balance/balance_db_reg[10][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 193  DFF  /u_account_balance/balance_db_reg[10][8]
+  (R) + 183  DFF  /u_account_balance/balance_db_reg[10][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1322 MUX  /u_account_balance/U$42/U$9
+  (R) + 3094 OR   /u_account_balance/balance_db_reg[10][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 194  DFF  /u_account_balance/balance_db_reg[10][7]
+  (R) + 182  DFF  /u_account_balance/balance_db_reg[10][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1321 MUX  /u_account_balance/U$42/U$8
+  (R) + 3090 OR   /u_account_balance/balance_db_reg[10][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 195  DFF  /u_account_balance/balance_db_reg[10][6]
+  (R) + 181  DFF  /u_account_balance/balance_db_reg[10][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1320 MUX  /u_account_balance/U$42/U$7
+  (R) + 3086 OR   /u_account_balance/balance_db_reg[10][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 196  DFF  /u_account_balance/balance_db_reg[10][5]
+  (R) + 180  DFF  /u_account_balance/balance_db_reg[10][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1319 MUX  /u_account_balance/U$42/U$6
+  (R) + 3082 OR   /u_account_balance/balance_db_reg[10][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 197  DFF  /u_account_balance/balance_db_reg[10][4]
+  (R) + 179  DFF  /u_account_balance/balance_db_reg[10][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1318 MUX  /u_account_balance/U$42/U$5
+  (R) + 3078 OR   /u_account_balance/balance_db_reg[10][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 198  DFF  /u_account_balance/balance_db_reg[10][3]
+  (R) + 178  DFF  /u_account_balance/balance_db_reg[10][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1317 MUX  /u_account_balance/U$42/U$4
+  (R) + 3074 OR   /u_account_balance/balance_db_reg[10][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 199  DFF  /u_account_balance/balance_db_reg[10][2]
+  (R) + 177  DFF  /u_account_balance/balance_db_reg[10][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1316 MUX  /u_account_balance/U$42/U$3
+  (R) + 3070 OR   /u_account_balance/balance_db_reg[10][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 200  DFF  /u_account_balance/balance_db_reg[10][1]
+  (R) + 176  DFF  /u_account_balance/balance_db_reg[10][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1315 MUX  /u_account_balance/U$42/U$2
+  (R) + 3066 OR   /u_account_balance/balance_db_reg[10][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 201  DFF  /u_account_balance/balance_db_reg[11][15]
+  (R) + 205  DFF  /u_account_balance/balance_db_reg[11][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1348 MUX  /u_account_balance/U$46/U$16
+  (R) + 3186 OR   /u_account_balance/balance_db_reg[11][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 202  DFF  /u_account_balance/balance_db_reg[11][14]
+  (R) + 204  DFF  /u_account_balance/balance_db_reg[11][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1347 MUX  /u_account_balance/U$46/U$15
+  (R) + 3182 OR   /u_account_balance/balance_db_reg[11][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 203  DFF  /u_account_balance/balance_db_reg[11][13]
+  (R) + 203  DFF  /u_account_balance/balance_db_reg[11][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1346 MUX  /u_account_balance/U$46/U$14
+  (R) + 3178 OR   /u_account_balance/balance_db_reg[11][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 204  DFF  /u_account_balance/balance_db_reg[11][12]
+  (R) + 202  DFF  /u_account_balance/balance_db_reg[11][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1345 MUX  /u_account_balance/U$46/U$13
+  (R) + 3174 OR   /u_account_balance/balance_db_reg[11][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 205  DFF  /u_account_balance/balance_db_reg[11][11]
+  (R) + 201  DFF  /u_account_balance/balance_db_reg[11][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1344 MUX  /u_account_balance/U$46/U$12
+  (R) + 3170 OR   /u_account_balance/balance_db_reg[11][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 206  DFF  /u_account_balance/balance_db_reg[11][10]
+  (R) + 200  DFF  /u_account_balance/balance_db_reg[11][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1343 MUX  /u_account_balance/U$46/U$11
+  (R) + 3166 OR   /u_account_balance/balance_db_reg[11][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 207  DFF  /u_account_balance/balance_db_reg[11][9]
+  (R) + 199  DFF  /u_account_balance/balance_db_reg[11][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1342 MUX  /u_account_balance/U$46/U$10
+  (R) + 3162 OR   /u_account_balance/balance_db_reg[11][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 208  DFF  /u_account_balance/balance_db_reg[11][8]
+  (R) + 198  DFF  /u_account_balance/balance_db_reg[11][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1341 MUX  /u_account_balance/U$46/U$9
+  (R) + 3158 OR   /u_account_balance/balance_db_reg[11][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 209  DFF  /u_account_balance/balance_db_reg[11][7]
+  (R) + 197  DFF  /u_account_balance/balance_db_reg[11][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1340 MUX  /u_account_balance/U$46/U$8
+  (R) + 3154 OR   /u_account_balance/balance_db_reg[11][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 210  DFF  /u_account_balance/balance_db_reg[11][6]
+  (R) + 196  DFF  /u_account_balance/balance_db_reg[11][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1339 MUX  /u_account_balance/U$46/U$7
+  (R) + 3150 OR   /u_account_balance/balance_db_reg[11][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 211  DFF  /u_account_balance/balance_db_reg[11][5]
+  (R) + 195  DFF  /u_account_balance/balance_db_reg[11][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1338 MUX  /u_account_balance/U$46/U$6
+  (R) + 3146 OR   /u_account_balance/balance_db_reg[11][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 212  DFF  /u_account_balance/balance_db_reg[11][4]
+  (R) + 194  DFF  /u_account_balance/balance_db_reg[11][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1337 MUX  /u_account_balance/U$46/U$5
+  (R) + 3142 OR   /u_account_balance/balance_db_reg[11][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 213  DFF  /u_account_balance/balance_db_reg[11][3]
+  (R) + 193  DFF  /u_account_balance/balance_db_reg[11][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1336 MUX  /u_account_balance/U$46/U$4
+  (R) + 3138 OR   /u_account_balance/balance_db_reg[11][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 214  DFF  /u_account_balance/balance_db_reg[11][2]
+  (R) + 192  DFF  /u_account_balance/balance_db_reg[11][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1335 MUX  /u_account_balance/U$46/U$3
+  (R) + 3134 OR   /u_account_balance/balance_db_reg[11][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 215  DFF  /u_account_balance/balance_db_reg[11][1]
+  (R) + 191  DFF  /u_account_balance/balance_db_reg[11][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1334 MUX  /u_account_balance/U$46/U$2
+  (R) + 3130 OR   /u_account_balance/balance_db_reg[11][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 216  DFF  /u_account_balance/balance_db_reg[12][15]
+  (R) + 220  DFF  /u_account_balance/balance_db_reg[12][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1367 MUX  /u_account_balance/U$50/U$16
+  (R) + 3248 OR   /u_account_balance/balance_db_reg[12][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 217  DFF  /u_account_balance/balance_db_reg[12][14]
+  (R) + 219  DFF  /u_account_balance/balance_db_reg[12][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1366 MUX  /u_account_balance/U$50/U$15
+  (R) + 3244 OR   /u_account_balance/balance_db_reg[12][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 218  DFF  /u_account_balance/balance_db_reg[12][13]
+  (R) + 218  DFF  /u_account_balance/balance_db_reg[12][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1365 MUX  /u_account_balance/U$50/U$14
+  (R) + 3240 OR   /u_account_balance/balance_db_reg[12][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 219  DFF  /u_account_balance/balance_db_reg[12][12]
+  (R) + 217  DFF  /u_account_balance/balance_db_reg[12][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1364 MUX  /u_account_balance/U$50/U$13
+  (R) + 3236 OR   /u_account_balance/balance_db_reg[12][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 220  DFF  /u_account_balance/balance_db_reg[12][11]
+  (R) + 216  DFF  /u_account_balance/balance_db_reg[12][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1363 MUX  /u_account_balance/U$50/U$12
+  (R) + 3232 OR   /u_account_balance/balance_db_reg[12][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 221  DFF  /u_account_balance/balance_db_reg[12][10]
+  (R) + 215  DFF  /u_account_balance/balance_db_reg[12][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1362 MUX  /u_account_balance/U$50/U$11
+  (R) + 3228 OR   /u_account_balance/balance_db_reg[12][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 222  DFF  /u_account_balance/balance_db_reg[12][9]
+  (R) + 214  DFF  /u_account_balance/balance_db_reg[12][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1361 MUX  /u_account_balance/U$50/U$10
+  (R) + 3224 OR   /u_account_balance/balance_db_reg[12][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 223  DFF  /u_account_balance/balance_db_reg[12][8]
+  (R) + 213  DFF  /u_account_balance/balance_db_reg[12][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1360 MUX  /u_account_balance/U$50/U$9
+  (R) + 3220 OR   /u_account_balance/balance_db_reg[12][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 224  DFF  /u_account_balance/balance_db_reg[12][7]
+  (R) + 212  DFF  /u_account_balance/balance_db_reg[12][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1359 MUX  /u_account_balance/U$50/U$8
+  (R) + 3216 OR   /u_account_balance/balance_db_reg[12][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 225  DFF  /u_account_balance/balance_db_reg[12][6]
+  (R) + 211  DFF  /u_account_balance/balance_db_reg[12][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1358 MUX  /u_account_balance/U$50/U$7
+  (R) + 3212 OR   /u_account_balance/balance_db_reg[12][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 226  DFF  /u_account_balance/balance_db_reg[12][5]
+  (R) + 210  DFF  /u_account_balance/balance_db_reg[12][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1357 MUX  /u_account_balance/U$50/U$6
+  (R) + 3208 OR   /u_account_balance/balance_db_reg[12][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 227  DFF  /u_account_balance/balance_db_reg[12][4]
+  (R) + 209  DFF  /u_account_balance/balance_db_reg[12][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1356 MUX  /u_account_balance/U$50/U$5
+  (R) + 3204 OR   /u_account_balance/balance_db_reg[12][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 228  DFF  /u_account_balance/balance_db_reg[12][3]
+  (R) + 208  DFF  /u_account_balance/balance_db_reg[12][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1355 MUX  /u_account_balance/U$50/U$4
+  (R) + 3200 OR   /u_account_balance/balance_db_reg[12][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 229  DFF  /u_account_balance/balance_db_reg[12][2]
+  (R) + 207  DFF  /u_account_balance/balance_db_reg[12][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1354 MUX  /u_account_balance/U$50/U$3
+  (R) + 3196 OR   /u_account_balance/balance_db_reg[12][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 230  DFF  /u_account_balance/balance_db_reg[12][1]
+  (R) + 206  DFF  /u_account_balance/balance_db_reg[12][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1353 MUX  /u_account_balance/U$50/U$2
+  (R) + 3192 OR   /u_account_balance/balance_db_reg[12][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 231  DFF  /u_account_balance/balance_db_reg[13][15]
+  (R) + 235  DFF  /u_account_balance/balance_db_reg[13][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1386 MUX  /u_account_balance/U$54/U$16
+  (R) + 3310 OR   /u_account_balance/balance_db_reg[13][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 232  DFF  /u_account_balance/balance_db_reg[13][14]
+  (R) + 234  DFF  /u_account_balance/balance_db_reg[13][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1385 MUX  /u_account_balance/U$54/U$15
+  (R) + 3306 OR   /u_account_balance/balance_db_reg[13][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 233  DFF  /u_account_balance/balance_db_reg[13][13]
+  (R) + 233  DFF  /u_account_balance/balance_db_reg[13][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1384 MUX  /u_account_balance/U$54/U$14
+  (R) + 3302 OR   /u_account_balance/balance_db_reg[13][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 234  DFF  /u_account_balance/balance_db_reg[13][12]
+  (R) + 232  DFF  /u_account_balance/balance_db_reg[13][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1383 MUX  /u_account_balance/U$54/U$13
+  (R) + 3298 OR   /u_account_balance/balance_db_reg[13][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 235  DFF  /u_account_balance/balance_db_reg[13][11]
+  (R) + 231  DFF  /u_account_balance/balance_db_reg[13][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1382 MUX  /u_account_balance/U$54/U$12
+  (R) + 3294 OR   /u_account_balance/balance_db_reg[13][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 236  DFF  /u_account_balance/balance_db_reg[13][10]
+  (R) + 230  DFF  /u_account_balance/balance_db_reg[13][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1381 MUX  /u_account_balance/U$54/U$11
+  (R) + 3290 OR   /u_account_balance/balance_db_reg[13][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 237  DFF  /u_account_balance/balance_db_reg[13][9]
+  (R) + 229  DFF  /u_account_balance/balance_db_reg[13][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1380 MUX  /u_account_balance/U$54/U$10
+  (R) + 3286 OR   /u_account_balance/balance_db_reg[13][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 238  DFF  /u_account_balance/balance_db_reg[13][8]
+  (R) + 228  DFF  /u_account_balance/balance_db_reg[13][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1379 MUX  /u_account_balance/U$54/U$9
+  (R) + 3282 OR   /u_account_balance/balance_db_reg[13][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 239  DFF  /u_account_balance/balance_db_reg[13][7]
+  (R) + 227  DFF  /u_account_balance/balance_db_reg[13][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1378 MUX  /u_account_balance/U$54/U$8
+  (R) + 3278 OR   /u_account_balance/balance_db_reg[13][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 240  DFF  /u_account_balance/balance_db_reg[13][6]
+  (R) + 226  DFF  /u_account_balance/balance_db_reg[13][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1377 MUX  /u_account_balance/U$54/U$7
+  (R) + 3274 OR   /u_account_balance/balance_db_reg[13][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 241  DFF  /u_account_balance/balance_db_reg[13][5]
+  (R) + 225  DFF  /u_account_balance/balance_db_reg[13][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1376 MUX  /u_account_balance/U$54/U$6
+  (R) + 3270 OR   /u_account_balance/balance_db_reg[13][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 242  DFF  /u_account_balance/balance_db_reg[13][4]
+  (R) + 224  DFF  /u_account_balance/balance_db_reg[13][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1375 MUX  /u_account_balance/U$54/U$5
+  (R) + 3266 OR   /u_account_balance/balance_db_reg[13][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 243  DFF  /u_account_balance/balance_db_reg[13][3]
+  (R) + 223  DFF  /u_account_balance/balance_db_reg[13][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1374 MUX  /u_account_balance/U$54/U$4
+  (R) + 3262 OR   /u_account_balance/balance_db_reg[13][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 244  DFF  /u_account_balance/balance_db_reg[13][2]
+  (R) + 222  DFF  /u_account_balance/balance_db_reg[13][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1373 MUX  /u_account_balance/U$54/U$3
+  (R) + 3258 OR   /u_account_balance/balance_db_reg[13][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 245  DFF  /u_account_balance/balance_db_reg[13][1]
+  (R) + 221  DFF  /u_account_balance/balance_db_reg[13][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1372 MUX  /u_account_balance/U$54/U$2
+  (R) + 3254 OR   /u_account_balance/balance_db_reg[13][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 246  DFF  /u_account_balance/balance_db_reg[14][15]
+  (R) + 250  DFF  /u_account_balance/balance_db_reg[14][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1405 MUX  /u_account_balance/U$58/U$16
+  (R) + 3372 OR   /u_account_balance/balance_db_reg[14][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 247  DFF  /u_account_balance/balance_db_reg[14][14]
+  (R) + 249  DFF  /u_account_balance/balance_db_reg[14][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1404 MUX  /u_account_balance/U$58/U$15
+  (R) + 3368 OR   /u_account_balance/balance_db_reg[14][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 248  DFF  /u_account_balance/balance_db_reg[14][13]
+  (R) + 248  DFF  /u_account_balance/balance_db_reg[14][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1403 MUX  /u_account_balance/U$58/U$14
+  (R) + 3364 OR   /u_account_balance/balance_db_reg[14][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 249  DFF  /u_account_balance/balance_db_reg[14][12]
+  (R) + 247  DFF  /u_account_balance/balance_db_reg[14][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1402 MUX  /u_account_balance/U$58/U$13
+  (R) + 3360 OR   /u_account_balance/balance_db_reg[14][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 250  DFF  /u_account_balance/balance_db_reg[14][11]
+  (R) + 246  DFF  /u_account_balance/balance_db_reg[14][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1401 MUX  /u_account_balance/U$58/U$12
+  (R) + 3356 OR   /u_account_balance/balance_db_reg[14][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 251  DFF  /u_account_balance/balance_db_reg[14][10]
+  (R) + 245  DFF  /u_account_balance/balance_db_reg[14][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1400 MUX  /u_account_balance/U$58/U$11
+  (R) + 3352 OR   /u_account_balance/balance_db_reg[14][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 252  DFF  /u_account_balance/balance_db_reg[14][9]
+  (R) + 244  DFF  /u_account_balance/balance_db_reg[14][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1399 MUX  /u_account_balance/U$58/U$10
+  (R) + 3348 OR   /u_account_balance/balance_db_reg[14][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 253  DFF  /u_account_balance/balance_db_reg[14][8]
+  (R) + 243  DFF  /u_account_balance/balance_db_reg[14][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1398 MUX  /u_account_balance/U$58/U$9
+  (R) + 3344 OR   /u_account_balance/balance_db_reg[14][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 254  DFF  /u_account_balance/balance_db_reg[14][7]
+  (R) + 242  DFF  /u_account_balance/balance_db_reg[14][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1397 MUX  /u_account_balance/U$58/U$8
+  (R) + 3340 OR   /u_account_balance/balance_db_reg[14][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 255  DFF  /u_account_balance/balance_db_reg[14][6]
+  (R) + 241  DFF  /u_account_balance/balance_db_reg[14][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1396 MUX  /u_account_balance/U$58/U$7
+  (R) + 3336 OR   /u_account_balance/balance_db_reg[14][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 256  DFF  /u_account_balance/balance_db_reg[14][5]
+  (R) + 240  DFF  /u_account_balance/balance_db_reg[14][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1395 MUX  /u_account_balance/U$58/U$6
+  (R) + 3332 OR   /u_account_balance/balance_db_reg[14][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 257  DFF  /u_account_balance/balance_db_reg[14][4]
+  (R) + 239  DFF  /u_account_balance/balance_db_reg[14][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1394 MUX  /u_account_balance/U$58/U$5
+  (R) + 3328 OR   /u_account_balance/balance_db_reg[14][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 258  DFF  /u_account_balance/balance_db_reg[14][3]
+  (R) + 238  DFF  /u_account_balance/balance_db_reg[14][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1393 MUX  /u_account_balance/U$58/U$4
+  (R) + 3324 OR   /u_account_balance/balance_db_reg[14][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 259  DFF  /u_account_balance/balance_db_reg[14][2]
+  (R) + 237  DFF  /u_account_balance/balance_db_reg[14][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1392 MUX  /u_account_balance/U$58/U$3
+  (R) + 3320 OR   /u_account_balance/balance_db_reg[14][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 260  DFF  /u_account_balance/balance_db_reg[14][1]
+  (R) + 236  DFF  /u_account_balance/balance_db_reg[14][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1391 MUX  /u_account_balance/U$58/U$2
+  (R) + 3316 OR   /u_account_balance/balance_db_reg[14][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 261  DFF  /u_account_balance/balance_db_reg[15][15]
+  (R) + 265  DFF  /u_account_balance/balance_db_reg[15][15]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1424 MUX  /u_account_balance/U$62/U$16
+  (R) + 3433 OR   /u_account_balance/balance_db_reg[15][15]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 262  DFF  /u_account_balance/balance_db_reg[15][14]
+  (R) + 264  DFF  /u_account_balance/balance_db_reg[15][14]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1423 MUX  /u_account_balance/U$62/U$15
+  (R) + 3429 OR   /u_account_balance/balance_db_reg[15][14]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 263  DFF  /u_account_balance/balance_db_reg[15][13]
+  (R) + 263  DFF  /u_account_balance/balance_db_reg[15][13]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1422 MUX  /u_account_balance/U$62/U$14
+  (R) + 3425 OR   /u_account_balance/balance_db_reg[15][13]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 264  DFF  /u_account_balance/balance_db_reg[15][12]
+  (R) + 262  DFF  /u_account_balance/balance_db_reg[15][12]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1421 MUX  /u_account_balance/U$62/U$13
+  (R) + 3421 OR   /u_account_balance/balance_db_reg[15][12]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 265  DFF  /u_account_balance/balance_db_reg[15][11]
+  (R) + 261  DFF  /u_account_balance/balance_db_reg[15][11]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1420 MUX  /u_account_balance/U$62/U$12
+  (R) + 3417 OR   /u_account_balance/balance_db_reg[15][11]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 266  DFF  /u_account_balance/balance_db_reg[15][10]
+  (R) + 260  DFF  /u_account_balance/balance_db_reg[15][10]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1419 MUX  /u_account_balance/U$62/U$11
+  (R) + 3413 OR   /u_account_balance/balance_db_reg[15][10]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 267  DFF  /u_account_balance/balance_db_reg[15][9]
+  (R) + 259  DFF  /u_account_balance/balance_db_reg[15][9]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1418 MUX  /u_account_balance/U$62/U$10
+  (R) + 3409 OR   /u_account_balance/balance_db_reg[15][9]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 268  DFF  /u_account_balance/balance_db_reg[15][8]
+  (R) + 258  DFF  /u_account_balance/balance_db_reg[15][8]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1417 MUX  /u_account_balance/U$62/U$9
+  (R) + 3405 OR   /u_account_balance/balance_db_reg[15][8]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 269  DFF  /u_account_balance/balance_db_reg[15][7]
+  (R) + 257  DFF  /u_account_balance/balance_db_reg[15][7]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1416 MUX  /u_account_balance/U$62/U$8
+  (R) + 3401 OR   /u_account_balance/balance_db_reg[15][7]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 270  DFF  /u_account_balance/balance_db_reg[15][6]
+  (R) + 256  DFF  /u_account_balance/balance_db_reg[15][6]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1415 MUX  /u_account_balance/U$62/U$7
+  (R) + 3397 OR   /u_account_balance/balance_db_reg[15][6]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 271  DFF  /u_account_balance/balance_db_reg[15][5]
+  (R) + 255  DFF  /u_account_balance/balance_db_reg[15][5]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1414 MUX  /u_account_balance/U$62/U$6
+  (R) + 3393 OR   /u_account_balance/balance_db_reg[15][5]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 272  DFF  /u_account_balance/balance_db_reg[15][4]
+  (R) + 254  DFF  /u_account_balance/balance_db_reg[15][4]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1413 MUX  /u_account_balance/U$62/U$5
+  (R) + 3389 OR   /u_account_balance/balance_db_reg[15][4]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 273  DFF  /u_account_balance/balance_db_reg[15][3]
+  (R) + 253  DFF  /u_account_balance/balance_db_reg[15][3]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1412 MUX  /u_account_balance/U$62/U$4
+  (R) + 3385 OR   /u_account_balance/balance_db_reg[15][3]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 274  DFF  /u_account_balance/balance_db_reg[15][2]
+  (R) + 252  DFF  /u_account_balance/balance_db_reg[15][2]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1411 MUX  /u_account_balance/U$62/U$3
+  (R) + 3381 OR   /u_account_balance/balance_db_reg[15][2]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 275  DFF  /u_account_balance/balance_db_reg[15][1]
+  (R) + 251  DFF  /u_account_balance/balance_db_reg[15][1]/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1410 MUX  /u_account_balance/U$62/U$2
+  (R) + 3377 OR   /u_account_balance/balance_db_reg[15][1]/U$2/__UU3
+
+Compared points are: Non-equivalent
+  (G) + 276  DFF  /u_account_balance/charge_done_reg
+  (R) + 25   DFF  /u_account_balance/charge_done_reg/U$1/U$1
+Due to these Non-equivalent points:
+[DATA]
+  (G) + 1426 AND  /u_account_balance/U$67
+  (R) + 3611 INV  /u_account_balance/g17078/U$3
+
+244 Non-equivalent point(s) reported
+244 compared point(s) reported
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           12     10        22      
+--------------------------------------------------------------------------------
+Non-equivalent       0      244       244     
+================================================================================
+CPU time     : 3.56    seconds
+Elapse time  : 2       seconds
+Memory usage : 322.18  M bytes
+// Command: report verification
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 0
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  1
+     Multiple clocks in the design:                            yes
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+--------------------------------------------------------------------------------
+6. Compare Results:                                                  FAIL:NONEQ
+================================================================================
+// Command: write compared points -replace lec_compared_points_minarea
+CPU time     : 3.71    seconds
+Elapse time  : 2       seconds
+Memory usage : 322.18  M bytes
+// Command: write mapped points -replace lec_mapped_points_minarea
+// Command: set verification information logical_eq_check_minarea
+// Verification information is set to /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_area/logical_eq_check_minarea.
+// Advanced reporting is enabled and the output is written to /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_area/logical_eq_check_minarea
+// Command: write verification information
+// Verification information is written to logical_eq_check_minarea.
+// Command: exit

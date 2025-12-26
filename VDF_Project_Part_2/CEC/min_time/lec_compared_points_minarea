@@ -1,0 +1,1316 @@
+// Compared points are: Equivalent
+//  (G) + 13   PO   /barrier_open_cmd
+//  (R) + 13   PO   /barrier_open_cmd
+add compared points barrier_open_cmd
+
+// Compared points are: Equivalent
+//  (G) + 14   PO   /barrier_close_cmd
+//  (R) + 14   PO   /barrier_close_cmd
+add compared points barrier_close_cmd
+
+// Compared points are: Equivalent
+//  (G) + 15   PO   /led_status[1]
+//  (R) + 15   PO   /led_status[1]
+add compared points led_status[1]
+
+// Compared points are: Equivalent
+//  (G) + 16   PO   /led_status[0]
+//  (R) + 16   PO   /led_status[0]
+add compared points led_status[0]
+
+// Compared points are: Equivalent
+//  (G) + 17   PO   /display_out[7]
+//  (R) + 17   PO   /display_out[7]
+add compared points display_out[7]
+
+// Compared points are: Equivalent
+//  (G) + 18   PO   /display_out[6]
+//  (R) + 18   PO   /display_out[6]
+add compared points display_out[6]
+
+// Compared points are: Equivalent
+//  (G) + 19   PO   /display_out[5]
+//  (R) + 19   PO   /display_out[5]
+add compared points display_out[5]
+
+// Compared points are: Equivalent
+//  (G) + 20   PO   /display_out[4]
+//  (R) + 20   PO   /display_out[4]
+add compared points display_out[4]
+
+// Compared points are: Equivalent
+//  (G) + 21   PO   /display_out[3]
+//  (R) + 21   PO   /display_out[3]
+add compared points display_out[3]
+
+// Compared points are: Equivalent
+//  (G) + 22   PO   /display_out[2]
+//  (R) + 22   PO   /display_out[2]
+add compared points display_out[2]
+
+// Compared points are: Equivalent
+//  (G) + 23   PO   /display_out[1]
+//  (R) + 23   PO   /display_out[1]
+add compared points display_out[1]
+
+// Compared points are: Equivalent
+//  (G) + 24   PO   /display_out[0]
+//  (R) + 24   PO   /display_out[0]
+add compared points display_out[0]
+
+// Compared points are: Non-equivalent
+//  (G) + 25   DFF  /state_reg[2]
+//  (R) + 275  DFF  /state_reg[2]/U$1/U$1
+add compared points state_reg[2]
+
+// Compared points are: Non-equivalent
+//  (G) + 26   DFF  /state_reg[1]
+//  (R) + 273  DFF  /state_reg[1]/U$1/U$1
+add compared points state_reg[1]
+
+// Compared points are: Non-equivalent
+//  (G) + 27   DFF  /state_reg[0]
+//  (R) + 274  DFF  /state_reg[0]/U$1/U$1
+add compared points state_reg[0]
+
+// Compared points are: Equivalent
+//  (G) + 28   DFF  /u_vehicle_interface/id_valid_reg
+//  (R) + 268  DFF  /u_vehicle_interface/id_valid_reg/U$1/U$1
+add compared points u_vehicle_interface/id_valid_reg
+
+// Compared points are: Equivalent
+//  (G) + 29   DFF  /u_vehicle_interface/id_to_check_reg[3]
+//  (R) + 271  DFF  /u_vehicle_interface/id_to_check_reg[3]/U$1/U$1
+add compared points u_vehicle_interface/id_to_check_reg[3]
+
+// Compared points are: Equivalent
+//  (G) + 30   DFF  /u_vehicle_interface/id_to_check_reg[2]
+//  (R) + 272  DFF  /u_vehicle_interface/id_to_check_reg[2]/U$1/U$1
+add compared points u_vehicle_interface/id_to_check_reg[2]
+
+// Compared points are: Equivalent
+//  (G) + 31   DFF  /u_vehicle_interface/id_to_check_reg[1]
+//  (R) + 270  DFF  /u_vehicle_interface/id_to_check_reg[1]/U$1/U$1
+add compared points u_vehicle_interface/id_to_check_reg[1]
+
+// Compared points are: Equivalent
+//  (G) + 32   DFF  /u_vehicle_interface/id_to_check_reg[0]
+//  (R) + 269  DFF  /u_vehicle_interface/id_to_check_reg[0]/U$1/U$1
+add compared points u_vehicle_interface/id_to_check_reg[0]
+
+// Compared points are: Equivalent
+//  (G) + 33   DFF  /u_account_balance/balance_db_reg[0][15]
+//  (R) + 40   DFF  /u_account_balance/balance_db_reg[0][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][15]
+
+// Compared points are: Equivalent
+//  (G) + 34   DFF  /u_account_balance/balance_db_reg[0][14]
+//  (R) + 39   DFF  /u_account_balance/balance_db_reg[0][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][14]
+
+// Compared points are: Equivalent
+//  (G) + 35   DFF  /u_account_balance/balance_db_reg[0][13]
+//  (R) + 38   DFF  /u_account_balance/balance_db_reg[0][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][13]
+
+// Compared points are: Equivalent
+//  (G) + 36   DFF  /u_account_balance/balance_db_reg[0][12]
+//  (R) + 37   DFF  /u_account_balance/balance_db_reg[0][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][12]
+
+// Compared points are: Equivalent
+//  (G) + 37   DFF  /u_account_balance/balance_db_reg[0][11]
+//  (R) + 36   DFF  /u_account_balance/balance_db_reg[0][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][11]
+
+// Compared points are: Equivalent
+//  (G) + 38   DFF  /u_account_balance/balance_db_reg[0][10]
+//  (R) + 35   DFF  /u_account_balance/balance_db_reg[0][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][10]
+
+// Compared points are: Equivalent
+//  (G) + 39   DFF  /u_account_balance/balance_db_reg[0][9]
+//  (R) + 34   DFF  /u_account_balance/balance_db_reg[0][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][9]
+
+// Compared points are: Equivalent
+//  (G) + 40   DFF  /u_account_balance/balance_db_reg[0][8]
+//  (R) + 33   DFF  /u_account_balance/balance_db_reg[0][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][8]
+
+// Compared points are: Equivalent
+//  (G) + 41   DFF  /u_account_balance/balance_db_reg[0][7]
+//  (R) + 32   DFF  /u_account_balance/balance_db_reg[0][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][7]
+
+// Compared points are: Equivalent
+//  (G) + 42   DFF  /u_account_balance/balance_db_reg[0][6]
+//  (R) + 31   DFF  /u_account_balance/balance_db_reg[0][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][6]
+
+// Compared points are: Equivalent
+//  (G) + 43   DFF  /u_account_balance/balance_db_reg[0][5]
+//  (R) + 30   DFF  /u_account_balance/balance_db_reg[0][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][5]
+
+// Compared points are: Equivalent
+//  (G) + 44   DFF  /u_account_balance/balance_db_reg[0][4]
+//  (R) + 29   DFF  /u_account_balance/balance_db_reg[0][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][4]
+
+// Compared points are: Equivalent
+//  (G) + 45   DFF  /u_account_balance/balance_db_reg[0][3]
+//  (R) + 28   DFF  /u_account_balance/balance_db_reg[0][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][3]
+
+// Compared points are: Equivalent
+//  (G) + 46   DFF  /u_account_balance/balance_db_reg[0][2]
+//  (R) + 27   DFF  /u_account_balance/balance_db_reg[0][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][2]
+
+// Compared points are: Equivalent
+//  (G) + 47   DFF  /u_account_balance/balance_db_reg[0][1]
+//  (R) + 26   DFF  /u_account_balance/balance_db_reg[0][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[0][1]
+
+// Compared points are: Non-equivalent
+//  (G) + 48   DFF  /u_account_balance/balance_db_reg[1][15]
+//  (R) + 52   DFF  /u_account_balance/balance_db_reg[1][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][15]
+
+// Compared points are: Non-equivalent
+//  (G) + 49   DFF  /u_account_balance/balance_db_reg[1][14]
+//  (R) + 51   DFF  /u_account_balance/balance_db_reg[1][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][14]
+
+// Compared points are: Non-equivalent
+//  (G) + 50   DFF  /u_account_balance/balance_db_reg[1][13]
+//  (R) + 50   DFF  /u_account_balance/balance_db_reg[1][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][13]
+
+// Compared points are: Non-equivalent
+//  (G) + 51   DFF  /u_account_balance/balance_db_reg[1][12]
+//  (R) + 49   DFF  /u_account_balance/balance_db_reg[1][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][12]
+
+// Compared points are: Non-equivalent
+//  (G) + 52   DFF  /u_account_balance/balance_db_reg[1][11]
+//  (R) + 48   DFF  /u_account_balance/balance_db_reg[1][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][11]
+
+// Compared points are: Non-equivalent
+//  (G) + 53   DFF  /u_account_balance/balance_db_reg[1][10]
+//  (R) + 47   DFF  /u_account_balance/balance_db_reg[1][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][10]
+
+// Compared points are: Non-equivalent
+//  (G) + 54   DFF  /u_account_balance/balance_db_reg[1][9]
+//  (R) + 46   DFF  /u_account_balance/balance_db_reg[1][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][9]
+
+// Compared points are: Non-equivalent
+//  (G) + 55   DFF  /u_account_balance/balance_db_reg[1][8]
+//  (R) + 45   DFF  /u_account_balance/balance_db_reg[1][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][8]
+
+// Compared points are: Non-equivalent
+//  (G) + 56   DFF  /u_account_balance/balance_db_reg[1][7]
+//  (R) + 44   DFF  /u_account_balance/balance_db_reg[1][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][7]
+
+// Compared points are: Non-equivalent
+//  (G) + 57   DFF  /u_account_balance/balance_db_reg[1][6]
+//  (R) + 43   DFF  /u_account_balance/balance_db_reg[1][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][6]
+
+// Compared points are: Non-equivalent
+//  (G) + 61   DFF  /u_account_balance/balance_db_reg[1][2]
+//  (R) + 42   DFF  /u_account_balance/balance_db_reg[1][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][2]
+
+// Compared points are: Non-equivalent
+//  (G) + 62   DFF  /u_account_balance/balance_db_reg[1][1]
+//  (R) + 41   DFF  /u_account_balance/balance_db_reg[1][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[1][1]
+
+// Compared points are: Equivalent
+//  (G) + 64   DFF  /u_account_balance/balance_db_reg[2][15]
+//  (R) + 67   DFF  /u_account_balance/balance_db_reg[2][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][15]
+
+// Compared points are: Equivalent
+//  (G) + 65   DFF  /u_account_balance/balance_db_reg[2][14]
+//  (R) + 66   DFF  /u_account_balance/balance_db_reg[2][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][14]
+
+// Compared points are: Equivalent
+//  (G) + 66   DFF  /u_account_balance/balance_db_reg[2][13]
+//  (R) + 65   DFF  /u_account_balance/balance_db_reg[2][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][13]
+
+// Compared points are: Equivalent
+//  (G) + 67   DFF  /u_account_balance/balance_db_reg[2][12]
+//  (R) + 64   DFF  /u_account_balance/balance_db_reg[2][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][12]
+
+// Compared points are: Equivalent
+//  (G) + 68   DFF  /u_account_balance/balance_db_reg[2][11]
+//  (R) + 63   DFF  /u_account_balance/balance_db_reg[2][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][11]
+
+// Compared points are: Equivalent
+//  (G) + 69   DFF  /u_account_balance/balance_db_reg[2][10]
+//  (R) + 62   DFF  /u_account_balance/balance_db_reg[2][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][10]
+
+// Compared points are: Equivalent
+//  (G) + 70   DFF  /u_account_balance/balance_db_reg[2][9]
+//  (R) + 61   DFF  /u_account_balance/balance_db_reg[2][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][9]
+
+// Compared points are: Equivalent
+//  (G) + 71   DFF  /u_account_balance/balance_db_reg[2][8]
+//  (R) + 60   DFF  /u_account_balance/balance_db_reg[2][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][8]
+
+// Compared points are: Equivalent
+//  (G) + 72   DFF  /u_account_balance/balance_db_reg[2][7]
+//  (R) + 59   DFF  /u_account_balance/balance_db_reg[2][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][7]
+
+// Compared points are: Equivalent
+//  (G) + 73   DFF  /u_account_balance/balance_db_reg[2][6]
+//  (R) + 58   DFF  /u_account_balance/balance_db_reg[2][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][6]
+
+// Compared points are: Equivalent
+//  (G) + 74   DFF  /u_account_balance/balance_db_reg[2][5]
+//  (R) + 57   DFF  /u_account_balance/balance_db_reg[2][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][5]
+
+// Compared points are: Equivalent
+//  (G) + 75   DFF  /u_account_balance/balance_db_reg[2][4]
+//  (R) + 56   DFF  /u_account_balance/balance_db_reg[2][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][4]
+
+// Compared points are: Equivalent
+//  (G) + 76   DFF  /u_account_balance/balance_db_reg[2][3]
+//  (R) + 55   DFF  /u_account_balance/balance_db_reg[2][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][3]
+
+// Compared points are: Equivalent
+//  (G) + 77   DFF  /u_account_balance/balance_db_reg[2][2]
+//  (R) + 54   DFF  /u_account_balance/balance_db_reg[2][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][2]
+
+// Compared points are: Equivalent
+//  (G) + 78   DFF  /u_account_balance/balance_db_reg[2][1]
+//  (R) + 53   DFF  /u_account_balance/balance_db_reg[2][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[2][1]
+
+// Compared points are: Equivalent
+//  (G) + 80   DFF  /u_account_balance/balance_db_reg[3][15]
+//  (R) + 82   DFF  /u_account_balance/balance_db_reg[3][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][15]
+
+// Compared points are: Equivalent
+//  (G) + 81   DFF  /u_account_balance/balance_db_reg[3][14]
+//  (R) + 81   DFF  /u_account_balance/balance_db_reg[3][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][14]
+
+// Compared points are: Equivalent
+//  (G) + 82   DFF  /u_account_balance/balance_db_reg[3][13]
+//  (R) + 80   DFF  /u_account_balance/balance_db_reg[3][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][13]
+
+// Compared points are: Equivalent
+//  (G) + 83   DFF  /u_account_balance/balance_db_reg[3][12]
+//  (R) + 79   DFF  /u_account_balance/balance_db_reg[3][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][12]
+
+// Compared points are: Equivalent
+//  (G) + 84   DFF  /u_account_balance/balance_db_reg[3][11]
+//  (R) + 78   DFF  /u_account_balance/balance_db_reg[3][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][11]
+
+// Compared points are: Equivalent
+//  (G) + 85   DFF  /u_account_balance/balance_db_reg[3][10]
+//  (R) + 77   DFF  /u_account_balance/balance_db_reg[3][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][10]
+
+// Compared points are: Equivalent
+//  (G) + 86   DFF  /u_account_balance/balance_db_reg[3][9]
+//  (R) + 76   DFF  /u_account_balance/balance_db_reg[3][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][9]
+
+// Compared points are: Equivalent
+//  (G) + 87   DFF  /u_account_balance/balance_db_reg[3][8]
+//  (R) + 75   DFF  /u_account_balance/balance_db_reg[3][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][8]
+
+// Compared points are: Equivalent
+//  (G) + 88   DFF  /u_account_balance/balance_db_reg[3][7]
+//  (R) + 74   DFF  /u_account_balance/balance_db_reg[3][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][7]
+
+// Compared points are: Equivalent
+//  (G) + 89   DFF  /u_account_balance/balance_db_reg[3][6]
+//  (R) + 73   DFF  /u_account_balance/balance_db_reg[3][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][6]
+
+// Compared points are: Equivalent
+//  (G) + 90   DFF  /u_account_balance/balance_db_reg[3][5]
+//  (R) + 72   DFF  /u_account_balance/balance_db_reg[3][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][5]
+
+// Compared points are: Equivalent
+//  (G) + 91   DFF  /u_account_balance/balance_db_reg[3][4]
+//  (R) + 71   DFF  /u_account_balance/balance_db_reg[3][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][4]
+
+// Compared points are: Equivalent
+//  (G) + 92   DFF  /u_account_balance/balance_db_reg[3][3]
+//  (R) + 70   DFF  /u_account_balance/balance_db_reg[3][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][3]
+
+// Compared points are: Equivalent
+//  (G) + 93   DFF  /u_account_balance/balance_db_reg[3][2]
+//  (R) + 69   DFF  /u_account_balance/balance_db_reg[3][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][2]
+
+// Compared points are: Equivalent
+//  (G) + 94   DFF  /u_account_balance/balance_db_reg[3][1]
+//  (R) + 68   DFF  /u_account_balance/balance_db_reg[3][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[3][1]
+
+// Compared points are: Equivalent
+//  (G) + 96   DFF  /u_account_balance/balance_db_reg[4][15]
+//  (R) + 97   DFF  /u_account_balance/balance_db_reg[4][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][15]
+
+// Compared points are: Equivalent
+//  (G) + 97   DFF  /u_account_balance/balance_db_reg[4][14]
+//  (R) + 96   DFF  /u_account_balance/balance_db_reg[4][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][14]
+
+// Compared points are: Equivalent
+//  (G) + 98   DFF  /u_account_balance/balance_db_reg[4][13]
+//  (R) + 95   DFF  /u_account_balance/balance_db_reg[4][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][13]
+
+// Compared points are: Equivalent
+//  (G) + 99   DFF  /u_account_balance/balance_db_reg[4][12]
+//  (R) + 94   DFF  /u_account_balance/balance_db_reg[4][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][12]
+
+// Compared points are: Equivalent
+//  (G) + 100  DFF  /u_account_balance/balance_db_reg[4][11]
+//  (R) + 93   DFF  /u_account_balance/balance_db_reg[4][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][11]
+
+// Compared points are: Equivalent
+//  (G) + 101  DFF  /u_account_balance/balance_db_reg[4][10]
+//  (R) + 92   DFF  /u_account_balance/balance_db_reg[4][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][10]
+
+// Compared points are: Equivalent
+//  (G) + 102  DFF  /u_account_balance/balance_db_reg[4][9]
+//  (R) + 91   DFF  /u_account_balance/balance_db_reg[4][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][9]
+
+// Compared points are: Equivalent
+//  (G) + 103  DFF  /u_account_balance/balance_db_reg[4][8]
+//  (R) + 90   DFF  /u_account_balance/balance_db_reg[4][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][8]
+
+// Compared points are: Equivalent
+//  (G) + 104  DFF  /u_account_balance/balance_db_reg[4][7]
+//  (R) + 89   DFF  /u_account_balance/balance_db_reg[4][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][7]
+
+// Compared points are: Equivalent
+//  (G) + 105  DFF  /u_account_balance/balance_db_reg[4][6]
+//  (R) + 88   DFF  /u_account_balance/balance_db_reg[4][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][6]
+
+// Compared points are: Equivalent
+//  (G) + 106  DFF  /u_account_balance/balance_db_reg[4][5]
+//  (R) + 87   DFF  /u_account_balance/balance_db_reg[4][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][5]
+
+// Compared points are: Equivalent
+//  (G) + 107  DFF  /u_account_balance/balance_db_reg[4][4]
+//  (R) + 86   DFF  /u_account_balance/balance_db_reg[4][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][4]
+
+// Compared points are: Equivalent
+//  (G) + 108  DFF  /u_account_balance/balance_db_reg[4][3]
+//  (R) + 85   DFF  /u_account_balance/balance_db_reg[4][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][3]
+
+// Compared points are: Equivalent
+//  (G) + 109  DFF  /u_account_balance/balance_db_reg[4][2]
+//  (R) + 84   DFF  /u_account_balance/balance_db_reg[4][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][2]
+
+// Compared points are: Equivalent
+//  (G) + 110  DFF  /u_account_balance/balance_db_reg[4][1]
+//  (R) + 83   DFF  /u_account_balance/balance_db_reg[4][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[4][1]
+
+// Compared points are: Equivalent
+//  (G) + 111  DFF  /u_account_balance/balance_db_reg[5][15]
+//  (R) + 112  DFF  /u_account_balance/balance_db_reg[5][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][15]
+
+// Compared points are: Equivalent
+//  (G) + 112  DFF  /u_account_balance/balance_db_reg[5][14]
+//  (R) + 111  DFF  /u_account_balance/balance_db_reg[5][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][14]
+
+// Compared points are: Equivalent
+//  (G) + 113  DFF  /u_account_balance/balance_db_reg[5][13]
+//  (R) + 110  DFF  /u_account_balance/balance_db_reg[5][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][13]
+
+// Compared points are: Equivalent
+//  (G) + 114  DFF  /u_account_balance/balance_db_reg[5][12]
+//  (R) + 109  DFF  /u_account_balance/balance_db_reg[5][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][12]
+
+// Compared points are: Equivalent
+//  (G) + 115  DFF  /u_account_balance/balance_db_reg[5][11]
+//  (R) + 108  DFF  /u_account_balance/balance_db_reg[5][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][11]
+
+// Compared points are: Equivalent
+//  (G) + 116  DFF  /u_account_balance/balance_db_reg[5][10]
+//  (R) + 107  DFF  /u_account_balance/balance_db_reg[5][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][10]
+
+// Compared points are: Equivalent
+//  (G) + 117  DFF  /u_account_balance/balance_db_reg[5][9]
+//  (R) + 106  DFF  /u_account_balance/balance_db_reg[5][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][9]
+
+// Compared points are: Equivalent
+//  (G) + 118  DFF  /u_account_balance/balance_db_reg[5][8]
+//  (R) + 105  DFF  /u_account_balance/balance_db_reg[5][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][8]
+
+// Compared points are: Equivalent
+//  (G) + 119  DFF  /u_account_balance/balance_db_reg[5][7]
+//  (R) + 104  DFF  /u_account_balance/balance_db_reg[5][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][7]
+
+// Compared points are: Equivalent
+//  (G) + 120  DFF  /u_account_balance/balance_db_reg[5][6]
+//  (R) + 103  DFF  /u_account_balance/balance_db_reg[5][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][6]
+
+// Compared points are: Equivalent
+//  (G) + 121  DFF  /u_account_balance/balance_db_reg[5][5]
+//  (R) + 102  DFF  /u_account_balance/balance_db_reg[5][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][5]
+
+// Compared points are: Equivalent
+//  (G) + 122  DFF  /u_account_balance/balance_db_reg[5][4]
+//  (R) + 101  DFF  /u_account_balance/balance_db_reg[5][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][4]
+
+// Compared points are: Equivalent
+//  (G) + 123  DFF  /u_account_balance/balance_db_reg[5][3]
+//  (R) + 100  DFF  /u_account_balance/balance_db_reg[5][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][3]
+
+// Compared points are: Equivalent
+//  (G) + 124  DFF  /u_account_balance/balance_db_reg[5][2]
+//  (R) + 99   DFF  /u_account_balance/balance_db_reg[5][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][2]
+
+// Compared points are: Equivalent
+//  (G) + 125  DFF  /u_account_balance/balance_db_reg[5][1]
+//  (R) + 98   DFF  /u_account_balance/balance_db_reg[5][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[5][1]
+
+// Compared points are: Equivalent
+//  (G) + 126  DFF  /u_account_balance/balance_db_reg[6][15]
+//  (R) + 127  DFF  /u_account_balance/balance_db_reg[6][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][15]
+
+// Compared points are: Equivalent
+//  (G) + 127  DFF  /u_account_balance/balance_db_reg[6][14]
+//  (R) + 126  DFF  /u_account_balance/balance_db_reg[6][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][14]
+
+// Compared points are: Equivalent
+//  (G) + 128  DFF  /u_account_balance/balance_db_reg[6][13]
+//  (R) + 125  DFF  /u_account_balance/balance_db_reg[6][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][13]
+
+// Compared points are: Equivalent
+//  (G) + 129  DFF  /u_account_balance/balance_db_reg[6][12]
+//  (R) + 124  DFF  /u_account_balance/balance_db_reg[6][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][12]
+
+// Compared points are: Equivalent
+//  (G) + 130  DFF  /u_account_balance/balance_db_reg[6][11]
+//  (R) + 123  DFF  /u_account_balance/balance_db_reg[6][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][11]
+
+// Compared points are: Equivalent
+//  (G) + 131  DFF  /u_account_balance/balance_db_reg[6][10]
+//  (R) + 122  DFF  /u_account_balance/balance_db_reg[6][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][10]
+
+// Compared points are: Equivalent
+//  (G) + 132  DFF  /u_account_balance/balance_db_reg[6][9]
+//  (R) + 121  DFF  /u_account_balance/balance_db_reg[6][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][9]
+
+// Compared points are: Equivalent
+//  (G) + 133  DFF  /u_account_balance/balance_db_reg[6][8]
+//  (R) + 120  DFF  /u_account_balance/balance_db_reg[6][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][8]
+
+// Compared points are: Equivalent
+//  (G) + 134  DFF  /u_account_balance/balance_db_reg[6][7]
+//  (R) + 119  DFF  /u_account_balance/balance_db_reg[6][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][7]
+
+// Compared points are: Equivalent
+//  (G) + 135  DFF  /u_account_balance/balance_db_reg[6][6]
+//  (R) + 118  DFF  /u_account_balance/balance_db_reg[6][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][6]
+
+// Compared points are: Equivalent
+//  (G) + 136  DFF  /u_account_balance/balance_db_reg[6][5]
+//  (R) + 117  DFF  /u_account_balance/balance_db_reg[6][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][5]
+
+// Compared points are: Equivalent
+//  (G) + 137  DFF  /u_account_balance/balance_db_reg[6][4]
+//  (R) + 116  DFF  /u_account_balance/balance_db_reg[6][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][4]
+
+// Compared points are: Equivalent
+//  (G) + 138  DFF  /u_account_balance/balance_db_reg[6][3]
+//  (R) + 115  DFF  /u_account_balance/balance_db_reg[6][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][3]
+
+// Compared points are: Equivalent
+//  (G) + 139  DFF  /u_account_balance/balance_db_reg[6][2]
+//  (R) + 114  DFF  /u_account_balance/balance_db_reg[6][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][2]
+
+// Compared points are: Equivalent
+//  (G) + 140  DFF  /u_account_balance/balance_db_reg[6][1]
+//  (R) + 113  DFF  /u_account_balance/balance_db_reg[6][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[6][1]
+
+// Compared points are: Equivalent
+//  (G) + 141  DFF  /u_account_balance/balance_db_reg[7][15]
+//  (R) + 142  DFF  /u_account_balance/balance_db_reg[7][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][15]
+
+// Compared points are: Equivalent
+//  (G) + 142  DFF  /u_account_balance/balance_db_reg[7][14]
+//  (R) + 141  DFF  /u_account_balance/balance_db_reg[7][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][14]
+
+// Compared points are: Equivalent
+//  (G) + 143  DFF  /u_account_balance/balance_db_reg[7][13]
+//  (R) + 140  DFF  /u_account_balance/balance_db_reg[7][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][13]
+
+// Compared points are: Equivalent
+//  (G) + 144  DFF  /u_account_balance/balance_db_reg[7][12]
+//  (R) + 139  DFF  /u_account_balance/balance_db_reg[7][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][12]
+
+// Compared points are: Equivalent
+//  (G) + 145  DFF  /u_account_balance/balance_db_reg[7][11]
+//  (R) + 138  DFF  /u_account_balance/balance_db_reg[7][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][11]
+
+// Compared points are: Equivalent
+//  (G) + 146  DFF  /u_account_balance/balance_db_reg[7][10]
+//  (R) + 137  DFF  /u_account_balance/balance_db_reg[7][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][10]
+
+// Compared points are: Equivalent
+//  (G) + 147  DFF  /u_account_balance/balance_db_reg[7][9]
+//  (R) + 136  DFF  /u_account_balance/balance_db_reg[7][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][9]
+
+// Compared points are: Equivalent
+//  (G) + 148  DFF  /u_account_balance/balance_db_reg[7][8]
+//  (R) + 135  DFF  /u_account_balance/balance_db_reg[7][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][8]
+
+// Compared points are: Equivalent
+//  (G) + 149  DFF  /u_account_balance/balance_db_reg[7][7]
+//  (R) + 134  DFF  /u_account_balance/balance_db_reg[7][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][7]
+
+// Compared points are: Equivalent
+//  (G) + 150  DFF  /u_account_balance/balance_db_reg[7][6]
+//  (R) + 133  DFF  /u_account_balance/balance_db_reg[7][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][6]
+
+// Compared points are: Equivalent
+//  (G) + 151  DFF  /u_account_balance/balance_db_reg[7][5]
+//  (R) + 132  DFF  /u_account_balance/balance_db_reg[7][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][5]
+
+// Compared points are: Equivalent
+//  (G) + 152  DFF  /u_account_balance/balance_db_reg[7][4]
+//  (R) + 131  DFF  /u_account_balance/balance_db_reg[7][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][4]
+
+// Compared points are: Equivalent
+//  (G) + 153  DFF  /u_account_balance/balance_db_reg[7][3]
+//  (R) + 130  DFF  /u_account_balance/balance_db_reg[7][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][3]
+
+// Compared points are: Equivalent
+//  (G) + 154  DFF  /u_account_balance/balance_db_reg[7][2]
+//  (R) + 129  DFF  /u_account_balance/balance_db_reg[7][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][2]
+
+// Compared points are: Equivalent
+//  (G) + 155  DFF  /u_account_balance/balance_db_reg[7][1]
+//  (R) + 128  DFF  /u_account_balance/balance_db_reg[7][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[7][1]
+
+// Compared points are: Equivalent
+//  (G) + 156  DFF  /u_account_balance/balance_db_reg[8][15]
+//  (R) + 157  DFF  /u_account_balance/balance_db_reg[8][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][15]
+
+// Compared points are: Equivalent
+//  (G) + 157  DFF  /u_account_balance/balance_db_reg[8][14]
+//  (R) + 156  DFF  /u_account_balance/balance_db_reg[8][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][14]
+
+// Compared points are: Equivalent
+//  (G) + 158  DFF  /u_account_balance/balance_db_reg[8][13]
+//  (R) + 155  DFF  /u_account_balance/balance_db_reg[8][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][13]
+
+// Compared points are: Equivalent
+//  (G) + 159  DFF  /u_account_balance/balance_db_reg[8][12]
+//  (R) + 154  DFF  /u_account_balance/balance_db_reg[8][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][12]
+
+// Compared points are: Equivalent
+//  (G) + 160  DFF  /u_account_balance/balance_db_reg[8][11]
+//  (R) + 153  DFF  /u_account_balance/balance_db_reg[8][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][11]
+
+// Compared points are: Equivalent
+//  (G) + 161  DFF  /u_account_balance/balance_db_reg[8][10]
+//  (R) + 152  DFF  /u_account_balance/balance_db_reg[8][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][10]
+
+// Compared points are: Equivalent
+//  (G) + 162  DFF  /u_account_balance/balance_db_reg[8][9]
+//  (R) + 151  DFF  /u_account_balance/balance_db_reg[8][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][9]
+
+// Compared points are: Equivalent
+//  (G) + 163  DFF  /u_account_balance/balance_db_reg[8][8]
+//  (R) + 150  DFF  /u_account_balance/balance_db_reg[8][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][8]
+
+// Compared points are: Equivalent
+//  (G) + 164  DFF  /u_account_balance/balance_db_reg[8][7]
+//  (R) + 149  DFF  /u_account_balance/balance_db_reg[8][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][7]
+
+// Compared points are: Equivalent
+//  (G) + 165  DFF  /u_account_balance/balance_db_reg[8][6]
+//  (R) + 148  DFF  /u_account_balance/balance_db_reg[8][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][6]
+
+// Compared points are: Equivalent
+//  (G) + 166  DFF  /u_account_balance/balance_db_reg[8][5]
+//  (R) + 147  DFF  /u_account_balance/balance_db_reg[8][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][5]
+
+// Compared points are: Equivalent
+//  (G) + 167  DFF  /u_account_balance/balance_db_reg[8][4]
+//  (R) + 146  DFF  /u_account_balance/balance_db_reg[8][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][4]
+
+// Compared points are: Equivalent
+//  (G) + 168  DFF  /u_account_balance/balance_db_reg[8][3]
+//  (R) + 145  DFF  /u_account_balance/balance_db_reg[8][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][3]
+
+// Compared points are: Equivalent
+//  (G) + 169  DFF  /u_account_balance/balance_db_reg[8][2]
+//  (R) + 144  DFF  /u_account_balance/balance_db_reg[8][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][2]
+
+// Compared points are: Equivalent
+//  (G) + 170  DFF  /u_account_balance/balance_db_reg[8][1]
+//  (R) + 143  DFF  /u_account_balance/balance_db_reg[8][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[8][1]
+
+// Compared points are: Equivalent
+//  (G) + 171  DFF  /u_account_balance/balance_db_reg[9][15]
+//  (R) + 172  DFF  /u_account_balance/balance_db_reg[9][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][15]
+
+// Compared points are: Equivalent
+//  (G) + 172  DFF  /u_account_balance/balance_db_reg[9][14]
+//  (R) + 171  DFF  /u_account_balance/balance_db_reg[9][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][14]
+
+// Compared points are: Equivalent
+//  (G) + 173  DFF  /u_account_balance/balance_db_reg[9][13]
+//  (R) + 170  DFF  /u_account_balance/balance_db_reg[9][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][13]
+
+// Compared points are: Equivalent
+//  (G) + 174  DFF  /u_account_balance/balance_db_reg[9][12]
+//  (R) + 169  DFF  /u_account_balance/balance_db_reg[9][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][12]
+
+// Compared points are: Equivalent
+//  (G) + 175  DFF  /u_account_balance/balance_db_reg[9][11]
+//  (R) + 168  DFF  /u_account_balance/balance_db_reg[9][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][11]
+
+// Compared points are: Equivalent
+//  (G) + 176  DFF  /u_account_balance/balance_db_reg[9][10]
+//  (R) + 167  DFF  /u_account_balance/balance_db_reg[9][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][10]
+
+// Compared points are: Equivalent
+//  (G) + 177  DFF  /u_account_balance/balance_db_reg[9][9]
+//  (R) + 166  DFF  /u_account_balance/balance_db_reg[9][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][9]
+
+// Compared points are: Equivalent
+//  (G) + 178  DFF  /u_account_balance/balance_db_reg[9][8]
+//  (R) + 165  DFF  /u_account_balance/balance_db_reg[9][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][8]
+
+// Compared points are: Equivalent
+//  (G) + 179  DFF  /u_account_balance/balance_db_reg[9][7]
+//  (R) + 164  DFF  /u_account_balance/balance_db_reg[9][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][7]
+
+// Compared points are: Equivalent
+//  (G) + 180  DFF  /u_account_balance/balance_db_reg[9][6]
+//  (R) + 163  DFF  /u_account_balance/balance_db_reg[9][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][6]
+
+// Compared points are: Equivalent
+//  (G) + 181  DFF  /u_account_balance/balance_db_reg[9][5]
+//  (R) + 162  DFF  /u_account_balance/balance_db_reg[9][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][5]
+
+// Compared points are: Equivalent
+//  (G) + 182  DFF  /u_account_balance/balance_db_reg[9][4]
+//  (R) + 161  DFF  /u_account_balance/balance_db_reg[9][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][4]
+
+// Compared points are: Equivalent
+//  (G) + 183  DFF  /u_account_balance/balance_db_reg[9][3]
+//  (R) + 160  DFF  /u_account_balance/balance_db_reg[9][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][3]
+
+// Compared points are: Equivalent
+//  (G) + 184  DFF  /u_account_balance/balance_db_reg[9][2]
+//  (R) + 159  DFF  /u_account_balance/balance_db_reg[9][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][2]
+
+// Compared points are: Equivalent
+//  (G) + 185  DFF  /u_account_balance/balance_db_reg[9][1]
+//  (R) + 158  DFF  /u_account_balance/balance_db_reg[9][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[9][1]
+
+// Compared points are: Equivalent
+//  (G) + 186  DFF  /u_account_balance/balance_db_reg[10][15]
+//  (R) + 187  DFF  /u_account_balance/balance_db_reg[10][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][15]
+
+// Compared points are: Equivalent
+//  (G) + 187  DFF  /u_account_balance/balance_db_reg[10][14]
+//  (R) + 186  DFF  /u_account_balance/balance_db_reg[10][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][14]
+
+// Compared points are: Equivalent
+//  (G) + 188  DFF  /u_account_balance/balance_db_reg[10][13]
+//  (R) + 185  DFF  /u_account_balance/balance_db_reg[10][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][13]
+
+// Compared points are: Equivalent
+//  (G) + 189  DFF  /u_account_balance/balance_db_reg[10][12]
+//  (R) + 184  DFF  /u_account_balance/balance_db_reg[10][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][12]
+
+// Compared points are: Equivalent
+//  (G) + 190  DFF  /u_account_balance/balance_db_reg[10][11]
+//  (R) + 183  DFF  /u_account_balance/balance_db_reg[10][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][11]
+
+// Compared points are: Equivalent
+//  (G) + 191  DFF  /u_account_balance/balance_db_reg[10][10]
+//  (R) + 182  DFF  /u_account_balance/balance_db_reg[10][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][10]
+
+// Compared points are: Equivalent
+//  (G) + 192  DFF  /u_account_balance/balance_db_reg[10][9]
+//  (R) + 181  DFF  /u_account_balance/balance_db_reg[10][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][9]
+
+// Compared points are: Equivalent
+//  (G) + 193  DFF  /u_account_balance/balance_db_reg[10][8]
+//  (R) + 180  DFF  /u_account_balance/balance_db_reg[10][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][8]
+
+// Compared points are: Equivalent
+//  (G) + 194  DFF  /u_account_balance/balance_db_reg[10][7]
+//  (R) + 179  DFF  /u_account_balance/balance_db_reg[10][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][7]
+
+// Compared points are: Equivalent
+//  (G) + 195  DFF  /u_account_balance/balance_db_reg[10][6]
+//  (R) + 178  DFF  /u_account_balance/balance_db_reg[10][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][6]
+
+// Compared points are: Equivalent
+//  (G) + 196  DFF  /u_account_balance/balance_db_reg[10][5]
+//  (R) + 177  DFF  /u_account_balance/balance_db_reg[10][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][5]
+
+// Compared points are: Equivalent
+//  (G) + 197  DFF  /u_account_balance/balance_db_reg[10][4]
+//  (R) + 176  DFF  /u_account_balance/balance_db_reg[10][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][4]
+
+// Compared points are: Equivalent
+//  (G) + 198  DFF  /u_account_balance/balance_db_reg[10][3]
+//  (R) + 175  DFF  /u_account_balance/balance_db_reg[10][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][3]
+
+// Compared points are: Equivalent
+//  (G) + 199  DFF  /u_account_balance/balance_db_reg[10][2]
+//  (R) + 174  DFF  /u_account_balance/balance_db_reg[10][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][2]
+
+// Compared points are: Equivalent
+//  (G) + 200  DFF  /u_account_balance/balance_db_reg[10][1]
+//  (R) + 173  DFF  /u_account_balance/balance_db_reg[10][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[10][1]
+
+// Compared points are: Equivalent
+//  (G) + 201  DFF  /u_account_balance/balance_db_reg[11][15]
+//  (R) + 202  DFF  /u_account_balance/balance_db_reg[11][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][15]
+
+// Compared points are: Equivalent
+//  (G) + 202  DFF  /u_account_balance/balance_db_reg[11][14]
+//  (R) + 201  DFF  /u_account_balance/balance_db_reg[11][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][14]
+
+// Compared points are: Equivalent
+//  (G) + 203  DFF  /u_account_balance/balance_db_reg[11][13]
+//  (R) + 200  DFF  /u_account_balance/balance_db_reg[11][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][13]
+
+// Compared points are: Equivalent
+//  (G) + 204  DFF  /u_account_balance/balance_db_reg[11][12]
+//  (R) + 199  DFF  /u_account_balance/balance_db_reg[11][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][12]
+
+// Compared points are: Equivalent
+//  (G) + 205  DFF  /u_account_balance/balance_db_reg[11][11]
+//  (R) + 198  DFF  /u_account_balance/balance_db_reg[11][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][11]
+
+// Compared points are: Equivalent
+//  (G) + 206  DFF  /u_account_balance/balance_db_reg[11][10]
+//  (R) + 197  DFF  /u_account_balance/balance_db_reg[11][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][10]
+
+// Compared points are: Equivalent
+//  (G) + 207  DFF  /u_account_balance/balance_db_reg[11][9]
+//  (R) + 196  DFF  /u_account_balance/balance_db_reg[11][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][9]
+
+// Compared points are: Equivalent
+//  (G) + 208  DFF  /u_account_balance/balance_db_reg[11][8]
+//  (R) + 195  DFF  /u_account_balance/balance_db_reg[11][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][8]
+
+// Compared points are: Equivalent
+//  (G) + 209  DFF  /u_account_balance/balance_db_reg[11][7]
+//  (R) + 194  DFF  /u_account_balance/balance_db_reg[11][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][7]
+
+// Compared points are: Equivalent
+//  (G) + 210  DFF  /u_account_balance/balance_db_reg[11][6]
+//  (R) + 193  DFF  /u_account_balance/balance_db_reg[11][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][6]
+
+// Compared points are: Equivalent
+//  (G) + 211  DFF  /u_account_balance/balance_db_reg[11][5]
+//  (R) + 192  DFF  /u_account_balance/balance_db_reg[11][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][5]
+
+// Compared points are: Equivalent
+//  (G) + 212  DFF  /u_account_balance/balance_db_reg[11][4]
+//  (R) + 191  DFF  /u_account_balance/balance_db_reg[11][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][4]
+
+// Compared points are: Equivalent
+//  (G) + 213  DFF  /u_account_balance/balance_db_reg[11][3]
+//  (R) + 190  DFF  /u_account_balance/balance_db_reg[11][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][3]
+
+// Compared points are: Equivalent
+//  (G) + 214  DFF  /u_account_balance/balance_db_reg[11][2]
+//  (R) + 189  DFF  /u_account_balance/balance_db_reg[11][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][2]
+
+// Compared points are: Equivalent
+//  (G) + 215  DFF  /u_account_balance/balance_db_reg[11][1]
+//  (R) + 188  DFF  /u_account_balance/balance_db_reg[11][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[11][1]
+
+// Compared points are: Equivalent
+//  (G) + 216  DFF  /u_account_balance/balance_db_reg[12][15]
+//  (R) + 217  DFF  /u_account_balance/balance_db_reg[12][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][15]
+
+// Compared points are: Equivalent
+//  (G) + 217  DFF  /u_account_balance/balance_db_reg[12][14]
+//  (R) + 216  DFF  /u_account_balance/balance_db_reg[12][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][14]
+
+// Compared points are: Equivalent
+//  (G) + 218  DFF  /u_account_balance/balance_db_reg[12][13]
+//  (R) + 215  DFF  /u_account_balance/balance_db_reg[12][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][13]
+
+// Compared points are: Equivalent
+//  (G) + 219  DFF  /u_account_balance/balance_db_reg[12][12]
+//  (R) + 214  DFF  /u_account_balance/balance_db_reg[12][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][12]
+
+// Compared points are: Equivalent
+//  (G) + 220  DFF  /u_account_balance/balance_db_reg[12][11]
+//  (R) + 213  DFF  /u_account_balance/balance_db_reg[12][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][11]
+
+// Compared points are: Equivalent
+//  (G) + 221  DFF  /u_account_balance/balance_db_reg[12][10]
+//  (R) + 212  DFF  /u_account_balance/balance_db_reg[12][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][10]
+
+// Compared points are: Equivalent
+//  (G) + 222  DFF  /u_account_balance/balance_db_reg[12][9]
+//  (R) + 211  DFF  /u_account_balance/balance_db_reg[12][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][9]
+
+// Compared points are: Equivalent
+//  (G) + 223  DFF  /u_account_balance/balance_db_reg[12][8]
+//  (R) + 210  DFF  /u_account_balance/balance_db_reg[12][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][8]
+
+// Compared points are: Equivalent
+//  (G) + 224  DFF  /u_account_balance/balance_db_reg[12][7]
+//  (R) + 209  DFF  /u_account_balance/balance_db_reg[12][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][7]
+
+// Compared points are: Equivalent
+//  (G) + 225  DFF  /u_account_balance/balance_db_reg[12][6]
+//  (R) + 208  DFF  /u_account_balance/balance_db_reg[12][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][6]
+
+// Compared points are: Equivalent
+//  (G) + 226  DFF  /u_account_balance/balance_db_reg[12][5]
+//  (R) + 207  DFF  /u_account_balance/balance_db_reg[12][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][5]
+
+// Compared points are: Equivalent
+//  (G) + 227  DFF  /u_account_balance/balance_db_reg[12][4]
+//  (R) + 206  DFF  /u_account_balance/balance_db_reg[12][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][4]
+
+// Compared points are: Equivalent
+//  (G) + 228  DFF  /u_account_balance/balance_db_reg[12][3]
+//  (R) + 205  DFF  /u_account_balance/balance_db_reg[12][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][3]
+
+// Compared points are: Equivalent
+//  (G) + 229  DFF  /u_account_balance/balance_db_reg[12][2]
+//  (R) + 204  DFF  /u_account_balance/balance_db_reg[12][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][2]
+
+// Compared points are: Equivalent
+//  (G) + 230  DFF  /u_account_balance/balance_db_reg[12][1]
+//  (R) + 203  DFF  /u_account_balance/balance_db_reg[12][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[12][1]
+
+// Compared points are: Equivalent
+//  (G) + 231  DFF  /u_account_balance/balance_db_reg[13][15]
+//  (R) + 232  DFF  /u_account_balance/balance_db_reg[13][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][15]
+
+// Compared points are: Equivalent
+//  (G) + 232  DFF  /u_account_balance/balance_db_reg[13][14]
+//  (R) + 231  DFF  /u_account_balance/balance_db_reg[13][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][14]
+
+// Compared points are: Equivalent
+//  (G) + 233  DFF  /u_account_balance/balance_db_reg[13][13]
+//  (R) + 230  DFF  /u_account_balance/balance_db_reg[13][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][13]
+
+// Compared points are: Equivalent
+//  (G) + 234  DFF  /u_account_balance/balance_db_reg[13][12]
+//  (R) + 229  DFF  /u_account_balance/balance_db_reg[13][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][12]
+
+// Compared points are: Equivalent
+//  (G) + 235  DFF  /u_account_balance/balance_db_reg[13][11]
+//  (R) + 228  DFF  /u_account_balance/balance_db_reg[13][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][11]
+
+// Compared points are: Equivalent
+//  (G) + 236  DFF  /u_account_balance/balance_db_reg[13][10]
+//  (R) + 227  DFF  /u_account_balance/balance_db_reg[13][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][10]
+
+// Compared points are: Equivalent
+//  (G) + 237  DFF  /u_account_balance/balance_db_reg[13][9]
+//  (R) + 226  DFF  /u_account_balance/balance_db_reg[13][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][9]
+
+// Compared points are: Equivalent
+//  (G) + 238  DFF  /u_account_balance/balance_db_reg[13][8]
+//  (R) + 225  DFF  /u_account_balance/balance_db_reg[13][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][8]
+
+// Compared points are: Equivalent
+//  (G) + 239  DFF  /u_account_balance/balance_db_reg[13][7]
+//  (R) + 224  DFF  /u_account_balance/balance_db_reg[13][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][7]
+
+// Compared points are: Equivalent
+//  (G) + 240  DFF  /u_account_balance/balance_db_reg[13][6]
+//  (R) + 223  DFF  /u_account_balance/balance_db_reg[13][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][6]
+
+// Compared points are: Equivalent
+//  (G) + 241  DFF  /u_account_balance/balance_db_reg[13][5]
+//  (R) + 222  DFF  /u_account_balance/balance_db_reg[13][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][5]
+
+// Compared points are: Equivalent
+//  (G) + 242  DFF  /u_account_balance/balance_db_reg[13][4]
+//  (R) + 221  DFF  /u_account_balance/balance_db_reg[13][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][4]
+
+// Compared points are: Equivalent
+//  (G) + 243  DFF  /u_account_balance/balance_db_reg[13][3]
+//  (R) + 220  DFF  /u_account_balance/balance_db_reg[13][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][3]
+
+// Compared points are: Equivalent
+//  (G) + 244  DFF  /u_account_balance/balance_db_reg[13][2]
+//  (R) + 219  DFF  /u_account_balance/balance_db_reg[13][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][2]
+
+// Compared points are: Equivalent
+//  (G) + 245  DFF  /u_account_balance/balance_db_reg[13][1]
+//  (R) + 218  DFF  /u_account_balance/balance_db_reg[13][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[13][1]
+
+// Compared points are: Equivalent
+//  (G) + 246  DFF  /u_account_balance/balance_db_reg[14][15]
+//  (R) + 247  DFF  /u_account_balance/balance_db_reg[14][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][15]
+
+// Compared points are: Equivalent
+//  (G) + 247  DFF  /u_account_balance/balance_db_reg[14][14]
+//  (R) + 246  DFF  /u_account_balance/balance_db_reg[14][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][14]
+
+// Compared points are: Equivalent
+//  (G) + 248  DFF  /u_account_balance/balance_db_reg[14][13]
+//  (R) + 245  DFF  /u_account_balance/balance_db_reg[14][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][13]
+
+// Compared points are: Equivalent
+//  (G) + 249  DFF  /u_account_balance/balance_db_reg[14][12]
+//  (R) + 244  DFF  /u_account_balance/balance_db_reg[14][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][12]
+
+// Compared points are: Equivalent
+//  (G) + 250  DFF  /u_account_balance/balance_db_reg[14][11]
+//  (R) + 243  DFF  /u_account_balance/balance_db_reg[14][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][11]
+
+// Compared points are: Equivalent
+//  (G) + 251  DFF  /u_account_balance/balance_db_reg[14][10]
+//  (R) + 242  DFF  /u_account_balance/balance_db_reg[14][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][10]
+
+// Compared points are: Equivalent
+//  (G) + 252  DFF  /u_account_balance/balance_db_reg[14][9]
+//  (R) + 241  DFF  /u_account_balance/balance_db_reg[14][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][9]
+
+// Compared points are: Equivalent
+//  (G) + 253  DFF  /u_account_balance/balance_db_reg[14][8]
+//  (R) + 240  DFF  /u_account_balance/balance_db_reg[14][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][8]
+
+// Compared points are: Equivalent
+//  (G) + 254  DFF  /u_account_balance/balance_db_reg[14][7]
+//  (R) + 239  DFF  /u_account_balance/balance_db_reg[14][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][7]
+
+// Compared points are: Equivalent
+//  (G) + 255  DFF  /u_account_balance/balance_db_reg[14][6]
+//  (R) + 238  DFF  /u_account_balance/balance_db_reg[14][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][6]
+
+// Compared points are: Equivalent
+//  (G) + 256  DFF  /u_account_balance/balance_db_reg[14][5]
+//  (R) + 237  DFF  /u_account_balance/balance_db_reg[14][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][5]
+
+// Compared points are: Equivalent
+//  (G) + 257  DFF  /u_account_balance/balance_db_reg[14][4]
+//  (R) + 236  DFF  /u_account_balance/balance_db_reg[14][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][4]
+
+// Compared points are: Equivalent
+//  (G) + 258  DFF  /u_account_balance/balance_db_reg[14][3]
+//  (R) + 235  DFF  /u_account_balance/balance_db_reg[14][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][3]
+
+// Compared points are: Equivalent
+//  (G) + 259  DFF  /u_account_balance/balance_db_reg[14][2]
+//  (R) + 234  DFF  /u_account_balance/balance_db_reg[14][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][2]
+
+// Compared points are: Equivalent
+//  (G) + 260  DFF  /u_account_balance/balance_db_reg[14][1]
+//  (R) + 233  DFF  /u_account_balance/balance_db_reg[14][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[14][1]
+
+// Compared points are: Equivalent
+//  (G) + 261  DFF  /u_account_balance/balance_db_reg[15][15]
+//  (R) + 262  DFF  /u_account_balance/balance_db_reg[15][15]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][15]
+
+// Compared points are: Equivalent
+//  (G) + 262  DFF  /u_account_balance/balance_db_reg[15][14]
+//  (R) + 261  DFF  /u_account_balance/balance_db_reg[15][14]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][14]
+
+// Compared points are: Equivalent
+//  (G) + 263  DFF  /u_account_balance/balance_db_reg[15][13]
+//  (R) + 260  DFF  /u_account_balance/balance_db_reg[15][13]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][13]
+
+// Compared points are: Equivalent
+//  (G) + 264  DFF  /u_account_balance/balance_db_reg[15][12]
+//  (R) + 259  DFF  /u_account_balance/balance_db_reg[15][12]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][12]
+
+// Compared points are: Equivalent
+//  (G) + 265  DFF  /u_account_balance/balance_db_reg[15][11]
+//  (R) + 258  DFF  /u_account_balance/balance_db_reg[15][11]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][11]
+
+// Compared points are: Equivalent
+//  (G) + 266  DFF  /u_account_balance/balance_db_reg[15][10]
+//  (R) + 257  DFF  /u_account_balance/balance_db_reg[15][10]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][10]
+
+// Compared points are: Equivalent
+//  (G) + 267  DFF  /u_account_balance/balance_db_reg[15][9]
+//  (R) + 256  DFF  /u_account_balance/balance_db_reg[15][9]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][9]
+
+// Compared points are: Equivalent
+//  (G) + 268  DFF  /u_account_balance/balance_db_reg[15][8]
+//  (R) + 255  DFF  /u_account_balance/balance_db_reg[15][8]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][8]
+
+// Compared points are: Equivalent
+//  (G) + 269  DFF  /u_account_balance/balance_db_reg[15][7]
+//  (R) + 254  DFF  /u_account_balance/balance_db_reg[15][7]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][7]
+
+// Compared points are: Equivalent
+//  (G) + 270  DFF  /u_account_balance/balance_db_reg[15][6]
+//  (R) + 253  DFF  /u_account_balance/balance_db_reg[15][6]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][6]
+
+// Compared points are: Equivalent
+//  (G) + 271  DFF  /u_account_balance/balance_db_reg[15][5]
+//  (R) + 252  DFF  /u_account_balance/balance_db_reg[15][5]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][5]
+
+// Compared points are: Equivalent
+//  (G) + 272  DFF  /u_account_balance/balance_db_reg[15][4]
+//  (R) + 251  DFF  /u_account_balance/balance_db_reg[15][4]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][4]
+
+// Compared points are: Equivalent
+//  (G) + 273  DFF  /u_account_balance/balance_db_reg[15][3]
+//  (R) + 250  DFF  /u_account_balance/balance_db_reg[15][3]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][3]
+
+// Compared points are: Equivalent
+//  (G) + 274  DFF  /u_account_balance/balance_db_reg[15][2]
+//  (R) + 249  DFF  /u_account_balance/balance_db_reg[15][2]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][2]
+
+// Compared points are: Equivalent
+//  (G) + 275  DFF  /u_account_balance/balance_db_reg[15][1]
+//  (R) + 248  DFF  /u_account_balance/balance_db_reg[15][1]/U$1/U$1
+add compared points u_account_balance/balance_db_reg[15][1]
+
+// Compared points are: Non-equivalent
+//  (G) + 276  DFF  /u_account_balance/charge_done_reg
+//  (R) + 25   DFF  /u_account_balance/charge_done_reg/U$1/U$1
+add compared points u_account_balance/charge_done_reg
+
+// Compared points are: Equivalent
+//  (G) + 277  DFF  /u_barrier_ctrl/barrier_position_counter_reg[2]
+//  (R) + 265  DFF  /u_barrier_ctrl/barrier_position_counter_reg[2]/U$1/U$1
+add compared points u_barrier_ctrl/barrier_position_counter_reg[2]
+
+// Compared points are: Equivalent
+//  (G) + 278  DFF  /u_barrier_ctrl/barrier_position_counter_reg[1]
+//  (R) + 266  DFF  /u_barrier_ctrl/barrier_position_counter_reg[1]/U$1/U$1
+add compared points u_barrier_ctrl/barrier_position_counter_reg[1]
+
+// Compared points are: Equivalent
+//  (G) + 279  DFF  /u_barrier_ctrl/barrier_position_counter_reg[0]
+//  (R) + 267  DFF  /u_barrier_ctrl/barrier_position_counter_reg[0]/U$1/U$1
+add compared points u_barrier_ctrl/barrier_position_counter_reg[0]
+
+// Compared points are: Equivalent
+//  (G) + 280  DFF  /u_barrier_ctrl/barrier_close_cmd_reg
+//  (R) + 263  DFF  /u_barrier_ctrl/barrier_close_cmd_reg/U$1/U$1
+add compared points u_barrier_ctrl/barrier_close_cmd_reg
+
+// Compared points are: Equivalent
+//  (G) + 281  DFF  /u_barrier_ctrl/barrier_open_cmd_reg
+//  (R) + 264  DFF  /u_barrier_ctrl/barrier_open_cmd_reg/U$1/U$1
+add compared points u_barrier_ctrl/barrier_open_cmd_reg
+
+// 263 compared points written

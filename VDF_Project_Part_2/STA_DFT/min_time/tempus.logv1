@@ -1,0 +1,105 @@
+[10/13 16:21:53      0s] 
+[10/13 16:21:53      0s] Cadence Tempus(TM) Timing Signoff Solution.
+[10/13 16:21:53      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[10/13 16:21:53      0s] 
+[10/13 16:21:53      0s] Version:	v20.10-p003_1, built Wed Apr 29 15:56:37 PDT 2020
+[10/13 16:21:53      0s] Options:	-nowin sta_min_area.tcl 
+[10/13 16:21:53      0s] Date:		Mon Oct 13 16:21:53 2025
+[10/13 16:21:53      0s] Host:		edatools-server2.iiitd.edu.in (x86_64 w/Linux 2.6.32-754.35.1.el6.x86_64) (18cores*72cpus*Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz 39936KB)
+[10/13 16:21:53      0s] OS:		Red Hat Enterprise Linux Server release 6.10 (Santiago)
+[10/13 16:21:53      0s] 
+[10/13 16:21:53      0s] License:
+[10/13 16:21:55      0s] 		tpsxl	Tempus Timing Signoff Solution XL	20.1	checkout succeeded
+[10/13 16:21:55      0s] 		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+[10/13 16:21:59      3s] **ERROR: (IMPSYT-468):	Unknown argument sta_min_area.tcl
+[10/13 16:21:59      3s] Usage: tempus
+[10/13 16:21:59      3s]  	[-abort_on_error]
+[10/13 16:21:59      3s]  	[-batch]
+[10/13 16:21:59      3s]  	[-cds_lib_file <in_file>]
+[10/13 16:21:59      3s]  	[-stylus]
+[10/13 16:21:59      3s]  	[-cpus <integer>]
+[10/13 16:21:59      3s]  	[-disable_user_startup]
+[10/13 16:21:59      3s]  	[-distributed]
+[10/13 16:21:59      3s]  	[-execute <Tcl_commands>] 
+[10/13 16:21:59      3s]  	[-files <in_file_list>] 
+[10/13 16:21:59      3s]  	[-help]
+[10/13 16:21:59      3s]  	[-lic_multi_cpu <lic_list>]
+[10/13 16:21:59      3s]  	[-lic_options <lic_list>]
+[10/13 16:21:59      3s]  	[-lic_startup <lic_list>]
+[10/13 16:21:59      3s]  	[-lic_startup_options <lic_list>]
+[10/13 16:21:59      3s]  	[-log <file.log>]
+[10/13 16:21:59      3s]  	[-no_gui]
+[10/13 16:21:59      3s]  	[-no_logv]
+[10/13 16:21:59      3s]  	[-no_cmd]
+[10/13 16:21:59      3s]  	[-overwrite]
+[10/13 16:21:59      3s]  	[-eco]
+[10/13 16:21:59      3s]  	[-version]
+[10/13 16:21:59      3s]  	[-wait <minutes>]
+[10/13 16:21:59      3s] 
+[10/13 16:21:59      3s] Usage: tempus [options]
+[10/13 16:21:59      3s] [-abort_on_error]
+[10/13 16:21:59      3s] 	Exit if an error is detected at any point.
+[10/13 16:21:59      3s] [-batch]
+[10/13 16:21:59      3s] 	No interactive prompt occurs. Exit after -execute and -files options
+[10/13 16:21:59      3s] 	are processed.
+[10/13 16:21:59      3s] [-cds_lib_file <in_file>]
+[10/13 16:21:59      3s] 	Load in_file rather than the default cds.lib file in the current
+[10/13 16:21:59      3s] 	directory to obtain the names and locations of OpenAccess libraries.
+[10/13 16:21:59      3s] [-stylus]
+[10/13 16:21:59      3s] 	Enable Common UI, Stylus flow kit, and Stylus metrics.
+[10/13 16:21:59      3s] [-cpus <integer>]
+[10/13 16:21:59      3s] 	Number of cpus to use for multi-threading on current host.
+[10/13 16:21:59      3s] [-disable_user_startup]
+[10/13 16:21:59      3s] 	Only read the init file in the installation hierarchy. Do not read
+[10/13 16:21:59      3s] 	init files in the home or current directory.
+[10/13 16:21:59      3s] [-distributed]
+[10/13 16:21:59      3s] 	Starts Tempus in the Distributed Static Timing Analysis (DSTA) mode.
+[10/13 16:21:59      3s] [-execute <Tcl_commands>]
+[10/13 16:21:59      3s] 	Specifies the Tcl commands to be executed as a quoted string at startup.
+[10/13 16:21:59      3s] [-files <in_file_list>]
+[10/13 16:21:59      3s] 	One or more Tcl files to source at startup, after -execute. Set shell envar CDS_STYLUS_SOURCE_VERBOSE to 0 if you don't want the source command output to default to verbose in Stylus.
+[10/13 16:21:59      3s] [-help]
+[10/13 16:21:59      3s] 	Write out the usage and options with brief descriptions.
+[10/13 16:21:59      3s] [-lic_multi_cpu <lic_list>]
+[10/13 16:21:59      3s] 	Control which licenses to use for higher multi-cpu usage in priority
+[10/13 16:21:59      3s] 	order from left to right. The allowed license names are:
+[10/13 16:21:59      3s] 	"tpsmp tpsl tpsxl"
+[10/13 16:21:59      3s] [-lic_options <lic_list>]
+[10/13 16:21:59      3s] 	Ordered list for dynamic option license checkout in priority order
+[10/13 16:21:59      3s] 	from left to right. These are checked out when needed by a specific
+[10/13 16:21:59      3s] 	Tcl command. Legal names are:
+[10/13 16:21:59      3s] 	"tpstso tpsng tpstsx tpspi vtsxl vtsl vtsaa invs_ms"
+[10/13 16:21:59      3s] [-lic_startup <lic_list>]
+[10/13 16:21:59      3s] 	Request one of these licenses at startup in priority order from left
+[10/13 16:21:59      3s] 	to right. The supported licenses are:
+[10/13 16:21:59      3s] 	"tpsxl tpsl vdst"
+[10/13 16:21:59      3s] [-lic_startup_options <lic_list>]
+[10/13 16:21:59      3s] 	Additional option licenses needed at startup. The allowed license
+[10/13 16:21:59      3s] 	names are:
+[10/13 16:21:59      3s] 	"tpstso tpsng tpstsx tpspi vtsxl vtsl vtsaa invs_ms"
+[10/13 16:21:59      3s] [-lic_startup_extra <lic_list>]
+[10/13 16:21:59      3s] 	Request extra base license at startup to enable saving physical changes
+[10/13 16:21:59      3s] 	in priority order from left to right. The allowed license names are:
+[10/13 16:21:59      3s] 	"invs invsb vdixl"
+[10/13 16:21:59      3s] [-log <prefix>]
+[10/13 16:21:59      3s] 	Prefix for the .log, .cmd, and .logv files. If it has an extension,
+[10/13 16:21:59      3s] 	only the prefix is used. For example, either '-log abc' or '-log abc.log'
+[10/13 16:21:59      3s] 	will create abc.log abc.cmd and abc.logv files. If the .log file already
+[10/13 16:21:59      3s] 	exists, an integer is appended to all the file names to make them unique
+[10/13 16:21:59      3s] 	(e.g. abc.log2 abc.cmd2 abc.logv2).
+[10/13 16:21:59      3s] [-no_gui]
+[10/13 16:21:59      3s] 	Disable GUI and Tk support. GUI will not be available later in the
+[10/13 16:21:59      3s] 	session.
+[10/13 16:21:59      3s] [-no_logv]
+[10/13 16:21:59      3s] 	Specifies that verbose log file will not be created.
+[10/13 16:21:59      3s] [-no_cmd]
+[10/13 16:21:59      3s] 	Specifies that verbose command file will not be created.
+[10/13 16:21:59      3s] [-overwrite]
+[10/13 16:21:59      3s] 	Overwrite an existing .log file (and associated .cmd, .logv files)
+[10/13 16:21:59      3s] 	instead of adding an integer to make the files unique.
+[10/13 16:21:59      3s] [-eco]
+[10/13 16:21:59      3s] 	Allows to run the Timing Signoff ECO flow.
+[10/13 16:21:59      3s] [-version]
+[10/13 16:21:59      3s] 	Return program version information.
+[10/13 16:21:59      3s] [-wait <minutes>]
+[10/13 16:21:59      3s] 	Number of minutes to wait for licenses before exiting. The default is 0.

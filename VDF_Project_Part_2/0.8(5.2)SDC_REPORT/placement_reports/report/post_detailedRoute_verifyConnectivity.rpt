@@ -1,0 +1,29 @@
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Mon Nov 10 17:51:18 2025
+
+Design Name: toll_gate
+Database Units: 2000
+Design Boundary: (0.0000, 0.0000) (106.4300, 102.0800)
+Error Limit = 1000; Warning Limit = 50
+Check all nets
+Net clk: Found a geometry with bounding box (-0.07,0.00) (0.07,0.58) outside the design boundary.
+Violations for such geometries will be reported.
+**WARN: (IMPVFC-97):	IO pin scan_en of net scan_en has not been assigned. Please make sure it is assigned and rerun verifyConnectivity.
+**WARN: (IMPVFC-97):	IO pin DFT_sdi_1 of net DFT_sdi_1 has not been assigned. Please make sure it is assigned and rerun verifyConnectivity.
+**WARN: (IMPVFC-97):	IO pin DFT_sdi_2 of net DFT_sdi_2 has not been assigned. Please make sure it is assigned and rerun verifyConnectivity.
+**WARN: (IMPVFC-97):	IO pin DFT_sdo_1 of net DFT_sdo_1 has not been assigned. Please make sure it is assigned and rerun verifyConnectivity.
+**WARN: (IMPVFC-97):	IO pin DFT_sdo_2 of net DFT_sdo_2 has not been assigned. Please make sure it is assigned and rerun verifyConnectivity.
+
+Begin Summary 
+  Found no problems or warnings.
+End Summary
+
+End Time: Mon Nov 10 17:51:18 2025
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 0 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+

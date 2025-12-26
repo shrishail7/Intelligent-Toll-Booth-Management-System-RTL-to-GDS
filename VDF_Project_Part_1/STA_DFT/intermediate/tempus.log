@@ -1,0 +1,160 @@
+
+Cadence Tempus(TM) Timing Signoff Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.10-p003_1, built Wed Apr 29 15:56:37 PDT 2020
+Options:	-nowin -file sta_min_area.tcl 
+Date:		Sat Oct 11 20:41:56 2025
+Host:		edatools-server2.iiitd.edu.in (x86_64 w/Linux 2.6.32-754.35.1.el6.x86_64) (18cores*72cpus*Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz 39936KB)
+OS:		Red Hat Enterprise Linux Server release 6.10 (Santiago)
+
+License:
+		tpsxl	Tempus Timing Signoff Solution XL	20.1	checkout succeeded
+		16 CPU jobs allowed with the current license(s). Use set_multi_cpu_usage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (1033 mbytes). Set global soft_stack_size_limit to change the value.
+environment variable TMPDIR is '/tmp/ssv_tmpdir_25278_GwUbB2'.
+#@ Processing -files option
+Sourcing tcl/tk file 'sta_min_area.tcl' ...
+<CMD> read_lib /cadence/FOUNDRY/digital/90nm/dig/lib/slow.lib
+<CMD> read_verilog /home/prerana25172/Desktop/cmos65/VDF_Project/STA_DFT/intermediate/rtl_netlist_min_area.v
+<CMD> set_top_module toll_gate
+#% Begin Load MMMC data ... (date=10/11 20:42:05, mem=438.0M)
+Number of views requested 1 are allowed with the current licenses... continuing with set_analysis_view.
+#% End Load MMMC data ... (date=10/11 20:42:05, total cpu=0:00:00.0, real=0:00:00.0, peak res=438.2M, current mem=438.2M)
+default_emulate_early_rc_corner default_emulate_late_rc_corner default_emulate_rc_corner
+Loading view definition file from .ssv_emulate_view_definition_25278.tcl
+Reading default_emulate_libset_max timing library '/cadence/FOUNDRY/digital/90nm/dig/lib/slow.lib' ...
+Read 479 cells in library 'slow' 
+*** End library_loading (cpu=0.01min, real=0.00min, mem=14.0M, fe_cpu=0.13min, fe_real=0.15min, fe_mem=552.1M) ***
+#% Begin Load netlist data ... (date=10/11 20:42:05, mem=443.4M)
+*** Begin netlist parsing (mem=552.1M) ***
+Reading verilog netlist '/home/prerana25172/Desktop/cmos65/VDF_Project/STA_DFT/intermediate/rtl_netlist_min_area.v'
+
+*** Memory Usage v#1 (Current mem = 704.176M, initial mem = 273.305M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=704.2M) ***
+#% End Load netlist data ... (date=10/11 20:42:05, total cpu=0:00:00.2, real=0:00:00.0, peak res=548.6M, current mem=540.6M)
+Set top cell to toll_gate.
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Building hierarchical netlist for Cell toll_gate ...
+*** Netlist is unique.
+** info: there are 483 modules.
+** info: there are 666 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 919.129M, initial mem = 273.305M) ***
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+/dev/null
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Starting consistency checks on late and early library sets of delay corner 'default_emulate_delay_corner'
+late library set: default_emulate_libset_max
+early library set: default_emulate_libset_min
+Completed consistency checks. Status: Successful
+Reading timing constraints file '/dev/null' ...
+Current (total cpu=0:00:08.6, real=0:00:10.0, peak res=849.3M, current mem=849.3M)
+Total number of combinational cells: 316
+Total number of sequential cells: 152
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8 INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVX6 INVXL INVX8
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X4 DLY4X1
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+default_emulate_constraint_mode
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+Extraction setup Started 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: default_emulate_view
+    RC-Corner Name        : default_emulate_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 125 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+default_emulate_libset_max default_emulate_libset_min
+<CMD> read_sdc cons.sdc
+Current (total cpu=0:00:08.9, real=0:00:10.0, peak res=871.7M, current mem=831.7M)
+**WARN: (TCLNL-330):	set_input_delay on clock root 'clk' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File cons.sdc, Line 26).
+
+INFO (CTE): Reading of timing constraints file cons.sdc completed, with 1 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=849.3M, current mem=849.3M)
+Current (total cpu=0:00:08.9, real=0:00:10.0, peak res=871.7M, current mem=849.3M)
+<CMD> check_timing > $report_dir/check_timing_area.rpt
+**WARN: (IMPESI-3468):	User needs to specify -equivalent_waveform_model propagation first before specifying -waveform_compression_mode accurate|clock_detailed .
+AAE DB initialization (MEM=1099.88 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Name: toll_gate
+# Design Mode: 65nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Start delay calculation (fullDC) (1 T). (MEM=955.891)
+/dev/null
+End delay calculation. (MEM=993.184 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=985.184 CPU=0:00:00.2 REAL=0:00:00.0)
+<CMD> report_timing > $report_dir/timing_report_area.rpt
+<CMD> report_timing -retime path_slew_propagation -max_path 50 -nworst 50 -path_type full_clock > $report_dir/pba_area.rpt
+INFO: Path Based Analysis (PBA) performed on total '50' paths
+<CMD> report_analysis_coverage > $report_dir/analysis_coverage_area.rpt
+<CMD> report_analysis_summary > $report_dir/analysis_summary_area.rpt
+<CMD> report_clocks > $report_dir/clocks_area.rpt
+<CMD> report_case_analysis > $report_dir/case_analysis_area.rpt
+<CMD> report_constraints -all_violators > sta_after_dft_area/reports/allviolations_area.rpt
+**WARN: (IMPSYT-3206):	No objects to show the edge number.
+
+*** Memory Usage v#1 (Current mem = 962.059M, initial mem = 273.305M) ***

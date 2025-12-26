@@ -1,0 +1,29 @@
+set_attr library /cadence/FOUNDRY/digital/90nm/dig/lib/slow.lib
+read_hdl /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/DFT/intermediate/netlist.v
+elaborate
+read_sdc cons.sdc
+report timing -lint
+set_attribute dft_scan_style muxed_scan
+define_dft shift_enable -active high -create_port scan_en
+define_dft test_clock clk
+report dft_setup
+check_dft_rules > dft_rules_report
+synthesize -to_mapped
+set_attr dft_min_number_of_scan_chains 2 toll_gate
+set_attr dft_mix_clock_edges_in_scan_chains true toll_gate
+connect_scan_chains -auto_create_chains -preview
+connect_scan_chains -auto_create_chains
+report qor
+write_atpg -cadence > rtl_module_min_area.atpg
+write_atpg -stil > rtl_module_still_min_area.atpg
+write_scandef > dft_report/rtl_module_min_area.def
+write_sdf -timescale ns -nonegchecks -recrem split -edges check_edges > syn_report/delays_min_area.sdf
+write_hdl > dft_report/rtl_netlist_min_area.v
+write_sdc > dft_report/sdc_file_for_physical_design_min_area.sdc
+write_script > dft_report/synthesis_script_sdc_min_area.g
+report timing > dft_report/synthesis_timing_report_min_area.rep
+report power > dft_report/synthesis_power_report_min_area.rep
+report gates > dft_report/synthesis_gates_report_min_area.rep
+report area > dft_report/synthesis_area_report_min_area.rep
+gui_show
+

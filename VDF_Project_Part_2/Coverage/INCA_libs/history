@@ -1,0 +1,8 @@
+//
+// File created by:  irun
+// Do not modify this file
+
+s1::(11Oct2025:23:26:20):( ncverilog -access rwc toll.v tb_toll.v -coverage all -gui )
+s2::(11Oct2025:23:38:49):( ncverilog -access rwc toll.v tb_toll.v -coverage all -gui )
+s3::(11Oct2025:23:58:15):( ncverilog -access rwc toll.v tb_toll.v -coverage all -gui )
+s4::(12Oct2025:00:03:58):( ncverilog -access rwc toll.v tb_toll.v -coverage all -gui )

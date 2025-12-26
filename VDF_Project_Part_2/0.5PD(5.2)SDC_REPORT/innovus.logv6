@@ -1,0 +1,27 @@
+[11/17 02:13:34      0s] 
+[11/17 02:13:34      0s] Cadence Innovus(TM) Implementation System.
+[11/17 02:13:34      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[11/17 02:13:34      0s] 
+[11/17 02:13:34      0s] Version:	v20.10-p004_1, built Thu May 7 20:02:41 PDT 2020
+[11/17 02:13:34      0s] Options:	
+[11/17 02:13:34      0s] Date:		Mon Nov 17 02:13:34 2025
+[11/17 02:13:34      0s] Host:		edatools-server2.iiitd.edu.in (x86_64 w/Linux 2.6.32-754.35.1.el6.x86_64) (18cores*72cpus*Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz 39936KB)
+[11/17 02:13:34      0s] OS:		Red Hat Enterprise Linux Server release 6.10 (Santiago)
+[11/17 02:13:34      0s] 
+[11/17 02:13:34      0s] License:
+[11/17 02:13:35      0s] 		invs	Innovus Implementation System	20.1	checkout succeeded
+[11/17 02:13:35      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[11/17 02:13:55     19s] @(#)CDS: Innovus v20.10-p004_1 (64bit) 05/07/2020 20:02 (Linux 2.6.32-431.11.2.el6.x86_64)
+[11/17 02:13:55     19s] @(#)CDS: NanoRoute 20.10-p004_1 NR200413-0234/20_10-UB (database version 18.20.505) {superthreading v1.69}
+[11/17 02:13:55     19s] @(#)CDS: AAE 20.10-p005 (64bit) 05/07/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[11/17 02:13:55     19s] @(#)CDS: CTE 20.10-p005_1 () Apr 14 2020 09:14:28 ( )
+[11/17 02:13:55     19s] @(#)CDS: SYNTECH 20.10-b004_1 () Mar 12 2020 22:18:21 ( )
+[11/17 02:13:55     19s] @(#)CDS: CPE v20.10-p006
+[11/17 02:13:55     19s] @(#)CDS: IQuantus/TQuantus 19.1.3-s155 (64bit) Sun Nov 3 18:26:52 PST 2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+[11/17 02:13:55     19s] @(#)CDS: OA 22.60-p028 Tue Dec  3 14:08:48 2019
+[11/17 02:13:55     19s] @(#)CDS: SGN 19.10-d001 (24-May-2019) (64 bit executable, Qt5.9.0)
+[11/17 02:13:55     19s] @(#)CDS: RCDB 11.15.0
+[11/17 02:13:55     19s] @(#)CDS: STYLUS 20.10-p002_1 (03/12/2020 10:11 PDT)
+[11/17 02:13:55     19s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_8445_edatools-server2.iiitd.edu.in_shrishail25147_wJVnCf.
+
+[11/17 02:13:55     19s] Change the soft stacksize limit to 0.2%RAM (1033 mbytes). Set global soft_stack_size_limit to change the value.

@@ -1,0 +1,23 @@
+ *** Starting Verify DRC (MEM: 1318.4) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+  VERIFY DRC ...... Sub-Area: {0.000 0.000 106.430 102.080} 1 of 1
+**WARN: (IMPVFG-1103):	VERIFY DRC did not complete: Number of violations exceeds the Error Limit [1000]
+
+  Verification Complete : 1000 Viols.
+
+ Violation Summary By Layer and Type:
+
+	            Mar outOfDie   AdjCut   Totals
+	Metal2      952       10        0      962
+	Via2          0        0       21       21
+	Metal3        0       16        0       16
+	Via3          0        0        1        1
+	Totals      952       26       22     1000
+
+ *** End Verify DRC (CPU: 0:00:00.2  ELAPSED TIME: 0.00  MEM: 0.0M) ***
+

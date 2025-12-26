@@ -1,0 +1,118 @@
+STIL 1.0 { Design 2005; } 
+Header {
+    Title "CTL for design 'toll_gate'";
+    Date  "Mon Nov 17 01:54:10 IST 2025";
+    Source "Cadence Design Systems Genus 19.13-s073_1 STIL output";
+}
+Signals {
+    "clk" In; "reset" In; "sensor_vehicle_enter" In;  
+    "sensor_vehicle_exit" In; "vehicle_id_in[7]" In; "vehicle_id_in[6]" In; "vehicle_id_in[5]" In;  
+    "vehicle_id_in[4]" In; "vehicle_id_in[3]" In; "vehicle_id_in[2]" In; "vehicle_id_in[1]" In;  
+    "vehicle_id_in[0]" In; "scan_en" In; "DFT_sdi_1" In; "DFT_sdi_2" In;  
+ 
+    "barrier_open_cmd" Out; "barrier_close_cmd" Out; "led_status[1]" Out;  
+    "led_status[0]" Out; "display_out[7]" Out; "display_out[6]" Out; "display_out[5]" Out;  
+    "display_out[4]" Out; "display_out[3]" Out; "display_out[2]" Out; "display_out[1]" Out;  
+    "display_out[0]" Out; "DFT_sdo_1" Out; "DFT_sdo_2" Out;  
+}
+SignalGroups {
+  // ... no bidirectional signals found
+  "all_inputs" = ' "clk" + "reset" + "sensor_vehicle_enter" +  
+    "sensor_vehicle_exit" + "vehicle_id_in[7]" + "vehicle_id_in[6]" + "vehicle_id_in[5]" +  
+    "vehicle_id_in[4]" + "vehicle_id_in[3]" + "vehicle_id_in[2]" + "vehicle_id_in[1]" +  
+    "vehicle_id_in[0]" + "scan_en" + "DFT_sdi_1" + "DFT_sdi_2" '; // #signals=15
+  "all_outputs" = ' "barrier_open_cmd" + "barrier_close_cmd" + "led_status[1]" +  
+    "led_status[0]" + "display_out[7]" + "display_out[6]" + "display_out[5]" +  
+    "display_out[4]" + "display_out[3]" + "display_out[2]" + "display_out[1]" +  
+    "display_out[0]" + "DFT_sdo_1" + "DFT_sdo_2" '; // #signals=14
+  "all_ports" =  ' "all_inputs"+ "all_outputs" '; // #signals=29
+  "_pi" = '"all_inputs"'; // #signals=15
+  "_po" = '"all_outputs"'; // #signals=14
+  "_si" = '"DFT_sdi_1" + "DFT_sdi_2"'; // #signals=2
+  "_so" = '"DFT_sdo_1" + "DFT_sdo_2"'; // #signals=2
+}
+ScanStructures {
+    ScanChain "AutoChain_1" {
+      ScanLength 28;
+     ScanIn "DFT_sdi_1" ; 
+     ScanOut "DFT_sdo_1" ; 
+     ScanEnable "scan_en";
+     ScanMasterClock "clk";
+    }
+    ScanChain "AutoChain_2" {
+      ScanLength 28;
+     ScanIn "DFT_sdi_2" ; 
+     ScanOut "DFT_sdo_2" ; 
+     ScanEnable "scan_en";
+     ScanMasterClock "clk";
+    }
+}
+Timing {
+    WaveformTable "_default_WFT_" { 
+      Period '50ns';
+      Waveforms {
+       "all_inputs" { 0 {  '0ns' D; } } 
+       "all_inputs" { 1 {  '0ns' U; } } 
+       "all_inputs" { Z {  '0ns' Z; } } 
+       "all_inputs" { N {  '0ns' N; } } 
+       "all_outputs" { X {  '0ns' X; } } 
+       "all_outputs" { H {  '0ns' X; '20ns' H; } } 
+       "all_outputs" { T {  '0ns' X; '20ns' T; } } 
+       "all_outputs" { L {  '0ns' X; '20ns' L; } } 
+       "clk" { P {  '0ns' D; '25ns' U; '45ns' D; } } 
+    }
+  }
+}
+//PatternBurst "__burst__" {
+//  PatList {
+//    "__pattern__" {
+//    }
+//  }
+//}
+//PatternExec {
+//    Timing "";
+//    PatternBurst "__burst__";
+//}
+Procedures {
+    "load_unload" {
+        W "_default_WFT_";
+        V {
+          "clk"=0; 
+          "scan_en"=1; 
+          }
+        Shift {
+          W "_default_WFT_";
+          V {
+         "_si"=##; "_so"=##;
+            "clk"=P; 
+            "scan_en"=1; 
+}
+        }
+    }
+    "capture" {
+        W "_default_WFT_";
+        F { 
+          }
+        V { "_pi"=\r15 #; "_po"=\r14 #; }
+    }
+    "capture_clk" {
+        W "_default_WFT_";
+        F { 
+        }
+        "forcePI": V { "_pi"=\r15 #; }
+        "measurePO": V { "_po"=\r14 #; }
+        "pulse": V { "clk"=P; }
+    }
+}
+MacroDefs {
+    "test_setup" {
+        W "_default_WFT_";
+        V { 
+            "clk" =0; 
+           }
+      // If required, add your test_controller specific initilization vectors here
+        V { 
+          "clk" =0; 
+        }
+    }
+}

@@ -1,0 +1,132 @@
+                          CONFORMAL (R)
+                   Version 20.10-p100 (01-May-2020) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2019. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 2024 days old. You can download the latest version from http://downloads.cadence.com.
+
+CPU time     : 2.11    seconds
+Elapse time  : 1       seconds
+Memory usage : 252.48  M bytes
+// Command: read library /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_time/slow.v -verilog -both
+// Parsing file /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_time/slow.v ...
+// Warning: (RTL7.2) Gate or transistor primitive is using weak attributes (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:196)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:84)
+// Warning: (VLG5.2) Primitive input port has multiple bits. Ignore all but LSB bit (occurrence:2)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:480)
+// Warning: (DIR6.2) Supported compiler directive is detected (occurrence:960)
+// Warning: (HRC1.4) Module/entity is empty (blackboxed) (occurrence:1)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
+// Note: Read VERILOG library successfully
+CPU time     : 2.32    seconds
+Elapse time  : 1       seconds
+Memory usage : 274.59  M bytes
+// Command: read design /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_time/toll.v -golden
+// Parsing file /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_time/toll.v ...
+// Golden root module is set to 'toll_gate'
+// Warning: (RTL1.2) Variable/signal is assigned by multiple non-blocking assignments (occurrence:3)
+// Warning: (RTL1.5a) Assignment with RHS bit width is greater than LHS bit width (occurrence:9)
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:3)
+// Warning: (RTL7.8) Overflowed integer is truncated (occurrence:4)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:1)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:1)
+// Warning: (HRC3.6) Port connection width mis-matches. Undriven signals are floating (occurrence:1)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:8)
+// Note: Read VERILOG design successfully
+// Command: read design /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_time/netlist.v -verilog -revised
+// Parsing file /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_time/netlist.v ...
+// Revised root module is set to 'toll_gate'
+// Warning: (RTL2.2) Variable is referenced but never assigned (occurrence:8)
+// Warning: (RTL2.5) Net is referenced without an assignment. Design verification will be based on set_undriven_signal setting (occurrence:8)
+// Warning: (RTL2.13) Undriven pin is detected (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:1)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:12)
+// Warning: There are 1 undriven nets in Revised
+// Warning: There are 1 undriven pins in Revised
+// Note: Read VERILOG design successfully
+// Command: set system mode lec
+// Processing Golden ...
+// Modeling Golden ...
+// (F13) Converted 13 DFF(s) to DLAT(s) due to direct feedback
+// Processing Revised ...
+// Modeling Revised ...
+// (F28) Converted 1 internal output port(s) to inout port(s)
+CPU time     : 2.61    seconds
+Elapse time  : 1       seconds
+Memory usage : 314.88  M bytes
+// Warning: Golden and Revised have different numbers of key points:
+// Golden  key points = 294
+// Revised key points = 278
+// Mapping key points ...
+================================================================================
+Mapped points: SYSTEM class
+--------------------------------------------------------------------------------
+Mapped points     PI     PO     DFF       Total   
+--------------------------------------------------------------------------------
+Golden            12     12     254       278     
+--------------------------------------------------------------------------------
+Revised           12     12     254       278     
+================================================================================
+Unmapped points:
+================================================================================
+Golden:
+--------------------------------------------------------------------------------
+Unmapped points   DFF    DLAT      Total   
+--------------------------------------------------------------------------------
+Unreachable       3      13        16      
+================================================================================
+// Command: add compared points -all
+// 266 compared points added to compare list
+// Command: compare
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           12     254       266     
+================================================================================
+CPU time     : 2.82    seconds
+Elapse time  : 2       seconds
+Memory usage : 320.27  M bytes
+// Command: report messages -compare -verb
+// Command: report compare data -noneq
+0 Non-equivalent point(s) reported
+0 compared point(s) reported
+================================================================================
+Compared points      PO     DFF       Total   
+--------------------------------------------------------------------------------
+Equivalent           12     254       266     
+================================================================================
+// Command: report verification
+================================================================================
+                            Verification Report
+--------------------------------------------------------------------------------
+Category                                                                  Count
+--------------------------------------------------------------------------------
+1. Non-standard modeling options used:                                      0
+--------------------------------------------------------------------------------
+2. Incomplete verification:                                                 0
+--------------------------------------------------------------------------------
+3. User modification to design:                                             0
+--------------------------------------------------------------------------------
+4. Conformal Constraint Designer clock domain crossing checks recommended:  1
+     Multiple clocks in the design:                            yes
+--------------------------------------------------------------------------------
+5. Design ambiguity:                                                        0
+--------------------------------------------------------------------------------
+6. Compare Results:                                                        PASS
+================================================================================
+// Command: write compared points -replace lec_compared_points_minarea
+CPU time     : 2.94    seconds
+Elapse time  : 2       seconds
+Memory usage : 320.27  M bytes
+// Command: write mapped points -replace lec_mapped_points_minarea
+// Command: set verification information logical_eq_check_minarea
+// Verification information is set to /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_time/logical_eq_check_minarea.
+// Advanced reporting is enabled and the output is written to /home/shrishail25147/Desktop/VDF_Submitted_project/VDF_Project/CEC/min_time/logical_eq_check_minarea
+// Command: write verification information
+// Verification information is written to logical_eq_check_minarea.
+// Command: exit

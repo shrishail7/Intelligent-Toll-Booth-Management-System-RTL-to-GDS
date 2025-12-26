@@ -1,0 +1,81 @@
+VERSION 5.5 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN toll_gate ;
+
+SCANCHAINS 2 ;
+  - AutoChain_1_seg1_clk_rising 
+    + PARTITION p_clk_rising 
+      MAXBITS 28
+    + START PIN DFT_sdi_1
+    + FLOATING 
+       u_account_balance/balance_db_reg[1][1] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][2] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][3] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][4] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][5] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][6] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][7] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][8] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][9] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][10] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][11] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][12] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][13] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[1][14] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][1] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][2] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][3] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][4] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][5] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][6] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][7] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][8] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][9] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][10] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][11] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][12] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][13] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[2][14] ( IN SI ) ( OUT Q ) 
+    + STOP PIN DFT_sdo_1
+;
+
+  - AutoChain_2_seg1_clk_rising 
+    + PARTITION p_clk_rising 
+      MAXBITS 28
+    + START PIN DFT_sdi_2
+    + FLOATING 
+       u_account_balance/balance_db_reg[3][1] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][2] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][3] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][4] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][5] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][6] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][7] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][8] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][9] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][10] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][11] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][12] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][13] ( IN SI ) ( OUT Q ) 
+       u_account_balance/balance_db_reg[3][14] ( IN SI ) ( OUT Q ) 
+       u_account_balance/charge_done_reg ( IN SI ) ( OUT Q ) 
+       u_barrier_ctrl/barrier_close_cmd_reg ( IN SI ) ( OUT Q ) 
+       u_barrier_ctrl/barrier_open_cmd_reg ( IN SI ) ( OUT Q ) 
+       u_barrier_ctrl/barrier_position_counter_reg[0] ( IN SI ) ( OUT Q ) 
+       u_barrier_ctrl/barrier_position_counter_reg[1] ( IN SI ) ( OUT Q ) 
+       u_barrier_ctrl/barrier_position_counter_reg[2] ( IN SI ) ( OUT Q ) 
+       u_vehicle_interface/id_to_check_reg[0] ( IN SI ) ( OUT Q ) 
+       u_vehicle_interface/id_to_check_reg[1] ( IN SI ) ( OUT Q ) 
+       u_vehicle_interface/id_to_check_reg[2] ( IN SI ) ( OUT Q ) 
+       u_vehicle_interface/id_to_check_reg[3] ( IN SI ) ( OUT Q ) 
+       u_vehicle_interface/id_valid_reg ( IN SI ) ( OUT Q ) 
+       state_reg[0] ( IN SI ) ( OUT Q ) 
+       state_reg[1] ( IN SI ) ( OUT Q ) 
+       state_reg[2] ( IN SI ) ( OUT Q ) 
+    + STOP PIN DFT_sdo_2
+;
+
+END SCANCHAINS 
+END DESIGN 

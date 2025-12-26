@@ -1,0 +1,143 @@
+*** Statistics for net list toll_gate ***
+Number of cells      = 710
+Number of nets       = 722
+Number of tri-nets   = 0
+Number of degen nets = 0
+Number of pins       = 3040
+Number of i/os       = 29
+
+Number of nets with    2 terms = 307 (42.5%)
+Number of nets with    3 terms = 234 (32.4%)
+Number of nets with    4 terms = 76 (10.5%)
+Number of nets with    5 terms = 19 (2.6%)
+Number of nets with    6 terms = 10 (1.4%)
+Number of nets with    7 terms = 6 (0.8%)
+Number of nets with    8 terms = 6 (0.8%)
+Number of nets with    9 terms = 5 (0.7%)
+Number of nets with >=10 terms = 59 (8.2%)
+
+*** 63 Primitives used:
+Primitive MXI2XL (9 insts)
+Primitive INVX2 (1 insts)
+Primitive CLKAND2X3 (1 insts)
+Primitive NAND4XL (9 insts)
+Primitive OAI2BB1XL (1 insts)
+Primitive AO22XL (32 insts)
+Primitive OR3X1 (1 insts)
+Primitive AOI21XL (1 insts)
+Primitive AOI22X1 (62 insts)
+Primitive CLKINVX2 (3 insts)
+Primitive NOR2BXL (3 insts)
+Primitive NOR2XL (41 insts)
+Primitive OAI22XL (1 insts)
+Primitive INVX1 (9 insts)
+Primitive NAND2BXL (2 insts)
+Primitive AO22X1 (1 insts)
+Primitive NOR3X1 (3 insts)
+Primitive AO21X1 (7 insts)
+Primitive AOI221X1 (7 insts)
+Primitive AND2X6 (1 insts)
+Primitive INVXL (7 insts)
+Primitive NOR3BX1 (3 insts)
+Primitive NOR2X1 (4 insts)
+Primitive AOI21X1 (7 insts)
+Primitive OAI32X1 (1 insts)
+Primitive OAI21XL (17 insts)
+Primitive OAI22X1 (8 insts)
+Primitive CLKAND2X2 (1 insts)
+Primitive NOR2BX1 (6 insts)
+Primitive ADDHX1 (1 insts)
+Primitive NAND2XL (63 insts)
+Primitive NAND3X1 (5 insts)
+Primitive SDFFQXL (77 insts)
+Primitive OR4X1 (1 insts)
+Primitive OAI211XL (1 insts)
+Primitive NAND2BX1 (10 insts)
+Primitive AOI211X1 (3 insts)
+Primitive CLKINVX1 (30 insts)
+Primitive OAI31X1 (2 insts)
+Primitive OAI221X1 (2 insts)
+Primitive NAND4BBXL (1 insts)
+Primitive OAI21X1 (12 insts)
+Primitive AOI222XL (7 insts)
+Primitive NAND2X1 (4 insts)
+Primitive AND2XL (1 insts)
+Primitive OR4XL (1 insts)
+Primitive SDFFQX1 (173 insts)
+Primitive OAI2BB1X2 (1 insts)
+Primitive AND4X1 (1 insts)
+Primitive AND3X1 (6 insts)
+Primitive OAI211X1 (6 insts)
+Primitive AND2X1 (14 insts)
+Primitive OR2X1 (9 insts)
+Primitive SDFFHQX4 (1 insts)
+Primitive CLKXOR2X1 (1 insts)
+Primitive NOR2X2 (2 insts)
+Primitive NOR2BX2 (1 insts)
+Primitive NAND4BXL (2 insts)
+Primitive OR2XL (1 insts)
+Primitive AOI32XL (1 insts)
+Primitive INVX8 (1 insts)
+Primitive AOI22XL (19 insts)
+Primitive OAI2BB1X1 (1 insts)
+************
+*** Net length and connection length statistics (cell toll_gate) ***
+
+Total net length = 1.460e+04 (7.926e+03 6.675e+03)
+
+Avg net length = 2.022e+01 (sigma = 3.047e+01)
+Sqrt of avg square net length = 3.657e+01
+
+Avg connection length = 6.299e+00 (sigma = 4.985e+00)
+Sqrt of avg square connection length = 8.033e+00
+
+Net and connection length distribution:
+
+[length   range   ]      #net #connection
+[0.00e+00 5.80e+00]:      178      418
+[5.80e+00 1.16e+01]:      269      229
+[1.16e+01 1.74e+01]:      109       47
+[1.74e+01 2.32e+01]:       34       14
+[2.32e+01 2.90e+01]:       26        7
+[2.90e+01 3.48e+01]:       13        2
+[3.48e+01 4.06e+01]:        8        0
+[4.06e+01 4.64e+01]:        8        2
+[4.64e+01 5.22e+01]:        8        1
+[5.22e+01 5.80e+01]:        4        0
+[5.80e+01 6.38e+01]:        6        0
+[6.38e+01 6.96e+01]:        8        0
+[6.96e+01 7.54e+01]:        3        1
+[7.54e+01 8.12e+01]:        1        0
+[8.12e+01 8.70e+01]:        3        0
+[8.70e+01 9.28e+01]:        2        1
+[9.28e+01 9.86e+01]:        7        0
+[9.86e+01 1.04e+02]:        2        0
+[1.04e+02 1.10e+02]:        7        0
+[1.10e+02 1.16e+02]:        2        0
+[1.16e+02 1.22e+02]:        4        0
+[1.22e+02 1.28e+02]:        4        0
+[1.28e+02 1.33e+02]:        3        0
+[1.39e+02 1.45e+02]:        1        0
+[1.45e+02 1.51e+02]:        3        0
+[1.51e+02 1.57e+02]:        3        0
+[1.57e+02 1.62e+02]:        1        0
+[1.62e+02 1.68e+02]:        2        0
+[1.68e+02 1.74e+02]:        2        0
+[1.97e+02 2.03e+02]:        1        0
+
+
+Total number of long connections = 0
+Io: nrCon=0
+
+
+Total length: 2.068e+04um, number of vias: 8133
+M1(H) length: 0.000e+00um, number of vias: 3015
+M2(V) length: 8.318e+03um, number of vias: 4807
+M3(H) length: 1.035e+04um, number of vias: 275
+M4(V) length: 1.699e+03um, number of vias: 36
+M5(H) length: 3.125e+02um, number of vias: 0
+M6(V) length: 0.000e+00um, number of vias: 0
+M7(H) length: 0.000e+00um, number of vias: 0
+M8(V) length: 0.000e+00um, number of vias: 0
+M9(H) length: 0.000e+00um
+

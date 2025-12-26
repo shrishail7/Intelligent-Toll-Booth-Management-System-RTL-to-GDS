@@ -1,0 +1,18 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 19.13-s073_1, built Fri Mar 20 01:36:16 PDT 2020
+Options: script.tcl 
+Date:    Sun Nov 16 21:50:06 2025
+Host:    edatools-server2.iiitd.edu.in (x86_64 w/Linux 2.6.32-754.35.1.el6.x86_64) (18cores*72cpus*2physical cpus*Intel(R) Xeon(R) Gold 6354 CPU @ 3.00GHz 39936KB) (528955884KB)
+PID:     19560
+OS:      Red Hat Enterprise Linux Server release 6.10 (Santiago)
+
+Checking out license: Genus_Synthesis
+invalid command name "read_lib"
+    while executing
+"read_lib /home/prerana25172/Desktop/cmos65/VDF_Project/synthesis/intermediate/slow.lib"
+    (file "script.tcl" line 4)
+Abnormal exit.

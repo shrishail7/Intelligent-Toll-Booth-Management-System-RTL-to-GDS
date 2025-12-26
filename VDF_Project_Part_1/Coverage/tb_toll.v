@@ -1,0 +1,204 @@
+`timescale 1ns / 1ps
+
+//================================================================
+// MODULE: tb_toll_gate_coverage
+// DESCRIPTION: Comprehensive testbench for the toll_gate FSM module.
+//              This version includes a full suite of tests including
+//              basic cases, reset validation, back-to-back traffic,
+//              and randomized stress testing to achieve 100% coverage.
+//================================================================
+module tb_toll_gate_coverage;
+
+    // Testbench signals
+    reg clk;
+    reg reset;
+    reg sensor_vehicle_enter;
+    reg sensor_vehicle_exit;
+    reg [7:0] vehicle_id_in;
+
+    wire barrier_open_cmd;
+    wire barrier_close_cmd;
+    wire [1:0] led_status;
+    wire [7:0] display_out;
+
+    integer i; // for loops
+
+    // Instantiate the Device Under Test (DUT)
+    toll_gate uut (
+        .clk(clk),
+        .reset(reset),
+        .sensor_vehicle_enter(sensor_vehicle_enter),
+        .sensor_vehicle_exit(sensor_vehicle_exit),
+        .vehicle_id_in(vehicle_id_in),
+        .barrier_open_cmd(barrier_open_cmd),
+        .barrier_close_cmd(barrier_close_cmd),
+        .led_status(led_status),
+        .display_out(display_out)
+    );
+
+    // Clock Generation
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk;
+    end
+
+    // Main Test Sequence
+    initial begin
+        // 1. Initialize and Reset
+        $display("--- [START] Initial Reset ---");
+        reset = 1;
+        sensor_vehicle_enter = 0;
+        sensor_vehicle_exit = 0;
+        vehicle_id_in = 8'h00;
+        #20;
+        reset = 0;
+        #10;
+
+        // 2. Setup Monitoring
+        $monitor("Time=%0t | State=%s | Enter=%b, Exit=%b, ID_in=%h | OpenCmd=%b, CloseCmd=%b, LED=%b, Display=%s",
+                 $time, uut.state, sensor_vehicle_enter, sensor_vehicle_exit, vehicle_id_in,
+                 barrier_open_cmd, barrier_close_cmd, led_status, display_out);
+
+        // --- SCENARIO 1: Basic Functional Tests ---
+        $display("\n--- [START] Basic Functional Tests ---");
+        run_transaction(8'h01, 1); // Successful Transaction
+        run_transaction(8'h02, 0); // Failed Transaction (insufficient funds)
+
+        // --- SCENARIO 2: Mid-Operation Reset Test ---
+        $display("\n--- [START] Mid-Operation Reset Test ---");
+        sensor_vehicle_enter = 1;
+        vehicle_id_in = 8'h01;
+        #30; // Let it get past the IDLE state
+        sensor_vehicle_enter = 0;
+        $display("INFO: FSM is active. Asserting reset now.");
+        #20;
+        reset = 1; // Assert reset mid-operation
+        #20; // Hold reset
+        $display("INFO: Releasing reset. FSM should be in IDLE state.");
+        reset = 0;
+        #20;
+        $display("INFO: Verifying recovery by starting a new transaction.");
+        run_transaction(8'h03, 1); // Verify recovery
+
+        // --- SCENARIO 3: Back-to-Back Vehicle Test ---
+        $display("\n--- [START] Back-to-Back Vehicle Test ---");
+        run_transaction_and_interrupt(8'h01); // Vehicle 1 starts
+        // Vehicle 2 will be handled by the task.
+
+        // --- SCENARIO 4: Randomized Stress Test ---
+        $display("\n--- [START] Randomized Stress Test (50 iterations) ---");
+        for (i = 0; i < 50; i = i + 1) begin
+            // Use urandom to get a random 8-bit vehicle ID.
+            // The DUT will determine if it's a pass or fail.
+            run_transaction($urandom, $urandom % 2);
+        end
+
+        // --- End Simulation ---
+        #100;
+        $display("\n--- Comprehensive Testbench Finished ---");
+        $finish;
+    end
+
+    // Task to run a standard transaction
+    task run_transaction;
+        input [7:0] id;
+        input is_successful_guess; // Testbench doesn't know balance, so this is a guess for timing
+
+        begin
+            $display("\n--- Testing Vehicle ID: %h ---", id);
+            @(posedge clk);
+            sensor_vehicle_enter = 1;
+            vehicle_id_in = id;
+            @(posedge clk); @(posedge clk);
+            sensor_vehicle_enter = 0;
+
+            // Wait for a period. If the gate opens, assume success.
+            #80;
+            if (barrier_open_cmd == 1'b1) begin
+                $display("INFO: Gate is opening for ID %h. Assuming success.", id);
+                #100; // Extra wait for gate to open fully
+                sensor_vehicle_exit = 1;
+                @(posedge clk); @(posedge clk);
+                sensor_vehicle_exit = 0;
+                #100; // Wait for gate to close
+            end else begin
+                $display("INFO: Gate did not open for ID %h. Assuming failure.", id);
+                #40; // Wait for FSM to return to idle on failure
+            end
+            vehicle_id_in = 8'h00;
+            #40; // Idle time
+        end
+    endtask
+
+    // Special task for the back-to-back test
+    task run_transaction_and_interrupt;
+        input [7:0] id_v1;
+
+        begin
+            $display("--- Vehicle 1 (ID: %h) arriving... ---", id_v1);
+            @(posedge clk);
+            sensor_vehicle_enter = 1;
+            vehicle_id_in = id_v1;
+            @(posedge clk); @(posedge clk);
+            sensor_vehicle_enter = 0;
+
+            #180; // Wait for gate to open and vehicle to pass
+            sensor_vehicle_exit = 1;
+            @(posedge clk);
+            $display("INFO: Vehicle 1 is exiting. Vehicle 2 (ID: FF) arriving now.");
+            // As V1 exits, V2 arrives
+            sensor_vehicle_enter = 1;
+            vehicle_id_in = 8'hFF;
+            @(posedge clk);
+            sensor_vehicle_exit = 0; // V1 has cleared
+            
+            // FSM should start closing the gate for V1, ignoring V2 for now
+            #80; // Wait for gate to close and FSM to return to IDLE
+            
+            $display("INFO: FSM should now process Vehicle 2.");
+            @(posedge clk);
+            @(posedge clk);
+            sensor_vehicle_enter = 0;
+
+            // --- SCENARIO 6: Stuck Vehicle (Timeout Test) ---
+$display("\n--- [START] Stuck Vehicle / Timeout Test ---");
+// Start a normal successful transaction
+run_transaction(8'h1A, 1); 
+
+// Now, start another transaction but never trigger the exit sensor
+$display("\n--- Testing Vehicle ID: %h (will get stuck) ---", 8'h1B);
+@(posedge clk);
+sensor_vehicle_enter = 1;
+vehicle_id_in = 8'h1B;
+@(posedge clk); @(posedge clk);
+sensor_vehicle_enter = 0;
+
+// Wait for the gate to open
+#120; 
+
+$display("INFO: Gate is OPEN, but vehicle will not exit. Waiting for a long time...");
+// In a real design, the FSM would be stuck here. We will wait and then reset.
+#1000; // Wait for a long duration
+
+$display("INFO: System is stuck as expected. Resetting to recover.");
+reset = 1;
+#20;
+reset = 0;
+#20;
+
+$display("INFO: System recovered. Running one final transaction.");
+run_transaction(8'h1C, 1); // Verify system works after recovery
+$display("\n--- [END] Stuck Vehicle / Timeout Test ---");
+            
+            // Now run the rest of the transaction for Vehicle 2
+            #180;
+            sensor_vehicle_exit = 1;
+            @(posedge clk); @(posedge clk);
+            sensor_vehicle_exit = 0;
+            #100;
+            vehicle_id_in = 8'h00;
+            #40;
+        end
+    endtask
+
+endmodule

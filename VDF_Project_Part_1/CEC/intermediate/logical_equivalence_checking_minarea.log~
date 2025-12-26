@@ -1,0 +1,44 @@
+                          CONFORMAL (R)
+                   Version 20.10-p100 (01-May-2020) (64 bit executable)
+   Copyright (c) Cadence Design Systems, Inc., 1997-2019. All Rights Reserved
+
+
+This program is proprietary and confidential information belonging to
+Cadence Design Systems, Inc., and may be used and disclosed only as authorized
+in a license agreement controlling such use and disclosure.
+
+// Warning: This version is 1990 days old. You can download the latest version from http://downloads.cadence.com.
+
+CPU time     : 0.36    seconds
+Elapse time  : 2       seconds
+Memory usage : 252.48  M bytes
+// Command: read library /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/intermediate/slow.v -verilog -both
+// Parsing file /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/intermediate/slow.v ...
+// Warning: (RTL7.2) Gate or transistor primitive is using weak attributes (occurrence:1)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:196)
+// Warning: (RTL14.1) Fanout load of the signal is removed (occurrence:84)
+// Warning: (VLG5.2) Primitive input port has multiple bits. Ignore all but LSB bit (occurrence:2)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:480)
+// Warning: (DIR6.2) Supported compiler directive is detected (occurrence:960)
+// Warning: (HRC1.4) Module/entity is empty (blackboxed) (occurrence:1)
+// Warning: (HRC3.10b) An input port is declared, but it is not used. Module is empty (occurrence:1)
+// Note: Read VERILOG library successfully
+CPU time     : 0.57    seconds
+Elapse time  : 2       seconds
+Memory usage : 274.58  M bytes
+// Command: read design /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/intermediate/toll.v -golden
+// Parsing file /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/intermediate/toll.v ...
+// Golden root module is set to 'toll_gate'
+// Warning: (RTL1.2) Variable/signal is assigned by multiple non-blocking assignments (occurrence:3)
+// Warning: (RTL1.5a) Assignment with RHS bit width is greater than LHS bit width (occurrence:9)
+// Warning: (RTL1.5b) Potential loss of RHS msb or carry-out bit (occurrence:3)
+// Warning: (RTL7.8) Overflowed integer is truncated (occurrence:4)
+// Warning: (RTL14) Signal has input but it has no output (occurrence:1)
+// Warning: (DIR6.1) Ignored compiler directive is detected (occurrence:1)
+// Warning: (HRC3.6) Port connection width mis-matches. Undriven signals are floating (occurrence:1)
+// Warning: (HRC3.10a) An input port is declared, but it is not completely used in the module (occurrence:8)
+// Note: Read VERILOG design successfully
+// Command: read design /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/intermediate/netlist.v -verilog -revised
+// Parsing file /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/intermediate/netlist.v ...
+// Error: /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/intermediate/netlist.v:77 Module 'OR2BX1' is referenced but not defined.
+// 'dofile /home/prerana25172/Desktop/cmos65/VDF_Project/CEC/intermediate/do_file.do' is aborted at line 6
